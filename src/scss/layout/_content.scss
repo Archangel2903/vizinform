@@ -9,6 +9,6 @@
   min-width: 320px;
 }
 
-.main-slider {
-
-}
+@import "./components/main-home";
+@import "./components/benefits";
+@import "./components/blog";

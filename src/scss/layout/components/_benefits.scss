@@ -1,0 +1,43 @@
+.benefits {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+
+  &__box {
+    display: inline-flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__ico {
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    margin: 0 0 20px;
+    background: #F5F9FF;
+    border-radius: 25px;
+
+    svg {
+      width: 42px;
+      height: 42px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 20px;
+  }
+
+  &__text {
+    margin: 0;
+    font-weight: 500;
+    line-height: 27px;
+  }
+}

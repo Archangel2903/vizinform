@@ -2,31 +2,32 @@
 @import 'partials/variables';
 
 /* Bootstrap */
+@import "~bootstrap/scss/bootstrap";
 //require
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
+//@import "~bootstrap/scss/functions";
+//@import "~bootstrap/scss/variables";
+//@import "~bootstrap/scss/mixins";
 //optional
-@import "~bootstrap/scss/reboot";
-@import "~bootstrap/scss/grid";
-@import "~bootstrap/scss/type";
-@import "~bootstrap/scss/utilities";
-@import "~bootstrap/scss/buttons";
-@import "~bootstrap/scss/card";
-@import "~bootstrap/scss/forms";
-@import "~bootstrap/scss/modal";
-@import "~bootstrap/scss/utilities/text";
+//@import "~bootstrap/scss/reboot";
+//@import "~bootstrap/scss/grid";
+//@import "~bootstrap/scss/type";
+//@import "~bootstrap/scss/utilities";
+//@import "~bootstrap/scss/buttons";
+//@import "~bootstrap/scss/card";
+//@import "~bootstrap/scss/forms";
+//@import "~bootstrap/scss/modal";
+//@import "~bootstrap/scss/utilities/text";
 
 //plugins
 @import "~jquery-ui/themes/base/base.css";
 @import "~swiper/dist/css/swiper.min.css";
-@import "~nouislider/distribute/nouislider.min.css";
 
 /* Project style */
 //partials
 @import 'partials/reset';
 @import 'partials/mixins';
 @import 'partials/utilits';
+@import 'partials/component';
 
 //layout
 @import 'layout/header';

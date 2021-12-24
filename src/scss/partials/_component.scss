@@ -1,0 +1,109 @@
+.btn {
+  padding: 10px;
+  line-height: 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: none !important;
+  font-weight: 600;
+
+  &-lg {
+    padding: 20px;
+    border-radius: 16px;
+    line-height: 27px;
+  }
+
+  &-sm {
+    padding: 5px;
+    border-radius: 8px;
+  }
+
+  &[class*="btn-outline"] {
+    border: 1px solid;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    //margin-left: 15px;
+  }
+}
+
+.card {
+  padding: 10px;
+  background: white;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+
+  &-img {
+    &-top {
+      max-height: 180px;
+      border-radius: 20px;
+    }
+  }
+
+  &-body {
+    padding: 20px 10px 10px;
+  }
+
+  &-title {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  &-text {
+    margin: 0 0 20px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 27px;
+  }
+
+  &-link {
+
+  }
+}
+
+.logo {
+  svg {
+    width: 210px;
+    height: 39px;
+  }
+}
+
+.languages {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  background: #F4F4F4;
+  border-radius: 12px;
+
+  &__link {
+    width: 45px;
+    padding: 1px 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+
+    &.active {
+      background: #FFFFFF;
+      border: 2px solid $main-first-color;
+      border-radius: 12px;
+      color: $main-first-color;
+    }
+
+    &:hover {
+      color: $main-first-color;
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) {}
+@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(xl) {}
