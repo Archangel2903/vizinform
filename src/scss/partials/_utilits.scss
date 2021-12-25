@@ -64,6 +64,14 @@
 
 .section {
   position: relative;
+
+  &__substrate {
+    width: 100%;
+    max-width: 1638px;
+    margin: 0 auto;
+    background: #F5F9FF;
+    border-radius: 90px;
+  }
 }
 
 .section-bg {
@@ -91,6 +99,8 @@
 }
 
 .title {
-  font-size: 2.5rem;
-  font-weight: $font-weight-normal;
+  margin: 0 0 60px;
+  font-size: 3.063rem;
+  font-weight: 700;
+  line-height: 60px;
 }

@@ -364,6 +364,12 @@ header.header {
 .catalog {
   flex: 0 0 330px;
 
+  &:hover {
+    .catalog__list-wrapper {
+      transform: translate(-50%, 0) scaleY(1);
+    }
+  }
+
   &__toggle {
     display: inline-flex;
     flex-flow: row wrap;

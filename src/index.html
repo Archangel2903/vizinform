@@ -428,7 +428,7 @@
 
             <form action="" class="header-search">
                 <label for="search_field">
-                    <input type="text" id="search_field" class="header-search__input" placeholder="Пошук">
+                    <input type="search" id="search_field" class="header-search__input" placeholder="Пошук">
                     <button type="button" class="header-search__button">
                         <svg>
                             <use xlink:href="./img/spritemap.svg#sprite-search"></use>
@@ -438,7 +438,11 @@
             </form>
 
             <div class="header-contacts">
-                <a href="tel:+380977851818" class="phone-list__link"><svg><use xlink:href="./img/spritemap.svg#sprite-phone-call"></use></svg>097-785-18-18</a>
+                <a href="tel:+380977851818" class="phone-list__link">
+                    <svg>
+                        <use xlink:href="./img/spritemap.svg#sprite-phone-call"></use>
+                    </svg>
+                    097-785-18-18</a>
 
                 <svg>
                     <use xlink:href="./img/spritemap.svg#sprite-chevron"></use>
@@ -446,7 +450,11 @@
 
                 <div class="header-contacts__dropdown">
                     <ul class="phone-list">
-                        <li><a href="tel:+380445923664" class="phone-list__link"><svg><use xlink:href="./img/spritemap.svg#sprite-phone-call"></use></svg>044-592-36-64</a></li>
+                        <li><a href="tel:+380445923664" class="phone-list__link">
+                            <svg>
+                                <use xlink:href="./img/spritemap.svg#sprite-phone-call"></use>
+                            </svg>
+                            044-592-36-64</a></li>
                     </ul>
 
                     <nav class="social">
@@ -517,17 +525,23 @@
 
                             <li>
                                 <button></button>
+
                                 <div>
                                     <picture>
                                         <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/image.jpg') %>" alt="image" title="image">
                                     </picture>
+
                                     <p></p>
                                 </div>
-                                <form action=""><label for="">
-                                    <button></button>
-                                    <input type="text">
-                                    <button></button>
-                                </label></form>
+
+                                <form action="">
+                                    <label>
+                                        <button>-</button>
+                                        <input type="text">
+                                        <button>+</button>
+                                    </label>
+                                </form>
+
                                 <span></span>
                             </li>
                         </ul>
@@ -550,27 +564,255 @@
     <main class="content">
         <section class="section section-main-home">
             <div class="section__substrate">
-                <div class="container main-home">
-                    <div class="main-home__content">
-                        <p class="main-home__title">Майстерня</p>
-                        
-                        <p class="main-home__text">з виготовлення рекламної продукції</p>
+                <div class="container">
+                    <div class="main-home">
+                        <div class="main-home__content">
+                            <p class="main-home__title">Майстерня</p>
 
-                        <div class="main-home-actions">
-                            <button class="btn btn-lg btn-primary">Замовити <svg><use xlink:href="./img/spritemap.svg#sprite-arrow-link"></use></svg></button>
+                            <p class="main-home__text">з виготовлення рекламної продукції</p>
 
-                            <a href="#" class="btn btn-lg btn-secondary">Конструктор <svg><use xlink:href="./img/spritemap.svg#sprite-brush"></use></svg></a>
+                            <div class="main-home-actions">
+                                <button class="btn btn-lg btn-primary">Замовити
+                                    <svg>
+                                        <use xlink:href="./img/spritemap.svg#sprite-arrow-link"></use>
+                                    </svg>
+                                </button>
+
+                                <a href="#" class="btn btn-lg btn-secondary">Конструктор
+                                    <svg>
+                                        <use xlink:href="./img/spritemap.svg#sprite-brush"></use>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
-                    </div>
 
-                    <picture class="main-home__pic">
-                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/company-logo.png') %>" alt="image" title="image">
-                    </picture>
+                        <picture class="main-home__pic">
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/company-logo.png') %>" alt="image" title="image">
+                        </picture>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <div class="container">
+        <section class="section section-benefits">
+            <div class="container">
+                <div class="benefits">
+                    <div class="benefits__box">
+                        <div class="benefits__ico">
+                            <svg>
+                                <use xlink:href="./img/spritemap.svg#sprite-briefcase"></use>
+                            </svg>
+                        </div>
+
+                        <p class="benefits__title">20 років досвіду</p>
+
+                        <p class="benefits__text">З 2000 року створюємо фасадні та рекламні вивіски, логотипи, таблички</p>
+                    </div>
+
+                    <div class="benefits__box">
+                        <div class="benefits__ico">
+                            <svg>
+                                <use xlink:href="./img/spritemap.svg#sprite-key"></use>
+                            </svg>
+                        </div>
+
+                        <p class="benefits__title">Послуги під ключ</p>
+
+                        <p class="benefits__text">Дизайн, виробництво, монтаж</p>
+                    </div>
+
+                    <div class="benefits__box">
+                        <div class="benefits__ico">
+                            <svg>
+                                <use xlink:href="./img/spritemap.svg#sprite-gear"></use>
+                            </svg>
+                        </div>
+
+                        <p class="benefits__title">Власне обладнання</p>
+
+                        <p class="benefits__text">Що дозволяє зробити практично все в обумовлені терміни</p>
+                    </div>
+
+                    <div class="benefits__box">
+                        <div class="benefits__ico">
+                            <svg>
+                                <use xlink:href="./img/spritemap.svg#sprite-rocket"></use>
+                            </svg>
+                        </div>
+
+                        <p class="benefits__title">Висока кваліфікація</p>
+
+                        <p class="benefits__text">Високопрофесійні дизайнери, опитні менеджери, кваліфіковані майстри</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-popular-category">
+            <div class="container">
+                <p class="title">Популярні категорії</p>
+
+                <div class="main-categories"></div>
+            </div>
+        </section>
+
+        <section class="section section-reviews">
+            <div class="section__substrate">
+                <div class="container">
+                    <div class="review">
+                        <div class="container-heading">
+                            <p class="title">Відгуки від
+                                наших клієнтів</p>
+
+                            <button class="btn btn-lg btn-primary">Свій відгук</button>
+                        </div>
+
+                        <div class="review-content"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-blog">
+            <div class="container blog">
+                <div class="container-heading">
+                    <p class="title">Корисні статті</p>
+
+                    <a href="#" class="btn btn-secondary">Усі відео
+                        <svg>
+                            <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="blog-card card">
+                            <picture>
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" class="card-img-top" alt="image"
+                                     title="image">
+                            </picture>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Технічні вимоги до оформлення паспорту об'єкта</h5>
+                                <p class="card-text">Розмір інформаційного стенду має бути не менше 1500 мм у довжину...</p>
+
+                                <div class="card-footer">
+                                    <a href="#" class="btn btn-link card-link">Читати
+                                        <svg>
+                                            <use xlink:href="./img/spritemap.svg#sprite-arrow-link"></use>
+                                        </svg>
+                                    </a>
+
+                                    <span class="card-date">19.08.2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="blog-card card">
+                            <picture>
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" class="card-img-top" alt="image"
+                                     title="image">
+                            </picture>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Різниця між растровими і векторними зображеннями</h5>
+                                <p class="card-text">Розмір інформаційного стенду має бути не менше 1500 мм у довжину...</p>
+                                <div class="card-footer">
+                                    <a href="#" class="btn btn-link card-link">Читати
+                                        <svg>
+                                            <use xlink:href="./img/spritemap.svg#sprite-arrow-link"></use>
+                                        </svg>
+                                    </a>
+
+                                    <span class="card-date">19.08.2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="blog-card card">
+                            <picture>
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" class="card-img-top" alt="image"
+                                     title="image">
+                            </picture>
+                            <div class="card-body">
+                                <h5 class="card-title">Технічні вимоги до оформлення паспорту об'єкта</h5>
+                                <p class="card-text">Розмір інформаційного стенду має бути не менше 1500 мм у довжину...</p>
+                                <div class="card-footer">
+                                    <a href="#" class="btn btn-link card-link">Читати
+                                        <svg>
+                                            <use xlink:href="./img/spritemap.svg#sprite-arrow-link"></use>
+                                        </svg>
+                                    </a>
+
+                                    <span class="card-date">19.08.2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="blog-card card">
+                            <picture>
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" class="card-img-top" alt="image"
+                                     title="image">
+                            </picture>
+                            <div class="card-body">
+                                <h5 class="card-title">Різниця між растровими і векторними зображеннями</h5>
+                                <p class="card-text">Розмір інформаційного стенду має бути не менше 1500 мм у довжину...</p>
+                                <div class="card-footer">
+                                    <a href="#" class="btn btn-link card-link">Читати
+                                        <svg>
+                                            <use xlink:href="./img/spritemap.svg#sprite-arrow-link"></use>
+                                        </svg>
+                                    </a>
+
+                                    <span class="card-date">19.08.2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-video">
+            <div class="section__substrate">
+                <div class="container">
+                    <div class="container-heading">
+                        <p class="title">Наші відео</p>
+
+                        <a href="#" class="btn btn-secondary">Усі статті
+                            <svg>
+                                <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="video">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-partners">
+            <div class="container">
+                <p class="title">Серед наших клієнтів</p>
+            </div>
+        </section>
+
+        <section class="section section-seo">
+            <div class="container">
+                <p>Майстерня з виготовлення рекламної продукції</p>
+            </div>
+        </section>
+
+        <div class="container" hidden>
             <div class="row">
                 <div class="col-12">
                     <button type="button" class="btn btn-primary btn-lg">Primary large</button>
@@ -588,7 +830,9 @@
                 </div>
 
                 <button type="button" class="btn btn-primary">Primary large
-                    <svg><use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use></svg>
+                    <svg>
+                        <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                    </svg>
                 </button>
                 <button type="button" class="btn btn-primary">Primary small
                     <svg>
@@ -683,61 +927,61 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <section class="section">
-            <div class="container">
-                <div class="benefits">
-                    <div class="benefits__box">
-                        <div class="benefits__ico">
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-ok"></use>
-                            </svg>
-                        </div>
-
-                        <p class="benefits__title"></p>
-
-                        <p class="benefits__text"></p>
+            <div class="benefits">
+                <div class="benefits__box">
+                    <div class="benefits__ico">
+                        <svg>
+                            <use xlink:href="./img/spritemap.svg#sprite-ok"></use>
+                        </svg>
                     </div>
 
-                    <div class="benefits__box">
-                        <div class="benefits__ico">
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-ok"></use>
-                            </svg>
-                        </div>
+                    <p class="benefits__title">Title</p>
 
-                        <p class="benefits__title"></p>
+                    <p class="benefits__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae consequuntur cum dicta dolorem earum eos explicabo
+                        facilis fugit illo magnam, nam neque non nulla placeat possimus praesentium quam voluptatem?</p>
+                </div>
 
-                        <p class="benefits__text"></p>
+                <div class="benefits__box">
+                    <div class="benefits__ico">
+                        <svg>
+                            <use xlink:href="./img/spritemap.svg#sprite-ok"></use>
+                        </svg>
                     </div>
 
-                    <div class="benefits__box">
-                        <div class="benefits__ico">
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-ok"></use>
-                            </svg>
-                        </div>
+                    <p class="benefits__title">Title</p>
 
-                        <p class="benefits__title"></p>
+                    <p class="benefits__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae consequuntur cum dicta dolorem earum eos explicabo
+                        facilis fugit illo magnam, nam neque non nulla placeat possimus praesentium quam voluptatem?</p>
+                </div>
 
-                        <p class="benefits__text"></p>
+                <div class="benefits__box">
+                    <div class="benefits__ico">
+                        <svg>
+                            <use xlink:href="./img/spritemap.svg#sprite-ok"></use>
+                        </svg>
                     </div>
 
-                    <div class="benefits__box">
-                        <div class="benefits__ico">
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-ok"></use>
-                            </svg>
-                        </div>
+                    <p class="benefits__title">Title</p>
 
-                        <p class="benefits__title"></p>
+                    <p class="benefits__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae consequuntur cum dicta dolorem earum eos explicabo
+                        facilis fugit illo magnam, nam neque non nulla placeat possimus praesentium quam voluptatem?</p>
+                </div>
 
-                        <p class="benefits__text"></p>
+                <div class="benefits__box">
+                    <div class="benefits__ico">
+                        <svg>
+                            <use xlink:href="./img/spritemap.svg#sprite-ok"></use>
+                        </svg>
                     </div>
+
+                    <p class="benefits__title">Title</p>
+
+                    <p class="benefits__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae consequuntur cum dicta dolorem earum eos explicabo
+                        facilis fugit illo magnam, nam neque non nulla placeat possimus praesentium quam voluptatem?</p>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!--<div class="section">
             <div class="container">
@@ -804,9 +1048,13 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container bg-info">
-            <h3 class="m-0">Footer Title</h3>
+        <div class="section__substrate">
+            <div class="container">
+                <h3 class="m-0">Footer Title</h3>
+            </div>
         </div>
+
+        <p class="copyright text-center">Vizinform© 2000 - 2021 Майстерня з виготовлення рекламної продукції. Всі права захищені</p>
     </footer>
     <!-- FOOTER END -->
 </div>

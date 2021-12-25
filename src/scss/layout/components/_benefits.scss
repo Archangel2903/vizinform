@@ -1,7 +1,11 @@
+.section-benefits {
+  margin: 120px 0;
+}
+
 .benefits {
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-content: stretch;
   align-items: stretch;
 
@@ -11,6 +15,7 @@
     justify-content: flex-start;
     align-content: flex-start;
     align-items: flex-start;
+    max-width: 260px;
   }
 
   &__ico {
@@ -33,10 +38,14 @@
 
   &__title {
     margin: 0 0 20px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 27px;
   }
 
   &__text {
     margin: 0;
+    font-size: 16px;
     font-weight: 500;
     line-height: 27px;
   }

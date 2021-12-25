@@ -1,3 +1,11 @@
+.section-blog {
+  margin: 120px 0;
+
+  .title {
+    margin: 0;
+  }
+}
+
 .blog {
   &-card {
     &.card {
@@ -45,7 +53,18 @@
           }
         }
 
+        &-date {
+          color: #888888;
+          font-size: 14px;
+          line-height: 17px;
+        }
+
         &-footer {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-between;
+          align-content: center;
+          align-items: center;
           padding: 0;
           background: none;
           border: none;
