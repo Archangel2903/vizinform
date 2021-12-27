@@ -119,6 +119,66 @@
   }
 }
 
+.ui-tabs {
+  .ui-tabs {
+    &-nav {
+      display: inline-flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-content: center;
+      align-items: center;
+      padding: 10px;
+      margin: 0;
+      border: 2px solid $main-second-color;
+      border-radius: 999px;
+
+      &::before, &::after {
+        display: none;
+      }
+
+      li {
+        padding: 10px 15px !important;
+        margin: 0;
+        border: 2px solid transparent;
+        border-radius: 99px;
+        float: none;
+
+        &:not(:last-child) {
+          margin-right: 20px !important;
+        }
+
+        &.ui-tabs-active {
+          margin: inherit;
+          border-color: $main-first-color;
+
+          .ui-tabs-anchor {
+            color: $main-first-color;
+          }
+        }
+      }
+
+      .ui-tabs-anchor {
+        padding: 0;
+        float: none !important;
+        font-weight: 600;
+        line-height: 20px;
+      }
+    }
+
+    &-tab {
+      margin: 0;
+
+      &.ui-tabs-active {
+
+      }
+    }
+
+    &-panel {
+      padding: 0;
+    }
+  }
+}
+
 @media screen and (min-width: 320px) {}
 @include media-breakpoint-up(sm) {}
 @include media-breakpoint-up(md) {}

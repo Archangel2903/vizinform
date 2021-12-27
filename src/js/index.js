@@ -3,6 +3,7 @@ import 'intersection-observer';
 import $ from 'jquery';
 import 'jquery-ui';
 import 'jquery-ui/ui/effect';
+import 'jquery-ui/ui/widgets/tabs';
 import 'bootstrap';
 import 'popper.js';
 import Swiper from 'swiper/dist/js/swiper.min';
@@ -88,6 +89,7 @@ $(function () {
     })();
 
     (function () {
+        $('#tabs').tabs();
     })();
 
     // Lazy load observer
