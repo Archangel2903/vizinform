@@ -10,4 +10,42 @@
 .review {
   padding-top: 110px;
   padding-bottom: 110px;
+
+  &-slider {
+    overflow: visible;
+  }
+
+  &-card {
+    display: inline-flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: stretch;
+    max-width: 330px;
+    height: 420px;
+    padding: 30px;
+    background: #FFFFFF;
+    border-radius: 40px;
+
+    &__text {
+      margin-bottom: 46px;
+      line-height: 27px;
+    }
+
+    &__info {
+
+    }
+
+    &__author {
+      margin-bottom: 20px;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &__product {
+      margin: 0;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
 }

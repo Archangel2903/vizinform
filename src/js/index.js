@@ -59,7 +59,40 @@ $(function () {
 
     // Swiper slider
     (function () {
-        if ($('.swiper-container').length) {
+        if ($('.main-categories__slider').length) {
+            let categoriesSlider;
+            let categoriesSlide = document.querySelectorAll('.main-categories__slider .swiper-slide').length;
+
+            if (categoriesSlide > 6) {
+                categoriesSlider = new Swiper('.swiper-container', {
+                    observer: true,
+                    observeParents: true,
+                    // loop: true,
+                    // autoplay: true,
+                    spaceBetween: 30,
+                    slidesPerView: 'auto',
+                });
+            }
+        }
+
+        if ($('.review-slider').length) {
+            let reviewsSlider;
+            let reviewsSlide = document.querySelectorAll('.review-slider .swiper-slide').length;
+
+            if (reviewsSlide > 4) {
+                reviewsSlider = new Swiper('.review-slider', {
+                    observer: true,
+                    observeParents: true,
+                    loop: true,
+                    // autoplay: true,
+                    spaceBetween: 30,
+                    slidesPerView: 4,
+                    // centeredSlides: true,
+                });
+            }
+        }
+
+        if ($('.simple-slider').length) {
             let slider;
             let slide = document.querySelectorAll('.swiper-container .swiper-slide').length;
 
@@ -67,11 +100,11 @@ $(function () {
                 slider = new Swiper('.swiper-container', {
                     observer: true,
                     observeParents: true,
-                    loop: true,
-                    autoplay: true,
+                    // loop: true,
+                    // autoplay: true,
                     spaceBetween: 25,
                     slidesPerView: 1,
-                    navigation: {
+                    /*navigation: {
                         nextEl: '.swiper-button-next',
                         prevEl: '.swiper-button-prev'
                     },
@@ -79,15 +112,16 @@ $(function () {
                         el: '.swiper-pagination',
                         clickable: true
                     },
-                    /*scrollbar: {
+                    scrollbar: {
                         el: '.swiper-scrollbar',
-                    },*/
-                    dynamicBullets: true,
+                    },
+                    dynamicBullets: true,*/
                 });
             }
         }
     })();
 
+    // Tabs
     (function () {
         $('#tabs').tabs();
     })();

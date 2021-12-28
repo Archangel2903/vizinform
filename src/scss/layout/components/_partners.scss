@@ -1,3 +1,26 @@
 .section-partners {
-  margin: 120px 0;
+  margin: 120px 0 60px;
+}
+
+.partners {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+
+  &__pic {
+    flex: 0 0 25%;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 60px;
+
+    img {
+
+    }
+  }
 }

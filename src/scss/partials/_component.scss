@@ -30,7 +30,8 @@
   }
 
   &-sm {
-    padding: 5px;
+    height: 40px;
+    padding: 8px;
     border-radius: 8px;
   }
 
@@ -128,7 +129,7 @@
       align-content: center;
       align-items: center;
       padding: 10px;
-      margin: 0;
+      margin: 0 0 30px;
       border: 2px solid $main-second-color;
       border-radius: 999px;
 
@@ -138,7 +139,7 @@
 
       li {
         padding: 10px 15px !important;
-        margin: 0;
+        margin: 0 !important;
         border: 2px solid transparent;
         border-radius: 99px;
         float: none;
@@ -148,7 +149,6 @@
         }
 
         &.ui-tabs-active {
-          margin: inherit;
           border-color: $main-first-color;
 
           .ui-tabs-anchor {

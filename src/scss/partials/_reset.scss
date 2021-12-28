@@ -124,7 +124,7 @@ input {
     -moz-appearance: textfield;
 
     &:focus {
-      background: none;
+      //background: none;
 
       &::-webkit-input-placeholder {
         color: transparent;
@@ -185,7 +185,7 @@ textarea {
   //padding: 0 5px;
 
   &:focus {
-    background: none;
+    //background: none;
 
     &::-webkit-input-placeholder {
       color: transparent;
@@ -306,18 +306,18 @@ iframe {
 
 ::selection {
   text-shadow: none;
-  color: $text-color;
+  color: $light;
   background: $main-first-color;
 }
 
 ::-moz-selection {
   text-shadow: none;
-  color: $text-color;
+  color: $light;
   background: $main-first-color;
 }
 
 ::-ms-selection {
   text-shadow: none;
-  color: $text-color;
+  color: $light;
   background: $main-first-color;
 }

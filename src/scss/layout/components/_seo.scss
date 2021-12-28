@@ -1,3 +1,36 @@
 .section-seo {
   margin: 120px 0;
 }
+
+.seo-block {
+  h1 {
+    margin: 0 0 20px;
+    font-size: 29px;
+    font-weight: 700;
+    line-height: 35px;
+    white-space: pre-line;
+  }
+
+  h2 {
+    margin: 10px 0;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+
+  p {
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  ul {
+    padding-left: 24px;
+    margin: 10px 0;
+    list-style: disc;
+
+    li {
+      line-height: 28px;
+    }
+  }
+}

@@ -5,6 +5,46 @@ footer.footer {
   order: 3;
   -webkit-order: 3;
   position: relative;
+
+  .section__substrate {
+    max-width: 1800px;
+  }
+
+  .container {
+    padding: 110px 0;
+  }
 }
 
-.copyright {}
+.footer {
+  &-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+
+    &__box {
+      flex: 0 0 25%;
+    }
+  }
+
+  &-social {
+    margin-top: 48px;
+
+    &__text {
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .social {
+      max-width: 180px;
+    }
+  }
+}
+
+.copyright {
+  padding: 22px 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 17px;
+}
