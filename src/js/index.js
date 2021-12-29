@@ -57,6 +57,15 @@ $(function () {
         });
     })();
 
+    // Cart
+    (function () {
+        let cartButton = document.querySelector('.cart__ico');
+
+        cartButton.addEventListener('click', function () {
+            this.nextElementSibling.classList.toggle('opened');
+        });
+    })();
+
     // Swiper slider
     (function () {
         if ($('.main-categories__slider').length) {
