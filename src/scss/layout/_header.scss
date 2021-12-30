@@ -365,6 +365,7 @@ header.header {
     top: 100%;
     right: 100%;
     width: 600px;
+    padding: 0 20px 20px;
     background: white;
     border-radius: 0 0 40px 40px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
@@ -386,7 +387,7 @@ header.header {
       justify-content: flex-start;
       align-content: stretch;
       align-items: stretch;
-      padding: 0 20px 20px;
+      padding: 0;
       margin: 0;
 
       li {
@@ -394,6 +395,17 @@ header.header {
           border-bottom: 1px solid $light;
         }
       }
+    }
+
+    &-footer {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-content: center;
+      align-items: center;
+      padding: 20px;
+      background: #f5f9ff;
+      border-radius: 20px;
     }
   }
 
@@ -412,6 +424,7 @@ header.header {
       margin-right: 20px;
       background: none;
       border: none;
+      outline: none !important;
 
       svg {
         width: 18px;
@@ -445,7 +458,6 @@ header.header {
         width: 60px;
         height: 60px;
         border-radius: 15px;
-        border: 1px solid;
       }
     }
 
@@ -475,6 +487,10 @@ header.header {
     &-btn {
       position: absolute;
       top: 50%;
+      background: none;
+      border: none;
+      outline: 0 !important;
+      font-size: 28px;
       transform: translate(0, -50%);
 
       &_minus {
@@ -488,8 +504,20 @@ header.header {
 
     &-field {
       width: 100%;
+      padding: 8px 30px;
+      border: 2px solid #E0ECFF;
+      border-radius: 10px;
+      font-weight: 600;
+      line-height: 20px;
       text-align: center;
     }
+  }
+
+  &__summary {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 27px;
   }
 
   &:hover {

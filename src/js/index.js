@@ -35,11 +35,9 @@ $(function () {
 
                     if (sublistHeight > list.offsetHeight) {
                         listWrap.style.height = `${sublistHeight + 20}px`;
-                    }
-                    else if (sublistHeight < list.offsetHeight) {
+                    } else if (sublistHeight < list.offsetHeight) {
                         listWrap.style.height = `auto`;
-                    }
-                    else {
+                    } else {
                         listWrap.style.height = `auto`;
                     }
                 }
@@ -60,20 +58,46 @@ $(function () {
     // Cart
     (function () {
         let cartButton = document.querySelector('.cart__ico');
-
         cartButton.addEventListener('click', function () {
             this.nextElementSibling.classList.toggle('opened');
         });
+
+        let counterBtn = document.querySelectorAll('.cart__counter-btn');
+        counterBtn.forEach(function (el, i) {
+            // el.addEventListener('click', counter);
+            el.addEventListener('mousedown', counter);
+        });
+
+        let removeItemBtn = document.querySelectorAll('.cart__item-remove');
+        removeItemBtn.forEach(function (el, i) {
+            el.addEventListener('click', function () {
+                this.parentElement.remove();
+            })
+        });
+
+        function counter() {
+            let field = this.parentElement.querySelector('.cart__counter-field');
+            let currentVal = this.parentElement.querySelector('.cart__counter-field').value;
+
+            if (this.classList.contains('cart__counter-btn_minus')) {
+                if (currentVal > 1) {
+                    this.nextElementSibling.value = +currentVal - 1;
+                }
+            } else if (this.classList.contains('cart__counter-btn_plus')) {
+                if (currentVal < Number(field.getAttribute('max'))) {
+                    this.previousElementSibling.value = +currentVal + 1;
+                }
+            }
+        }
     })();
 
     // Swiper slider
     (function () {
         if ($('.main-categories__slider').length) {
-            let categoriesSlider;
             let categoriesSlide = document.querySelectorAll('.main-categories__slider .swiper-slide').length;
 
             if (categoriesSlide > 6) {
-                categoriesSlider = new Swiper('.swiper-container', {
+                let categoriesSlider = new Swiper('.swiper-container', {
                     observer: true,
                     observeParents: true,
                     // loop: true,
@@ -85,11 +109,10 @@ $(function () {
         }
 
         if ($('.review-slider').length) {
-            let reviewsSlider;
             let reviewsSlide = document.querySelectorAll('.review-slider .swiper-slide').length;
 
             if (reviewsSlide > 4) {
-                reviewsSlider = new Swiper('.review-slider', {
+                let reviewsSlider = new Swiper('.review-slider', {
                     observer: true,
                     observeParents: true,
                     loop: true,
@@ -101,17 +124,63 @@ $(function () {
             }
         }
 
+        if ($('.video-slider').length) {
+            let videoSlide = document.querySelectorAll('.video-slider .swiper-slide').length;
+
+            if (videoSlide > 1) {
+                let videoSlider = new Swiper('.video-slider', {
+                    observer: true,
+                    observeParents: true,
+                    autoHeight: true,
+                    width: 1058,
+                    height: 585,
+                    loop: false,
+                    speed: 1600,
+                    allowTouchMove: false,
+                    pagination: {
+                        el: $('.video-slider').prev('.swiper-pagination'),
+                        renderBullet: function (index, className) {
+                            let title = document.querySelectorAll('.video-slider .swiper-slide')[index].getAttribute('data-title');
+                            return '<span class="' + className + '">' + title + '</span>';
+                        },
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        768: {
+                            direction: 'horizontal',
+                        }
+                    }
+                });
+
+                /*videoSlider = new Swiper('.video-slider', {
+                    direction: 'vertical',
+                    // observer: true,
+                    // observeParents: true,
+                    autoplay: true,
+                    autoHeight: true,
+                    height: 585,
+                    // followFinger: false,
+                    // allowTouchMove: false,
+                    effect: 'fade',
+                    setWrapperSize: true,
+                    pagination: {
+                        el: $('.video-slider').prev('.swiper-pagination'),
+                        clickable: true,
+                    },
+                });*/
+            }
+        }
+
         if ($('.simple-slider').length) {
-            let slider;
             let slide = document.querySelectorAll('.swiper-container .swiper-slide').length;
 
             if (slide > 1) {
-                slider = new Swiper('.swiper-container', {
+                let slider = new Swiper('.swiper-container', {
                     observer: true,
                     observeParents: true,
                     // loop: true,
                     // autoplay: true,
-                    spaceBetween: 25,
+                    // spaceBetween: 25,
                     slidesPerView: 1,
                     /*navigation: {
                         nextEl: '.swiper-button-next',
@@ -123,8 +192,8 @@ $(function () {
                     },
                     scrollbar: {
                         el: '.swiper-scrollbar',
-                    },
-                    dynamicBullets: true,*/
+                        dynamicBullets: true,
+                    },*/
                 });
             }
         }

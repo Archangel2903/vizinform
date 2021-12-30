@@ -123,6 +123,11 @@ input {
     -webkit-appearance: textfield;
     -moz-appearance: textfield;
 
+    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
     &:focus {
       //background: none;
 
