@@ -13,8 +13,9 @@
     align-content: flex-start;
     align-items: flex-start;
     width: 31.2%;
+
     &:not(:last-child) {
-      margin-right:30px;
+      margin-right: 30px;
     }
   }
 }

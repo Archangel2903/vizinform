@@ -129,14 +129,18 @@ $(function () {
 
             if (videoSlide > 1) {
                 let videoSlider = new Swiper('.video-slider', {
+                    allowTouchMove: false,
+                    followFinger: false,
+                    direction: 'vertical',
                     observer: true,
                     observeParents: true,
                     autoHeight: true,
+                    effect: 'fade',
+                    enabled: false,
                     width: 1058,
                     height: 585,
                     loop: false,
-                    speed: 1600,
-                    allowTouchMove: false,
+                    // speed: 1600,
                     pagination: {
                         el: $('.video-slider').prev('.swiper-pagination'),
                         renderBullet: function (index, className) {
@@ -151,23 +155,6 @@ $(function () {
                         }
                     }
                 });
-
-                /*videoSlider = new Swiper('.video-slider', {
-                    direction: 'vertical',
-                    // observer: true,
-                    // observeParents: true,
-                    autoplay: true,
-                    autoHeight: true,
-                    height: 585,
-                    // followFinger: false,
-                    // allowTouchMove: false,
-                    effect: 'fade',
-                    setWrapperSize: true,
-                    pagination: {
-                        el: $('.video-slider').prev('.swiper-pagination'),
-                        clickable: true,
-                    },
-                });*/
             }
         }
 
@@ -178,11 +165,11 @@ $(function () {
                 let slider = new Swiper('.swiper-container', {
                     observer: true,
                     observeParents: true,
-                    // loop: true,
-                    // autoplay: true,
-                    // spaceBetween: 25,
+                    loop: true,
+                    autoplay: true,
+                    spaceBetween: 25,
                     slidesPerView: 1,
-                    /*navigation: {
+                    navigation: {
                         nextEl: '.swiper-button-next',
                         prevEl: '.swiper-button-prev'
                     },
@@ -193,7 +180,7 @@ $(function () {
                     scrollbar: {
                         el: '.swiper-scrollbar',
                         dynamicBullets: true,
-                    },*/
+                    },
                 });
             }
         }
