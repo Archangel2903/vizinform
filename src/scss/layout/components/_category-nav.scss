@@ -1,0 +1,43 @@
+.section-category-nav {
+  margin-bottom: 60px;
+}
+
+.category-nav {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+
+  &__box {
+    display: inline-flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    width: 31.2%;
+    padding: 30px;
+    margin-bottom: 60px;
+    border-radius: 30px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.05);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    .btn {
+      width: 100%;
+      max-width: 170px;
+      height: 40px;
+    }
+  }
+
+  &__name {
+    font-size: 22px;
+    color: #1B1B1B;
+    font-weight: 600;
+    line-height: 22px;
+    margin-bottom: 52px;
+  }
+}
