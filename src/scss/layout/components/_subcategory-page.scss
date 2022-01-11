@@ -1,0 +1,25 @@
+.section-category-products {
+  .btn-more {
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.product-cards {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 30px;
+
+
+  .product-card {
+    margin-bottom: 30px;
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+}
