@@ -1,0 +1,50 @@
+.section-article {
+  margin-bottom: 120px;
+  .main-title {
+    max-width: 971px;
+    margin-bottom: 30px;
+  }
+}
+
+.article {
+  max-width: 810px;
+
+  &-date {
+    margin-bottom: 10px;
+    color: #888888;
+  }
+
+  &__content {
+    line-height: 27px;
+  }
+
+  &__title {
+    margin: 30px 0;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27px;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 20px;
+  }
+
+  &__number-list {
+    list-style: inside decimal;
+    padding: 0;
+
+    li {
+      margin: 20px 0;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding-left: 20px;
+
+    li {
+      margin: 20px 0;
+    }
+  }
+}
