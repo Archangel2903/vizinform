@@ -3,10 +3,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="format-detection" content="telephone=no">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
     <title>Главная</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="style.6bf1a7365ab0508907d9.min.css" rel="stylesheet"></head>
+</head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
@@ -309,8 +308,7 @@
                                         <!-- level 3 --><span class="catalog__dropdown-toggle"></span>
                                         <ul class="catalog__dropdown">
                                             <li><a href="#">Шильди металеві (повнокольоровий друк на алюмінії)</a></li>
-                                            <li><a href="#">Гравірування на двошаровому гравірувальному пластиці</a>
-                                            </li>
+                                            <li><a href="#">Гравірування на двошаровому гравірувальному пластиці</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -512,9 +510,7 @@
 
                                 <div class="cart__item-info">
                                     <picture class="cart__item-pic">
-                                        <img src="img/default.svg"
-                                             data-src="img/placeholder-img.jpg" alt="image"
-                                             title="image">
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="image" title="image">
                                     </picture>
 
                                     <p class="cart__item-name"><a href="#">Бейдж Вбб1</a></p>
@@ -522,11 +518,9 @@
 
                                 <form action="" class="cart__counter">
                                     <label>
-                                        <button type="button" class="cart__counter-btn cart__counter-btn_minus">-
-                                        </button>
+                                        <button type="button" class="cart__counter-btn cart__counter-btn_minus">-</button>
                                         <input type="number" class="cart__counter-field" value="1" min="1" max="9999">
-                                        <button type="button" class="cart__counter-btn cart__counter-btn_plus">+
-                                        </button>
+                                        <button type="button" class="cart__counter-btn cart__counter-btn_plus">+</button>
                                     </label>
                                 </form>
 
@@ -542,9 +536,7 @@
 
                                 <div class="cart__item-info">
                                     <picture class="cart__item-pic">
-                                        <img src="img/default.svg"
-                                             data-src="img/placeholder-img.jpg" alt="image"
-                                             title="image">
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="image" title="image">
                                     </picture>
 
                                     <p class="cart__item-name"><a href="#">Магніт, Код В1</a></p>
@@ -552,11 +544,9 @@
 
                                 <form action="" class="cart__counter">
                                     <label>
-                                        <button type="button" class="cart__counter-btn cart__counter-btn_minus">-
-                                        </button>
+                                        <button type="button" class="cart__counter-btn cart__counter-btn_minus">-</button>
                                         <input type="number" class="cart__counter-field" value="1" min="1" max="9999">
-                                        <button type="button" class="cart__counter-btn cart__counter-btn_plus">+
-                                        </button>
+                                        <button type="button" class="cart__counter-btn cart__counter-btn_plus">+</button>
                                     </label>
                                 </form>
 
@@ -594,447 +584,77 @@
                     </li>
 
                     <li class="breadcrumbs__item">
-                        <span class="breadcrumbs__link">Зовнішня реклама</span>
+                        <span class="breadcrumbs__link">Про компанію</span>
                     </li>
                 </ul>
             </div>
         </section>
 
-        <section class="section section-category-nav">
-            <div class="container">
-                <p class="main-title">Зовнішня реклама</p>
-
-                <div class="category-nav">
-                    <div class="category-nav__box">
-                        <p class="category-nav__name">Виготовлення вивісок</p>
-                        <button class="btn btn-secondary">
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="category-nav__box">
-                        <p class="category-nav__name">Виготовлення логотипів</p>
-                        <button class="btn btn-secondary">
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="category-nav__box">
-                        <p class="category-nav__name">Щити, штендери</p>
-                        <button class="btn btn-secondary">
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="category-nav__box">
-                        <p class="category-nav__name">Таблички, номерки</p>
-                        <button class="btn btn-secondary">
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="category-nav__box">
-                        <p class="category-nav__name">Брелоки на замовлення</p>
-                        <button class="btn btn-secondary">
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
-                            </svg>
-                        </button>
+        <section class="section section-home">
+            <div class="section__substrate">
+                <div class="container">
+                    <div class="home">
+                        <p class="main-title">Компанія з виготовлення рекламної продукції</p>
+                        <p class="home__text">«Візінформ» - компанія, яка спеціалізується на виготовленні вивісок, логотипів, інформаційних щитів. На цьому ринку ми працюємо з серпня 2000 року і, крім зовнішньої реклами, виготовляємо будь-яку рекламну та сувенірну продукцію, включаючи таблички, бейджи, брелоки, нагородну атрибутику та інші вироби. Наша компанія постійно розвивається, освоюючи нові види продукції і регулярно бере участь в спеціалізованих виставках.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section section-seo">
-            <div class="container seo-block">
-                <div class="row">
-                    <div class="col-12">
-                        <h1>Зовнішня реклама в Києві</h1>
+        <section class="section section-video">
+            <div class="section__substrate">
+                <div class="container">
+                    <div class="container-heading">
+                        <p class="title">Наші відео</p>
+
+                        <a href="#" class="btn btn-secondary">Усі статті
+                            <svg>
+                                <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                            </svg>
+                        </a>
                     </div>
 
-                    <div class="col-md-6">
-                        <p>Зовнішня реклама - ефективний спосіб залучення нової аудиторії та утримання постійних
-                            клієнтів. Такий вид реклами допоможе:</p>
-                        <ul>
-                            <li>вивести на ринок новий бренд або товар;
-                            </li>
-                            <li>познайомити клієнтів з новинками, акціями, спеціальними пропозиціями;
-                            </li>
-                            <li>підтримати лояльність до існуючої торгової марки;
-                            </li>
-                            <li>збільшити продажі.
-                            </li>
-                        </ul>
-                        <p>Переваги зовнішньої реклами очевидні, а результати не змусять себе чекати. Головне -
-                            придумати оригінальний дизайн, розмістивши рекламу в правильному місці з великим потоком
-                            потенційних клієнтів.
-                        </p>
-                        <p>Хороші вивіски, щити, штендери помітні здалеку і привертають увагу потенційних клієнтів, у
-                            яких виникає бажання зайти до вас, навіть якщо вони цього не планували. Непродумана реклама,
-                            навпаки, може викликати огиду або негативні емоції, тому важливо довірити виготовлення
-                            зовнішньої реклами досвідченим професіоналам компанії «Визинформ».</p>
+                    <div class="video">
+                        <div class="video-slider-wrapper">
+                            <div class="swiper-pagination"></div>
+                            <div class="video-slider swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" data-title='Презентація УФ принтера'>
+                                        <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
 
+                                    <div class="swiper-slide" data-title='Порівняння 2-х фанерних коробок'>
+                                        <iframe src="https://www.youtube.com/embed/rNdkbXe_1CA" title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
 
-                        <h2>Виготовлення зовнішньої реклами: види і її особливості</h2>
+                                    <div class="swiper-slide" data-title='Світлова вивіска для агенції "AP news"'>
+                                        <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
 
-                        <p>Виготовлення зовнішньої реклами є одним з напрямків діяльності компанії «Візінформ».
-                            Особливою популярністю серед клієнтів користуються такі види зовнішньої реклами:</p>
-                        <p>вивіски: без такого виду зовнішньої реклами не може обійтися жодне підприємство, будь це
-                            звичайний офіс, заклад громадського харчування, салон краси; вивіски відрізняються
-                            різноманітністю форм, видів, матеріалів і способами виготовлення, вони можуть нести як
-                            рекламний, так і інформаційний характер. Наші фахівці готові швидко і якісно виготовити:</p>
-                        <ul>
-                            <li>скляні вивіски;
-                            </li>
-                            <li>фасадні і рекламні вивіски;
-                            </li>
-                            <li>акрілайти;
-                            </li>
-                            <li>металеві вивіски;
-                            </li>
-                            <li>вивіски з об'ємними літерами;
-                            </li>
-                            <li>вивіски на банерній тканині;
-                            </li>
-                            <li>фасадні таблички - такий вид зовнішньої реклами дозволяє відвідувачеві швидко знайти
-                                вашу компанію або кабінет, що особливо актуально в офісних центрах.
-                            </li>
-                        </ul>
-                        <p>І така реклама може бути виготовлена з різних матеріалів. У «Візінформ» можна замовити:</p>
-                        <ul>
-                            <li>скляні таблички;
-                            </li>
-                            <li>таблички з оргскла, пластику або акрилу;
-                            </li>
-                            <li>металеві таблички;
-                            </li>
-                            <li>таблички в профілі, багет або рамці;
-                            </li>
-                            <li>світлові коробки або лайтбокси: перевагою такого виду реклами - її помітно не тільки
-                                вдень, але і у вечірній час доби.
-                            </li>
-                        </ul>
-                    </div>
+                                    <div class="swiper-slide" data-title="Візитки з металу з кольоровим друком">
+                                        <iframe src="https://www.youtube.com/embed/rNdkbXe_1CA" title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
 
-                    <div class="col-md-6">
-                        <p> Рекламний текст або малюнок наноситься за допомогою друку або аплікації. Корпус
-                            виготовляється з акрилу, а на задній стінці розміщується підсвічування. У «Візінформ» можна
-                            замовити лайтбокс будь-якого розміру, форми і складності, з односторонньою або двосторонньою
-                            картинкою;</p>
+                                    <div class="swiper-slide" data-title="Акриловый логотип - credence">
+                                        <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
 
-                        <ul>
-                            <li>банери: така зовнішня реклама представляє собою великий плакат, який, як правило,
-                                розташовується на стіні будівлі на рівні очей або на більшій висоті. Компанія
-                                «Візінформ» пропонує банери різних форматів. Інформація наноситься на банерну тканину за
-                                допомогою повнокольорового друку;
-                            </li>
-                            <li>рекламні щити і штендери: такий вид реклами відрізняється мобільністю і доступною ціною,
-                                а конкретно штендери знадобляться там, де складно використовувати інші види реклами.
-                                Розрізняються різні конструкції, форми і розміри щитів. Каркас може бути виготовлений з
-                                алюмінієвого або металевого профілю. Інформаційне поле - з пластика або з композиту з
-                                нанесенням зображення за допомогою кольорового фотодруку.
-                            </li>
-                        </ul>
-                        <h2>«Візінформ»: якісне виготовлення зовнішньої реклами за доступними цінами</h2>
-                        <p>Щоб створити ефективну зовнішню рекламу, потрібно володіти певними знаннями і вміннями.
-                            Пам'ятайте, що картинка повинна гармоніювати з текстовою частиною, при цьому текст повинен
-                            бути інформативним і коротким. Якщо ви не впевнені в своїх силах - краще виготовлення
-                            зовнішньої реклами в Києві довірити досвідченим майстрам «Візінформ».</p>
-                        <h2>Нашими головними перевагами в порівнянні з конкурентами є:</h2>
-                        <ul>
-                            <li>послуги «під ключ»: виготовлення зовнішньої реклами - тривалий і копіткий процес, який
-                                складається з декілька етапів (дизайн, виробництво і монтаж), і ми готові все взяти на
-                                себе!
-                            </li>
-                            <li>кваліфіковані співробітники з великим досвідом роботи;
-                            </li>
-                            <li>прийнятні ціни на зовнішню рекламу: ми пропонуємо доступні і вигідні ціни (вартість
-                                зовнішньої реклами залежить від її виду, розміру та використовуванних матеріалів);
-                            </li>
-                            <li>використання власного обладнання: наша команда майстрів працює на сучасному обладнанні,
-                                тому всі замовлення виконуються швидко і якісно в обумовлені терміни;
-                            </li>
-                            <li>наша клієнтська база постійно збільшується і нараховує тисячі задоволених клієнтів;
-                            </li>
-                            <li>багаторічний досвід роботи - майстерня з виготовлення логотипів, вивісок, інформаційних
-                                щитів «Визинформ» була організована в 2000 році, і за цей час ми успішно реалізували
-                                безліч проектів
-                            </li>
-                        </ul>
-                        <p>Замовити виготовлення зовнішньої реклами в київській майстерні «Візінформ» дуже просто:
-                            достатньо оформити заявку онлайн - написати на електронну пошту або зв'язатися з нашими
-                            менеджерами за телефонами: 067-440-16-90 або 044 -592-36-64. Дзвоніть прямо зараз!
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div hidden>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <button type="button" class="btn btn-primary btn-lg">Primary large</button>
-                        <button type="button" class="btn btn-primary btn-sm">Primary small</button>
-                        <button type="button" class="btn btn-primary">Primary</button>
-                        <button type="button" class="btn btn-secondary">Secondary</button>
-                        <button type="button" class="btn btn-success">Success</button>
-                        <button type="button" class="btn btn-danger">Danger</button>
-                        <button type="button" class="btn btn-warning">Warning</button>
-                        <button type="button" class="btn btn-info">Info</button>
-                        <button type="button" class="btn btn-light">Light</button>
-                        <button type="button" class="btn btn-dark">Dark</button>
-
-                        <button type="button" class="btn btn-link">Link</button>
-                    </div>
-
-                    <button type="button" class="btn btn-primary">Primary large
-                        <svg>
-                            <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
-                        </svg>
-                    </button>
-                    <button type="button" class="btn btn-primary">Primary small
-                        <svg>
-                            <use xlink:href="./img/spritemap.svg#sprite-arrow-link"></use>
-                        </svg>
-                    </button>
-                    <button type="button" class="btn btn-primary">Primary small
-                        <svg>
-                            <use xlink:href="./img/spritemap.svg#sprite-brush"></use>
-                        </svg>
-                    </button>
-
-                    <div class="col-12">
-                        <button type="button" class="btn btn-outline-primary">Primary</button>
-                        <button type="button" class="btn btn-outline-secondary">Secondary</button>
-                        <button type="button" class="btn btn-outline-success">Success</button>
-                        <button type="button" class="btn btn-outline-danger">Danger</button>
-                        <button type="button" class="btn btn-outline-warning">Warning</button>
-                        <button type="button" class="btn btn-outline-info">Info</button>
-                        <button type="button" class="btn btn-outline-light">Light</button>
-                        <button type="button" class="btn btn-outline-dark">Dark</button>
-                    </div>
-
-                    <div class="col-12">
-                        <a href="#" class="btn btn-primary btn-lg">Primary large</a>
-                        <a href="#" class="btn btn-primary btn-sm">Primary small</a>
-                        <a href="#" class="btn btn-primary">Primary</a>
-                        <a href="#" class="btn btn-secondary">Secondary</a>
-                        <a href="#" class="btn btn-success">Success</a>
-                        <a href="#" class="btn btn-danger">Danger</a>
-                        <a href="#" class="btn btn-warning">Warning</a>
-                        <a href="#" class="btn btn-info">Info</a>
-                        <a href="#" class="btn btn-light">Light</a>
-                        <a href="#" class="btn btn-dark">Dark</a>
-
-                        <a href="#" class="btn btn-link">Link</a>
-                    </div>
-
-                    <div class="col-12"></div>
-                </div>
-
-                <div class="row">
-                    <div class="col-4">
-                        <div class="blog-card card">
-                            <picture>
-                                <img src="img/default.svg"
-                                     data-src="img/placeholder-img.jpg" class="card-img-top"
-                                     alt="image"
-                                     title="image">
-                            </picture>
-                            <div class="card-body">
-                                <h5 class="card-title">Заголовок карточки</h5>
-                                <p class="card-text">Несколько быстрых примеров текста для построения на основе
-                                    заголовка карточек и составляющих основную часть содержимого
-                                    карточки.</p>
-
-                                <div class="card-footer">
-                                    <a href="#" class="btn btn-link card-link">Читати
-                                        <svg>
-                                            <use xlink:href="./img/spritemap.svg#sprite-arrow-link"></use>
-                                        </svg>
-                                    </a>
+                                    <div class="swiper-slide" data-title="Наклейки із самоклеючої плівки">
+                                        <iframe src="https://www.youtube.com/embed/rNdkbXe_1CA" title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-4">
-                        <div class="blog-card card">
-                            <picture>
-                                <img src="img/default.svg"
-                                     data-src="img/placeholder-img.jpg" class="card-img-top"
-                                     alt="image"
-                                     title="image">
-                            </picture>
-                            <div class="card-body">
-                                <h5 class="card-title">Заголовок карточки</h5>
-                                <p class="card-text">Несколько быстрых примеров текста для построения на основе
-                                    заголовка карточек и составляющих основную часть содержимого
-                                    карточки.</p>
-                                <a href="#" class="btn btn-primary">Идти куда-нибудь</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-4">
-                        <div class="blog-card card">
-                            <picture>
-                                <img src="img/default.svg"
-                                     data-src="img/placeholder-img.jpg" class="card-img-top"
-                                     alt="image"
-                                     title="image">
-                            </picture>
-                            <div class="card-body">
-                                <h5 class="card-title">Заголовок карточки</h5>
-                                <p class="card-text">Несколько быстрых примеров текста для построения на основе
-                                    заголовка карточек и составляющих основную часть содержимого
-                                    карточки.</p>
-                                <a href="#" class="btn btn-primary">Идти куда-нибудь</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="benefits">
-                    <div class="benefits__box">
-                        <div class="benefits__ico">
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-ok"></use>
-                            </svg>
-                        </div>
-
-                        <p class="benefits__title">Title</p>
-
-                        <p class="benefits__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae
-                            consequuntur cum dicta dolorem earum eos explicabo
-                            facilis fugit illo magnam, nam neque non nulla placeat possimus praesentium quam
-                            voluptatem?</p>
-                    </div>
-
-                    <div class="benefits__box">
-                        <div class="benefits__ico">
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-ok"></use>
-                            </svg>
-                        </div>
-
-                        <p class="benefits__title">Title</p>
-
-                        <p class="benefits__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae
-                            consequuntur cum dicta dolorem earum eos explicabo
-                            facilis fugit illo magnam, nam neque non nulla placeat possimus praesentium quam
-                            voluptatem?</p>
-                    </div>
-
-                    <div class="benefits__box">
-                        <div class="benefits__ico">
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-ok"></use>
-                            </svg>
-                        </div>
-
-                        <p class="benefits__title">Title</p>
-
-                        <p class="benefits__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae
-                            consequuntur cum dicta dolorem earum eos explicabo
-                            facilis fugit illo magnam, nam neque non nulla placeat possimus praesentium quam
-                            voluptatem?</p>
-                    </div>
-
-                    <div class="benefits__box">
-                        <div class="benefits__ico">
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-ok"></use>
-                            </svg>
-                        </div>
-
-                        <p class="benefits__title">Title</p>
-
-                        <p class="benefits__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae
-                            consequuntur cum dicta dolorem earum eos explicabo
-                            facilis fugit illo magnam, nam neque non nulla placeat possimus praesentium quam
-                            voluptatem?</p>
-                    </div>
                 </div>
             </div>
-
-            <div class="section">
-                <div class="container">
-                    <h2>Section Slider</h2>
-
-                    <div class="main-slider swiper-container">
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide">
-                                <picture>
-                                    <img src="img/default.svg"
-                                         data-src="img/placeholder-img.jpg" alt="example"
-                                         title="example">
-                                </picture>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <picture>
-                                    <img src="img/default.svg"
-                                         data-src="img/placeholder-img.jpg" alt="example"
-                                         title="example">
-                                </picture>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <picture>
-                                    <img src="img/default.svg"
-                                         data-src="img/placeholder-img.jpg" alt="example"
-                                         title="example">
-                                </picture>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <picture>
-                                    <img src="img/default.svg"
-                                         data-src="img/placeholder-img.jpg" alt="example"
-                                         title="example">
-                                </picture>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <picture>
-                                    <img src="img/default.svg"
-                                         data-src="img/placeholder-img.jpg" alt="example"
-                                         title="example">
-                                </picture>
-                            </div>
-                        </div>
-
-                        <div class="swiper-pagination"></div>
-
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-
-                        <!--<div class="swiper-scrollbar"></div>-->
-                    </div>
-                </div>
-            </div>
-
-            <div class="section">
-                <div class="container">
-                    <h2>Section Pictures</h2>
-                    <picture>
-                        <img src="img/default.svg"
-                             data-src="img/placeholder-img.jpg" alt="loader" title="loader">
-                    </picture>
-
-                    <svg>
-                        <use xlink:href="img/spritemap.svg#sprite-ok"></use>
-                    </svg>
-                </div>
-            </div>
-        </div>
+        </section>
     </main>
     <!-- CONTENT END -->
 
@@ -1119,8 +739,7 @@
                         <p class="footer-content__title">Наші контакти</p>
 
                         <div class="footer-content__contacts">
-                            <p class="footer-content__contacts-text">м. Київ, вул. Кирилівська, 152а, (територія заводу
-                                "Пожтехніка")</p>
+                            <p class="footer-content__contacts-text">м. Київ, вул. Кирилівська, 152а, (територія заводу "Пожтехніка")</p>
 
                             <ul class="footer-content__contacts-phones">
                                 <li><a href="#">097-785-18-18</a></li>
@@ -1143,15 +762,14 @@
             </div>
         </div>
 
-        <p class="copyright text-center">Vizinform© 2000 - 2021 Майстерня з виготовлення рекламної продукції. Всі права
-            захищені</p>
+        <p class="copyright text-center">Vizinform© 2000 - 2021 Майстерня з виготовлення рекламної продукції. Всі права захищені</p>
     </footer>
     <!-- FOOTER END -->
 </div>
 
 <div class="icon-load">
-    <picture><img src="img/logo-ico.svg" alt="pre-loader"></picture>
+    <picture><img src="<%= require('./img/logo-ico.svg') %>" alt="pre-loader"></picture>
 </div>
 <!-- BODY END   -->
-<script type="text/javascript" src="bundle.6bf1a7365ab0508907d9.min.js"></script></body>
+</body>
 </html>
