@@ -1,0 +1,27 @@
+.section-faq {
+  .subtitle {
+    max-width: 538px;
+  }
+
+  .faq__box {
+    weight: 690px;
+    border: 1px solid #E0ECFF;
+    border-radius: 20px;
+    margin-bottom: 30px;
+
+    &-title {
+      font-weight: 600;
+      font-size: 22px;
+      margin-bottom: 0;
+    }
+  }
+
+  .faq__box-header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+}
