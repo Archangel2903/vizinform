@@ -590,65 +590,338 @@
                 <ul class="breadcrumbs">
                     <li class="breadcrumbs__item">
                         <a href="#" class="breadcrumbs__link">Головна</a>
-                        <svg><use xlink:href="./img/spritemap.svg#sprite-bread-logo"></use></svg>
+                        <svg>
+                            <use xlink:href="./img/spritemap.svg#sprite-bread-logo"></use>
+                        </svg>
                     </li>
-
                     <li class="breadcrumbs__item">
-                        <span class="breadcrumbs__link">Зовнішня реклама</span>
+                        <a href="#" class="breadcrumbs__link">Зовнішня реклама</a>
+                        <svg>
+                            <use xlink:href="./img/spritemap.svg#sprite-bread-logo"></use>
+                        </svg>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="#" class="breadcrumbs__link">Виготовлення вивісок</a>
+                        <svg>
+                            <use xlink:href="./img/spritemap.svg#sprite-bread-logo"></use>
+                        </svg>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <span class="breadcrumbs__link">Вивіски скляні</span>
                     </li>
                 </ul>
             </div>
         </section>
 
-        <section class="section section-category-nav">
+        <section class="section section-category-products">
             <div class="container">
-                <p class="main-title">Зовнішня реклама</p>
+                <p class="main-title">Вивіски фасадні (приклади)</p>
 
-                <div class="category-nav">
-                    <div class="category-nav__box">
-                        <p class="category-nav__name">Виготовлення вивісок</p>
-                        <button class="btn btn-secondary">
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
-                            </svg>
-                        </button>
-                    </div>
+                <div class="product-cards">
+                    <div class="product-card">
+                        <div class="product-card__info">
+                            <picture class="product-card__pic">
+                                <img src="<%= require('./img/default.svg') %>"
+                                     data-src="<%= require('./img/prod-badge01.png') %>" alt="image"
+                                     title="image">
+                            </picture>
 
-                    <div class="category-nav__box">
-                        <p class="category-nav__name">Виготовлення логотипів</p>
-                        <button class="btn btn-secondary">
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
-                            </svg>
-                        </button>
-                    </div>
+                            <p class="product-card__name">Бейдж "D&P perfumum"</p>
+                        </div>
 
-                    <div class="category-nav__box">
-                        <p class="category-nav__name">Щити, штендери</p>
-                        <button class="btn btn-secondary">
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
-                            </svg>
-                        </button>
+                        <div class="product-card__actions">
+                            <button class="product-card__btn-wish btn btn-sm btn-light">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-heart"></use>
+                                </svg>
+                            </button>
+                            <a href="#" class="product-card__btn-link btn btn-sm btn-secondary">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
+                    <div class="product-card">
+                        <div class="product-card__info">
+                            <picture class="product-card__pic">
+                                <img src="<%= require('./img/default.svg') %>"
+                                     data-src="<%= require('./img/prod-badge01.png') %>" alt="image"
+                                     title="image">
+                            </picture>
 
-                    <div class="category-nav__box">
-                        <p class="category-nav__name">Таблички, номерки</p>
-                        <button class="btn btn-secondary">
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
-                            </svg>
-                        </button>
-                    </div>
+                            <p class="product-card__name">Бейдж "D&P perfumum"</p>
+                        </div>
 
-                    <div class="category-nav__box">
-                        <p class="category-nav__name">Брелоки на замовлення</p>
-                        <button class="btn btn-secondary">
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
-                            </svg>
-                        </button>
+                        <div class="product-card__actions">
+                            <button class="product-card__btn-wish btn btn-sm btn-light">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-heart"></use>
+                                </svg>
+                            </button>
+                            <a href="#" class="product-card__btn-link btn btn-sm btn-secondary">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
+                    <div class="product-card">
+                        <div class="product-card__info">
+                            <picture class="product-card__pic">
+                                <img src="<%= require('./img/default.svg') %>"
+                                     data-src="<%= require('./img/prod-badge01.png') %>" alt="image"
+                                     title="image">
+                            </picture>
+
+                            <p class="product-card__name">Бейдж "D&P perfumum"</p>
+                        </div>
+
+                        <div class="product-card__actions">
+                            <button class="product-card__btn-wish btn btn-sm btn-light">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-heart"></use>
+                                </svg>
+                            </button>
+                            <a href="#" class="product-card__btn-link btn btn-sm btn-secondary">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card__info">
+                            <picture class="product-card__pic">
+                                <img src="<%= require('./img/default.svg') %>"
+                                     data-src="<%= require('./img/prod-badge01.png') %>" alt="image"
+                                     title="image">
+                            </picture>
+
+                            <p class="product-card__name">Бейдж "D&P perfumum"</p>
+                        </div>
+
+                        <div class="product-card__actions">
+                            <button class="product-card__btn-wish btn btn-sm btn-light">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-heart"></use>
+                                </svg>
+                            </button>
+                            <a href="#" class="product-card__btn-link btn btn-sm btn-secondary">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card__info">
+                            <picture class="product-card__pic">
+                                <img src="<%= require('./img/default.svg') %>"
+                                     data-src="<%= require('./img/prod-badge01.png') %>" alt="image"
+                                     title="image">
+                            </picture>
+
+                            <p class="product-card__name">Бейдж "D&P perfumum"</p>
+                        </div>
+
+                        <div class="product-card__actions">
+                            <button class="product-card__btn-wish btn btn-sm btn-light">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-heart"></use>
+                                </svg>
+                            </button>
+                            <a href="#" class="product-card__btn-link btn btn-sm btn-secondary">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card__info">
+                            <picture class="product-card__pic">
+                                <img src="<%= require('./img/default.svg') %>"
+                                     data-src="<%= require('./img/prod-badge01.png') %>" alt="image"
+                                     title="image">
+                            </picture>
+
+                            <p class="product-card__name">Бейдж "D&P perfumum"</p>
+                        </div>
+
+                        <div class="product-card__actions">
+                            <button class="product-card__btn-wish btn btn-sm btn-light">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-heart"></use>
+                                </svg>
+                            </button>
+                            <a href="#" class="product-card__btn-link btn btn-sm btn-secondary">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card__info">
+                            <picture class="product-card__pic">
+                                <img src="<%= require('./img/default.svg') %>"
+                                     data-src="<%= require('./img/prod-badge01.png') %>" alt="image"
+                                     title="image">
+                            </picture>
+
+                            <p class="product-card__name">Бейдж "D&P perfumum"</p>
+                        </div>
+
+                        <div class="product-card__actions">
+                            <button class="product-card__btn-wish btn btn-sm btn-light">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-heart"></use>
+                                </svg>
+                            </button>
+                            <a href="#" class="product-card__btn-link btn btn-sm btn-secondary">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card__info">
+                            <picture class="product-card__pic">
+                                <img src="<%= require('./img/default.svg') %>"
+                                     data-src="<%= require('./img/prod-badge01.png') %>" alt="image"
+                                     title="image">
+                            </picture>
+
+                            <p class="product-card__name">Бейдж "D&P perfumum"</p>
+                        </div>
+
+                        <div class="product-card__actions">
+                            <button class="product-card__btn-wish btn btn-sm btn-light">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-heart"></use>
+                                </svg>
+                            </button>
+                            <a href="#" class="product-card__btn-link btn btn-sm btn-secondary">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card__info">
+                            <picture class="product-card__pic">
+                                <img src="<%= require('./img/default.svg') %>"
+                                     data-src="<%= require('./img/prod-badge01.png') %>" alt="image"
+                                     title="image">
+                            </picture>
+
+                            <p class="product-card__name">Бейдж "D&P perfumum"</p>
+                        </div>
+
+                        <div class="product-card__actions">
+                            <button class="product-card__btn-wish btn btn-sm btn-light">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-heart"></use>
+                                </svg>
+                            </button>
+                            <a href="#" class="product-card__btn-link btn btn-sm btn-secondary">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card__info">
+                            <picture class="product-card__pic">
+                                <img src="<%= require('./img/default.svg') %>"
+                                     data-src="<%= require('./img/prod-badge01.png') %>" alt="image"
+                                     title="image">
+                            </picture>
+
+                            <p class="product-card__name">Бейдж "D&P perfumum"</p>
+                        </div>
+
+                        <div class="product-card__actions">
+                            <button class="product-card__btn-wish btn btn-sm btn-light">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-heart"></use>
+                                </svg>
+                            </button>
+                            <a href="#" class="product-card__btn-link btn btn-sm btn-secondary">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card__info">
+                            <picture class="product-card__pic">
+                                <img src="<%= require('./img/default.svg') %>"
+                                     data-src="<%= require('./img/prod-badge01.png') %>" alt="image"
+                                     title="image">
+                            </picture>
+
+                            <p class="product-card__name">Бейдж "D&P perfumum"</p>
+                        </div>
+
+                        <div class="product-card__actions">
+                            <button class="product-card__btn-wish btn btn-sm btn-light">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-heart"></use>
+                                </svg>
+                            </button>
+                            <a href="#" class="product-card__btn-link btn btn-sm btn-secondary">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card__info">
+                            <picture class="product-card__pic">
+                                <img src="<%= require('./img/default.svg') %>"
+                                     data-src="<%= require('./img/prod-badge01.png') %>" alt="image"
+                                     title="image">
+                            </picture>
+
+                            <p class="product-card__name">Бейдж "D&P perfumum"</p>
+                        </div>
+
+                        <div class="product-card__actions">
+                            <button class="product-card__btn-wish btn btn-sm btn-light">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-heart"></use>
+                                </svg>
+                            </button>
+                            <a href="#" class="product-card__btn-link btn btn-sm btn-secondary">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="pagination">
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                </ul>
+
+                <div class="d-flex flex-row flex-wrap justify-content-center align-content-start align-items-start">
+                    <button class="btn btn-more btn-secondary">Показати більше
+                        <svg>
+                            <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </section>
@@ -657,122 +930,88 @@
             <div class="container seo-block">
                 <div class="row">
                     <div class="col-12">
-                        <h1>Зовнішня реклама в Києві</h1>
+                        <h1>Фасадні і рекламні вивіски</h1>
                     </div>
 
                     <div class="col-md-6">
-                        <p>Зовнішня реклама - ефективний спосіб залучення нової аудиторії та утримання постійних
-                            клієнтів. Такий вид реклами допоможе:</p>
+                        <p>Як для інформативних, так і для рекламних цілей необхідним атрибутом будь-якої організації,
+                            фірми або установи є фасадна, рекламна вивіска - складова іміджу компанії, своєрідна
+                            візитка. Вона може мати форму невеликої таблички, об'ємного щита із зазначенням назви
+                            установи, режиму роботи, адреси та інших даних. Встановлюються такі вивіски, як правило, на
+                            стіні або біля дверей при вході на територію фірми, на кабінетні двері.</p>
+                        <p>Наша компанія пропонує виготовлення фасадних вивісок Київ в короткий термін різних розмірів,
+                            форм і типів. Представлені в даному розділі вивіски - продукція нашої фірми «Візінформ».
+                            Вони не є шаблонними, і всі зазначені в описах вивісок матеріали можна комбінувати за
+                            бажанням замовника.</p>
+                        <h2>Рекламні вивіски</h2>
+
+                        <p>Сьогодні рекламна вивіска - невід'ємний іміджевий елемент будь-якого закладу громадського
+                            харчування, магазину, банку, салону краси та інших підприємств. Головними завданнями такої
+                            конструкції є:</p>
                         <ul>
-                            <li>вивести на ринок новий бренд або товар;
-                            </li>
-                            <li>познайомити клієнтів з новинками, акціями, спеціальними пропозиціями;
-                            </li>
-                            <li>підтримати лояльність до існуючої торгової марки;
-                            </li>
-                            <li>збільшити продажі.
-                            </li>
+                            <li>розширення кола клієнтів;</li>
+                            <li>привернення уваги відвідувачів;</li>
+                            <li>запам'ятовуваність і впізнаваність бренду;</li>
+                            <li>виділення бізнесу серед конкурентів;</li>
+                            <li>формування лояльності і збільшення продажів.</li>
                         </ul>
-                        <p>Переваги зовнішньої реклами очевидні, а результати не змусять себе чекати. Головне -
-                            придумати оригінальний дизайн, розмістивши рекламу в правильному місці з великим потоком
-                            потенційних клієнтів.
+                        <p>Головне - продумати дизайн і вдало вибрати місце для розміщення. Як правило, рекламні вивіски
+                            розміщуються на фасадах будівлі або поруч із входом.</p>
+                        <p>Створюючи зовнішню рекламу, важливо враховувати інтереси цільової аудиторії. Вибір вивіски
+                            залежить від безлічі факторів: від особливостей діяльності, від місця розташування. Тут
+                            важлива кожна деталь, тому не варто довіряти цей відповідальний момент недосвідченим фірмам.
                         </p>
-                        <p>Хороші вивіски, щити, штендери помітні здалеку і привертають увагу потенційних клієнтів, у
-                            яких виникає бажання зайти до вас, навіть якщо вони цього не планували. Непродумана реклама,
-                            навпаки, може викликати огиду або негативні емоції, тому важливо довірити виготовлення
-                            зовнішньої реклами досвідченим професіоналам компанії «Визинформ».</p>
-
-
-                        <h2>Виготовлення зовнішньої реклами: види і її особливості</h2>
-
-                        <p>Виготовлення зовнішньої реклами є одним з напрямків діяльності компанії «Візінформ».
-                            Особливою популярністю серед клієнтів користуються такі види зовнішньої реклами:</p>
-                        <p>вивіски: без такого виду зовнішньої реклами не може обійтися жодне підприємство, будь це
-                            звичайний офіс, заклад громадського харчування, салон краси; вивіски відрізняються
-                            різноманітністю форм, видів, матеріалів і способами виготовлення, вони можуть нести як
-                            рекламний, так і інформаційний характер. Наші фахівці готові швидко і якісно виготовити:</p>
-                        <ul>
-                            <li>скляні вивіски;
-                            </li>
-                            <li>фасадні і рекламні вивіски;
-                            </li>
-                            <li>акрілайти;
-                            </li>
-                            <li>металеві вивіски;
-                            </li>
-                            <li>вивіски з об'ємними літерами;
-                            </li>
-                            <li>вивіски на банерній тканині;
-                            </li>
-                            <li>фасадні таблички - такий вид зовнішньої реклами дозволяє відвідувачеві швидко знайти
-                                вашу компанію або кабінет, що особливо актуально в офісних центрах.
-                            </li>
-                        </ul>
-                        <p>І така реклама може бути виготовлена з різних матеріалів. У «Візінформ» можна замовити:</p>
-                        <ul>
-                            <li>скляні таблички;
-                            </li>
-                            <li>таблички з оргскла, пластику або акрилу;
-                            </li>
-                            <li>металеві таблички;
-                            </li>
-                            <li>таблички в профілі, багет або рамці;
-                            </li>
-                            <li>світлові коробки або лайтбокси: перевагою такого виду реклами - її помітно не тільки
-                                вдень, але і у вечірній час доби.
-                            </li>
-                        </ul>
+                        <p>Якщо ви хочете заощадити сили, час і кошти, рекомендуємо звернутися до фахівців київської
+                            майстерні «Візінформ», яка спеціалізуються на виготовленні рекламних вивісок будь-якої
+                            складності.</p>
+                        <h2>Виготовлення рекламних вивісок в Києві</h2>
+                        <p>Рекламні вивіски відрізняються різноманітністю форм, матеріалів, способів розміщення букв,
+                            обсягами. У компанії «Візінформ» можна замовити наступні види:</p>
                     </div>
 
                     <div class="col-md-6">
-                        <p> Рекламний текст або малюнок наноситься за допомогою друку або аплікації. Корпус
-                            виготовляється з акрилу, а на задній стінці розміщується підсвічування. У «Візінформ» можна
-                            замовити лайтбокс будь-якого розміру, форми і складності, з односторонньою або двосторонньою
-                            картинкою;</p>
+                        <ul>
+                            <li>універсальні вивіски, які можна розміщувати як на фасаді, так і всередині будівлі.
+                                Завдяки відмінній якості матеріалів та виконання - рекламні банери не втратять
+                                яскравості і кольору;</li>
+                            <li>фасадні вивіски, які відрізняються стійкістю до негативних зовнішніх чинників і не
+                                втрачають свого привабливого зовнішнього вигляду;
+                            </li>
+                            <li>двосторонні вивіски на ланцюгах, які відрізняються оригінальністю: зовнішня рекламна
+                                вивіска такого типу однозначно не залишиться без уваги, а завдяки надійним і міцним
+                                кріпленням, різкі пориви вітру будуть не страшні вашій рекламі;
+                            </li>
+                            <li>підлогові фасадні вивіски з міцного алюмінієвого профілю і композитних матеріалів, а
+                                також інші види.
+                            </li>
+                        </ul>
 
+                        <p>При виготовленні рекламних вивісок використовуються тільки якісні матеріали. Інформація
+                            наноситься за допомогою повноколірного друку, кольоровою самоклеючою плівкою або гравіювання
+                            з фарбуванням кольоровими фарбами. На вивісці можна розмістити будь-яку інформацію,
+                            наприклад, назва організації, логотип, режим роботи та інше.</p>
+                        <h2>Де замовити рекламну вивіску в Києві</h2>
+
+                        <p>Виробництво рекламних вивісок - кропіткий процес, який складається з таких етапів,
+                            проектування, вибір матеріалів, власне саме виготовлення рекламної вивіски, а також монтажу.
+                            Все це готові взяти на себе професійні майстри компанії «Візінформ». Наші переваги очевидні,
+                            і серед них:</p>
                         <ul>
-                            <li>банери: така зовнішня реклама представляє собою великий плакат, який, як правило,
-                                розташовується на стіні будівлі на рівні очей або на більшій висоті. Компанія
-                                «Візінформ» пропонує банери різних форматів. Інформація наноситься на банерну тканину за
-                                допомогою повнокольорового друку;
+                            <li>досвід роботи більше 17 років;</li>
+                            <li>команда кваліфікованих співробітників, які мають значний досвід роботи в галузі дизайну,
+                                виробництва і монтажу;
                             </li>
-                            <li>рекламні щити і штендери: такий вид реклами відрізняється мобільністю і доступною ціною,
-                                а конкретно штендери знадобляться там, де складно використовувати інші види реклами.
-                                Розрізняються різні конструкції, форми і розміри щитів. Каркас може бути виготовлений з
-                                алюмінієвого або металевого профілю. Інформаційне поле - з пластика або з композиту з
-                                нанесенням зображення за допомогою кольорового фотодруку.
-                            </li>
+                            <li>прийнятні ціни в поєднанні з бездоганною якістю;</li>
+                            <li>виконання робіт чітко в обумовлений термін;</li>
+                            <li>використання власного обладнання для виконання робіт різної складності;</li>
+                            <li>індивідуальний підхід до кожного клієнта;</li>
+                            <li>професійна консультація.</li>
                         </ul>
-                        <h2>«Візінформ»: якісне виготовлення зовнішньої реклами за доступними цінами</h2>
-                        <p>Щоб створити ефективну зовнішню рекламу, потрібно володіти певними знаннями і вміннями.
-                            Пам'ятайте, що картинка повинна гармоніювати з текстовою частиною, при цьому текст повинен
-                            бути інформативним і коротким. Якщо ви не впевнені в своїх силах - краще виготовлення
-                            зовнішньої реклами в Києві довірити досвідченим майстрам «Візінформ».</p>
-                        <h2>Нашими головними перевагами в порівнянні з конкурентами є:</h2>
-                        <ul>
-                            <li>послуги «під ключ»: виготовлення зовнішньої реклами - тривалий і копіткий процес, який
-                                складається з декілька етапів (дизайн, виробництво і монтаж), і ми готові все взяти на
-                                себе!
-                            </li>
-                            <li>кваліфіковані співробітники з великим досвідом роботи;
-                            </li>
-                            <li>прийнятні ціни на зовнішню рекламу: ми пропонуємо доступні і вигідні ціни (вартість
-                                зовнішньої реклами залежить від її виду, розміру та використовуванних матеріалів);
-                            </li>
-                            <li>використання власного обладнання: наша команда майстрів працює на сучасному обладнанні,
-                                тому всі замовлення виконуються швидко і якісно в обумовлені терміни;
-                            </li>
-                            <li>наша клієнтська база постійно збільшується і нараховує тисячі задоволених клієнтів;
-                            </li>
-                            <li>багаторічний досвід роботи - майстерня з виготовлення логотипів, вивісок, інформаційних
-                                щитів «Визинформ» була організована в 2000 році, і за цей час ми успішно реалізували
-                                безліч проектів
-                            </li>
-                        </ul>
-                        <p>Замовити виготовлення зовнішньої реклами в київській майстерні «Візінформ» дуже просто:
-                            достатньо оформити заявку онлайн - написати на електронну пошту або зв'язатися з нашими
-                            менеджерами за телефонами: 067-440-16-90 або 044 -592-36-64. Дзвоніть прямо зараз!
-                        </p>
+                        <p>Ви можете повністю довіритися нам і скористатися послугою «під ключ». Всі етапи виготовлення
+                            візьмуть на себе наші співробітники. Вартість рекламної вивіски залежить від її виду та
+                            розміру.</p>
+                        <p>Замовити рекламну вивіску в нашій майстерні можна за телефонами: 067-440-16-90 () або
+                            044-592-36-64, через електронну пошту: info@vizinform.com.ua Замовляйте прямо зараз!</p>
                     </div>
                 </div>
             </div>

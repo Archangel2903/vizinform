@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
     <title>Главная</title>
-</head>
+<link rel="shortcut icon" href="favicon.ico"><link href="style.efafb6b54420167ed5e6.min.css" rel="stylesheet"></head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
@@ -512,8 +512,8 @@
 
                                 <div class="cart__item-info">
                                     <picture class="cart__item-pic">
-                                        <img src="<%= require('./img/default.svg') %>"
-                                             data-src="<%= require('./img/placeholder-img.jpg') %>" alt="image"
+                                        <img src="img/default.svg"
+                                             data-src="img/placeholder-img.jpg" alt="image"
                                              title="image">
                                     </picture>
 
@@ -542,8 +542,8 @@
 
                                 <div class="cart__item-info">
                                     <picture class="cart__item-pic">
-                                        <img src="<%= require('./img/default.svg') %>"
-                                             data-src="<%= require('./img/placeholder-img.jpg') %>" alt="image"
+                                        <img src="img/default.svg"
+                                             data-src="img/placeholder-img.jpg" alt="image"
                                              title="image">
                                     </picture>
 
@@ -590,193 +590,377 @@
                 <ul class="breadcrumbs">
                     <li class="breadcrumbs__item">
                         <a href="#" class="breadcrumbs__link">Головна</a>
-                        <svg><use xlink:href="./img/spritemap.svg#sprite-bread-logo"></use></svg>
+                        <svg>
+                            <use xlink:href="./img/spritemap.svg#sprite-bread-logo"></use>
+                        </svg>
                     </li>
 
                     <li class="breadcrumbs__item">
-                        <span class="breadcrumbs__link">Зовнішня реклама</span>
+                        <a href="#" class="breadcrumbs__link">Статті</a>
+                        <svg>
+                            <use xlink:href="./img/spritemap.svg#sprite-bread-logo"></use>
+                        </svg>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <span class="breadcrumbs__link">Різниця між растровими і векторними зображеннями</span>
                     </li>
                 </ul>
             </div>
         </section>
 
-        <section class="section section-category-nav">
+
+        <section class="section section-article">
             <div class="container">
-                <p class="main-title">Зовнішня реклама</p>
+                <p class="article-date">19.08.2020</p>
+                <h1 class="main-title">Різниця між растровими і векторними зображеннями</h1>
 
-                <div class="category-nav">
-                    <div class="category-nav__box">
-                        <p class="category-nav__name">Виготовлення вивісок</p>
-                        <button class="btn btn-secondary">
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
-                            </svg>
-                        </button>
-                    </div>
+                <div class="article">
+                    <p class="article__content">Векторна графіка створюється за допомогою найпростіших геометричних
+                        функцій -
+                        точок, ліній і багатокутників. Фактично, векторна графіка створюється за допомогою математичних
+                        функцій.
+                        Тому для створення і зберігання простих, таких, наприклад, макети візитних карток або бейджів,
+                        зображень рекомендується використовувати векторну графіку.</p>
+                    <h2 class="article__title">Переваги використання векторної графіки:
+                    </h2>
+                    <p class="article__content">- розмір файлу з векторним зображенням не залежить від його
+                        реальної величини. В
+                        принципі, можна мінімальною кількістю інформації описати як завгодно велике векторне
+                        зображення;</p>
+                    <p class="article__content">- векторне зображення можна збільшувати до будь-яких розмірів.
+                        Це означає, що ви можете,
+                        наприклад, створити векторне зображення логотипу компанії для бейджа або візитної картки, а
+                        потім використовувати це зображення для друку великого розміру;</p>
+                    <p class="article__content">- векторні зображення можна змінювати без втрати якості, тоді
+                        як для зміни растрового зображення
+                        потрібне складне програмне забезпечення і досвідчений фахівець, оплата послуг якого значно
+                        збільшить остаточну вартість роботи.</p>
+                    <picture>
+                        <img src="img/default.svg" data-src="img/strawberry.png"
+                             alt="loader" title="loader">
 
-                    <div class="category-nav__box">
-                        <p class="category-nav__name">Виготовлення логотипів</p>
-                        <button class="btn btn-secondary">
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
-                            </svg>
-                        </button>
-                    </div>
+                    </picture>
 
-                    <div class="category-nav__box">
-                        <p class="category-nav__name">Щити, штендери</p>
-                        <button class="btn btn-secondary">
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
-                            </svg>
-                        </button>
-                    </div>
+                    <h2 class="article__title">Недоліками векторних зображень вважаються:</h2>
+                    <p class="article__content">- зображення високої складності все-таки краще створювати за
+                        допомогою растрової графіки, оскільки вони потребують занадто велику кількість складних
+                        об'єктів. Це негативно впливає на кількість пам'яті, і на час його відтворення; </p>
+                    <p class="article__content">- перевести векторну графіку в растрове зображення досить
+                        просто, проте зворотний процес неможливий, оскільки потребує значних обчислювальних потужностей,
+                        так і в цьому випадку отриманий векторний малюнок не буде володіти достатньою якістю.
+                    </p>
+                    <p class="article__content">Растрові зображення створюються сіткою колірних точок
+                        (пікселів) на будь-якому матеріальному носії або електронному носії.</p>
 
-                    <div class="category-nav__box">
-                        <p class="category-nav__name">Таблички, номерки</p>
-                        <button class="btn btn-secondary">
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
-                            </svg>
-                        </button>
-                    </div>
+                    <h2 class="article__title">Перевагами растрових зображень є:
+                    </h2>
+                    <p class="article__content">- за допомогою растрової графіки можна створювати практично
+                        будь-яке зображення будь-якої складності з точним ефектом колірним переходом;</p>
+                    <p class="article__content">- широка поширеність: переважна більшість зображень сьогодні -
+                        це саме растрова графіка;</p>
+                    <p class="article__content">- висока швидкість роботи з зображеннями будь-якої складності.
+                        Виняток - масштабування;</p>
+                    <p class="article__content">- з растровими зображеннями працюють всі монітори, принтери,
+                        сканери, фотоапарати і мобільні телефони.</p>
 
-                    <div class="category-nav__box">
-                        <p class="category-nav__name">Брелоки на замовлення</p>
-                        <button class="btn btn-secondary">
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
-                            </svg>
-                        </button>
-                    </div>
+                    <h2 class="article__title">Є у растрових зображень і недоліки:
+                    </h2>
+                    <p class="article__content">- великий обсяг файлів навіть у нескладних растрових зображень;
+                    </p>
+                    <p class="article__content">- при масштабуванні растрового зображення неможливо домогтися ідеальної
+                        якості;
+                    </p>
+                    <p class="article__content">- неможливо друкувати растрове зображення на обладнанні яке працює з
+                        вектором.
+                    </p>
+                    <ol class="article__number-list">
+                        <li>Програми прийняття макетів:
+                            <ul class="article__list">
+                                <li>- CorelDRAW не вище 15 версії,</li>
+                                <li> - Adobe Illustrator не вище 15 версії.</li>
+                                <li> - можливо Adobe Photoshop Cs2</li>
+                                <li> (Без можливості коригування кольору).</li>
+                            </ul>
+                        </li>
+                        <li>Всі шрифти повинні бути переведені в криві.
+                        </li>
+                        <li>Макети в масштабі 1: 1.
+                        </li>
+                    </ol>
+                    <p class="article__content">Якщо є вимоги за кольором приймаємо їх по:</p>
+                    <ul class="article__list">
+                        <li>- колірним довідників Pantone,</li>
+                        <li> - CMYK,</li>
+                        <li> - RGB.</li>
+                    </ul>
+                    <p class="article__content">Або передавайте живі зразки кольорів (ваша візитка, буклет, календар або
+                        будь-який інший носій вашого кольору).</p>
+
                 </div>
             </div>
         </section>
 
-        <section class="section section-seo">
-            <div class="container seo-block">
+        <div hidden>
+            <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1>Зовнішня реклама в Києві</h1>
+                        <button type="button" class="btn btn-primary btn-lg">Primary large</button>
+                        <button type="button" class="btn btn-primary btn-sm">Primary small</button>
+                        <button type="button" class="btn btn-primary">Primary</button>
+                        <button type="button" class="btn btn-secondary">Secondary</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-danger">Danger</button>
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-light">Light</button>
+                        <button type="button" class="btn btn-dark">Dark</button>
+
+                        <button type="button" class="btn btn-link">Link</button>
                     </div>
 
-                    <div class="col-md-6">
-                        <p>Зовнішня реклама - ефективний спосіб залучення нової аудиторії та утримання постійних
-                            клієнтів. Такий вид реклами допоможе:</p>
-                        <ul>
-                            <li>вивести на ринок новий бренд або товар;
-                            </li>
-                            <li>познайомити клієнтів з новинками, акціями, спеціальними пропозиціями;
-                            </li>
-                            <li>підтримати лояльність до існуючої торгової марки;
-                            </li>
-                            <li>збільшити продажі.
-                            </li>
-                        </ul>
-                        <p>Переваги зовнішньої реклами очевидні, а результати не змусять себе чекати. Головне -
-                            придумати оригінальний дизайн, розмістивши рекламу в правильному місці з великим потоком
-                            потенційних клієнтів.
-                        </p>
-                        <p>Хороші вивіски, щити, штендери помітні здалеку і привертають увагу потенційних клієнтів, у
-                            яких виникає бажання зайти до вас, навіть якщо вони цього не планували. Непродумана реклама,
-                            навпаки, може викликати огиду або негативні емоції, тому важливо довірити виготовлення
-                            зовнішньої реклами досвідченим професіоналам компанії «Визинформ».</p>
+                    <button type="button" class="btn btn-primary">Primary large
+                        <svg>
+                            <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                        </svg>
+                    </button>
+                    <button type="button" class="btn btn-primary">Primary small
+                        <svg>
+                            <use xlink:href="./img/spritemap.svg#sprite-arrow-link"></use>
+                        </svg>
+                    </button>
+                    <button type="button" class="btn btn-primary">Primary small
+                        <svg>
+                            <use xlink:href="./img/spritemap.svg#sprite-brush"></use>
+                        </svg>
+                    </button>
 
-
-                        <h2>Виготовлення зовнішньої реклами: види і її особливості</h2>
-
-                        <p>Виготовлення зовнішньої реклами є одним з напрямків діяльності компанії «Візінформ».
-                            Особливою популярністю серед клієнтів користуються такі види зовнішньої реклами:</p>
-                        <p>вивіски: без такого виду зовнішньої реклами не може обійтися жодне підприємство, будь це
-                            звичайний офіс, заклад громадського харчування, салон краси; вивіски відрізняються
-                            різноманітністю форм, видів, матеріалів і способами виготовлення, вони можуть нести як
-                            рекламний, так і інформаційний характер. Наші фахівці готові швидко і якісно виготовити:</p>
-                        <ul>
-                            <li>скляні вивіски;
-                            </li>
-                            <li>фасадні і рекламні вивіски;
-                            </li>
-                            <li>акрілайти;
-                            </li>
-                            <li>металеві вивіски;
-                            </li>
-                            <li>вивіски з об'ємними літерами;
-                            </li>
-                            <li>вивіски на банерній тканині;
-                            </li>
-                            <li>фасадні таблички - такий вид зовнішньої реклами дозволяє відвідувачеві швидко знайти
-                                вашу компанію або кабінет, що особливо актуально в офісних центрах.
-                            </li>
-                        </ul>
-                        <p>І така реклама може бути виготовлена з різних матеріалів. У «Візінформ» можна замовити:</p>
-                        <ul>
-                            <li>скляні таблички;
-                            </li>
-                            <li>таблички з оргскла, пластику або акрилу;
-                            </li>
-                            <li>металеві таблички;
-                            </li>
-                            <li>таблички в профілі, багет або рамці;
-                            </li>
-                            <li>світлові коробки або лайтбокси: перевагою такого виду реклами - її помітно не тільки
-                                вдень, але і у вечірній час доби.
-                            </li>
-                        </ul>
+                    <div class="col-12">
+                        <button type="button" class="btn btn-outline-primary">Primary</button>
+                        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                        <button type="button" class="btn btn-outline-success">Success</button>
+                        <button type="button" class="btn btn-outline-danger">Danger</button>
+                        <button type="button" class="btn btn-outline-warning">Warning</button>
+                        <button type="button" class="btn btn-outline-info">Info</button>
+                        <button type="button" class="btn btn-outline-light">Light</button>
+                        <button type="button" class="btn btn-outline-dark">Dark</button>
                     </div>
 
-                    <div class="col-md-6">
-                        <p> Рекламний текст або малюнок наноситься за допомогою друку або аплікації. Корпус
-                            виготовляється з акрилу, а на задній стінці розміщується підсвічування. У «Візінформ» можна
-                            замовити лайтбокс будь-якого розміру, форми і складності, з односторонньою або двосторонньою
-                            картинкою;</p>
+                    <div class="col-12">
+                        <a href="#" class="btn btn-primary btn-lg">Primary large</a>
+                        <a href="#" class="btn btn-primary btn-sm">Primary small</a>
+                        <a href="#" class="btn btn-primary">Primary</a>
+                        <a href="#" class="btn btn-secondary">Secondary</a>
+                        <a href="#" class="btn btn-success">Success</a>
+                        <a href="#" class="btn btn-danger">Danger</a>
+                        <a href="#" class="btn btn-warning">Warning</a>
+                        <a href="#" class="btn btn-info">Info</a>
+                        <a href="#" class="btn btn-light">Light</a>
+                        <a href="#" class="btn btn-dark">Dark</a>
 
-                        <ul>
-                            <li>банери: така зовнішня реклама представляє собою великий плакат, який, як правило,
-                                розташовується на стіні будівлі на рівні очей або на більшій висоті. Компанія
-                                «Візінформ» пропонує банери різних форматів. Інформація наноситься на банерну тканину за
-                                допомогою повнокольорового друку;
-                            </li>
-                            <li>рекламні щити і штендери: такий вид реклами відрізняється мобільністю і доступною ціною,
-                                а конкретно штендери знадобляться там, де складно використовувати інші види реклами.
-                                Розрізняються різні конструкції, форми і розміри щитів. Каркас може бути виготовлений з
-                                алюмінієвого або металевого профілю. Інформаційне поле - з пластика або з композиту з
-                                нанесенням зображення за допомогою кольорового фотодруку.
-                            </li>
-                        </ul>
-                        <h2>«Візінформ»: якісне виготовлення зовнішньої реклами за доступними цінами</h2>
-                        <p>Щоб створити ефективну зовнішню рекламу, потрібно володіти певними знаннями і вміннями.
-                            Пам'ятайте, що картинка повинна гармоніювати з текстовою частиною, при цьому текст повинен
-                            бути інформативним і коротким. Якщо ви не впевнені в своїх силах - краще виготовлення
-                            зовнішньої реклами в Києві довірити досвідченим майстрам «Візінформ».</p>
-                        <h2>Нашими головними перевагами в порівнянні з конкурентами є:</h2>
-                        <ul>
-                            <li>послуги «під ключ»: виготовлення зовнішньої реклами - тривалий і копіткий процес, який
-                                складається з декілька етапів (дизайн, виробництво і монтаж), і ми готові все взяти на
-                                себе!
-                            </li>
-                            <li>кваліфіковані співробітники з великим досвідом роботи;
-                            </li>
-                            <li>прийнятні ціни на зовнішню рекламу: ми пропонуємо доступні і вигідні ціни (вартість
-                                зовнішньої реклами залежить від її виду, розміру та використовуванних матеріалів);
-                            </li>
-                            <li>використання власного обладнання: наша команда майстрів працює на сучасному обладнанні,
-                                тому всі замовлення виконуються швидко і якісно в обумовлені терміни;
-                            </li>
-                            <li>наша клієнтська база постійно збільшується і нараховує тисячі задоволених клієнтів;
-                            </li>
-                            <li>багаторічний досвід роботи - майстерня з виготовлення логотипів, вивісок, інформаційних
-                                щитів «Визинформ» була організована в 2000 році, і за цей час ми успішно реалізували
-                                безліч проектів
-                            </li>
-                        </ul>
-                        <p>Замовити виготовлення зовнішньої реклами в київській майстерні «Візінформ» дуже просто:
-                            достатньо оформити заявку онлайн - написати на електронну пошту або зв'язатися з нашими
-                            менеджерами за телефонами: 067-440-16-90 або 044 -592-36-64. Дзвоніть прямо зараз!
-                        </p>
+                        <a href="#" class="btn btn-link">Link</a>
+                    </div>
+
+                    <div class="col-12"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <div class="blog-card card">
+                            <picture>
+                                <img src="img/default.svg"
+                                     data-src="img/placeholder-img.jpg" class="card-img-top"
+                                     alt="image"
+                                     title="image">
+                            </picture>
+                            <div class="card-body">
+                                <h5 class="card-title">Заголовок карточки</h5>
+                                <p class="card-text">Несколько быстрых примеров текста для построения на основе
+                                    заголовка карточек и составляющих основную часть содержимого
+                                    карточки.</p>
+
+                                <div class="card-footer">
+                                    <a href="#" class="btn btn-link card-link">Читати
+                                        <svg>
+                                            <use xlink:href="./img/spritemap.svg#sprite-arrow-link"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="blog-card card">
+                            <picture>
+                                <img src="img/default.svg"
+                                     data-src="img/placeholder-img.jpg" class="card-img-top"
+                                     alt="image"
+                                     title="image">
+                            </picture>
+                            <div class="card-body">
+                                <h5 class="card-title">Заголовок карточки</h5>
+                                <p class="card-text">Несколько быстрых примеров текста для построения на основе
+                                    заголовка карточек и составляющих основную часть содержимого
+                                    карточки.</p>
+                                <a href="#" class="btn btn-primary">Идти куда-нибудь</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="blog-card card">
+                            <picture>
+                                <img src="img/default.svg"
+                                     data-src="img/placeholder-img.jpg" class="card-img-top"
+                                     alt="image"
+                                     title="image">
+                            </picture>
+                            <div class="card-body">
+                                <h5 class="card-title">Заголовок карточки</h5>
+                                <p class="card-text">Несколько быстрых примеров текста для построения на основе
+                                    заголовка карточек и составляющих основную часть содержимого
+                                    карточки.</p>
+                                <a href="#" class="btn btn-primary">Идти куда-нибудь</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="benefits">
+                    <div class="benefits__box">
+                        <div class="benefits__ico">
+                            <svg>
+                                <use xlink:href="./img/spritemap.svg#sprite-ok"></use>
+                            </svg>
+                        </div>
+
+                        <p class="benefits__title">Title</p>
+
+                        <p class="benefits__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae
+                            consequuntur cum dicta dolorem earum eos explicabo
+                            facilis fugit illo magnam, nam neque non nulla placeat possimus praesentium quam
+                            voluptatem?</p>
+                    </div>
+
+                    <div class="benefits__box">
+                        <div class="benefits__ico">
+                            <svg>
+                                <use xlink:href="./img/spritemap.svg#sprite-ok"></use>
+                            </svg>
+                        </div>
+
+                        <p class="benefits__title">Title</p>
+
+                        <p class="benefits__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae
+                            consequuntur cum dicta dolorem earum eos explicabo
+                            facilis fugit illo magnam, nam neque non nulla placeat possimus praesentium quam
+                            voluptatem?</p>
+                    </div>
+
+                    <div class="benefits__box">
+                        <div class="benefits__ico">
+                            <svg>
+                                <use xlink:href="./img/spritemap.svg#sprite-ok"></use>
+                            </svg>
+                        </div>
+
+                        <p class="benefits__title">Title</p>
+
+                        <p class="benefits__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae
+                            consequuntur cum dicta dolorem earum eos explicabo
+                            facilis fugit illo magnam, nam neque non nulla placeat possimus praesentium quam
+                            voluptatem?</p>
+                    </div>
+
+                    <div class="benefits__box">
+                        <div class="benefits__ico">
+                            <svg>
+                                <use xlink:href="./img/spritemap.svg#sprite-ok"></use>
+                            </svg>
+                        </div>
+
+                        <p class="benefits__title">Title</p>
+
+                        <p class="benefits__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae
+                            consequuntur cum dicta dolorem earum eos explicabo
+                            facilis fugit illo magnam, nam neque non nulla placeat possimus praesentium quam
+                            voluptatem?</p>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <div class="section">
+                <div class="container">
+                    <h2>Section Slider</h2>
+
+                    <div class="main-slider swiper-container">
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <picture>
+                                    <img src="img/default.svg"
+                                         data-src="img/placeholder-img.jpg" alt="example"
+                                         title="example">
+                                </picture>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <picture>
+                                    <img src="img/default.svg"
+                                         data-src="img/placeholder-img.jpg" alt="example"
+                                         title="example">
+                                </picture>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <picture>
+                                    <img src="img/default.svg"
+                                         data-src="img/placeholder-img.jpg" alt="example"
+                                         title="example">
+                                </picture>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <picture>
+                                    <img src="img/default.svg"
+                                         data-src="img/placeholder-img.jpg" alt="example"
+                                         title="example">
+                                </picture>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <picture>
+                                    <img src="img/default.svg"
+                                         data-src="img/placeholder-img.jpg" alt="example"
+                                         title="example">
+                                </picture>
+                            </div>
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <!--<div class="swiper-scrollbar"></div>-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="container">
+                    <h2>Section Pictures</h2>
+                    <picture>
+                        <img src="img/default.svg"
+                             data-src="img/placeholder-img.jpg" alt="loader" title="loader">
+                    </picture>
+
+                    <svg>
+                        <use xlink:href="img/spritemap.svg#sprite-ok"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
     </main>
     <!-- CONTENT END -->
 
@@ -892,8 +1076,8 @@
 </div>
 
 <div class="icon-load">
-    <picture><img src="<%= require('./img/logo-ico.svg') %>" alt="pre-loader"></picture>
+    <picture><img src="img/logo-ico.svg" alt="pre-loader"></picture>
 </div>
 <!-- BODY END   -->
-</body>
+<script type="text/javascript" src="bundle.efafb6b54420167ed5e6.min.js"></script></body>
 </html>
