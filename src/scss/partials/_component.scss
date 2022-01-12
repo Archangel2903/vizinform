@@ -179,8 +179,56 @@
   }
 }
 
-@media screen and (min-width: 320px) {}
-@include media-breakpoint-up(sm) {}
-@include media-breakpoint-up(md) {}
-@include media-breakpoint-up(lg) {}
-@include media-breakpoint-up(xl) {}
+.pagination {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 30px;
+
+  li {
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    transition: $transition-base;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &.active {
+      border: 2px solid $main-first-color;
+      border-radius: 24px;
+
+      a {
+        color: $main-first-color;
+      }
+    }
+
+    a {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 17px;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) {
+}
+
+@include media-breakpoint-up(sm) {
+}
+
+@include media-breakpoint-up(md) {
+}
+
+@include media-breakpoint-up(lg) {
+}
+
+@include media-breakpoint-up(xl) {
+}
