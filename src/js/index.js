@@ -123,36 +123,35 @@ $(function () {
             }
         }
 
-        if ($('.video-slider').length) {
+        let video_slider = $('.video-slider');
+        if (video_slider.length) {
             let videoSlide = document.querySelectorAll('.video-slider .swiper-slide').length;
 
             if (videoSlide > 1) {
                 let videoSlider = new Swiper('.video-slider', {
                     observer: true,
                     observeParents: true,
-                    allowTouchMove: false,
+                    allowTouchMove: true,
                     autoplay: true,
-                    disableOnInteraction: false,
                     pauseOnMouseEnter: true,
                     autoHeight: true,
-                    direction: 'vertical',
                     effect: 'fade',
-                    width: 1058,
-                    height: 585,
-                    loop: false,
+                    // width: 1058,
+                    // height: 585,
+                    // loop: false,
                     pagination: {
-                        el: $('.video-slider').prev('.swiper-pagination'),
+                        el: video_slider.prev('.swiper-pagination'),
                         renderBullet: function (index, className) {
                             let title = document.querySelectorAll('.video-slider .swiper-slide')[index].getAttribute('data-title');
                             return '<span class="' + className + '">' + title + '</span>';
                         },
                         clickable: true,
                     },
-                    breakpoints: {
+                    /*breakpoints: {
                         768: {
                             direction: 'horizontal',
                         },
-                    }
+                    }*/
                 });
             }
         }

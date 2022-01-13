@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
-    <title>О нас</title>
+    <title>Доставка и оплата</title>
 </head>
 <body class="loaded">
 <!-- BODY -->
@@ -586,7 +586,7 @@
                     </li>
 
                     <li class="breadcrumbs__item">
-                        <span class="breadcrumbs__link">Про компанію</span>
+                        <span class="breadcrumbs__link">Доставка і оплата</span>
                     </li>
                 </ul>
             </div>
@@ -596,12 +596,15 @@
             <div class="section__substrate">
                 <div class="container">
                     <div class="home">
-                        <div class="home__description">
-                            <p class="main-title">Компанія з виготовлення рекламної продукції</p>
-                            <p class="home__text">«Візінформ» - компанія, яка спеціалізується на виготовленні вивісок, логотипів, інформаційних щитів. На цьому ринку ми
-                                працюємо з серпня 2000 року і, крім зовнішньої реклами, виготовляємо будь-яку рекламну та сувенірну продукцію, включаючи таблички, бейджи,
-                                брелоки, нагородну атрибутику та інші вироби. Наша компанія постійно розвивається, освоюючи нові види продукції і регулярно бере участь в
-                                спеціалізованих виставках.</p>
+                        <div class="home__content">
+                            <p class="main-title">Мінімальна сума замовлення 1000₴</p>
+                            <p class="home__text">Всі вироби прораховуються по площі, по складності виконання та матеріалів</p>
+                        </div>
+
+                        <div class="home__decoration">
+                            <picture class="home__pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/home-01.png') %>" alt="image" title="image">
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -610,10 +613,6 @@
 
         <section class="section section-benefits">
             <div class="container">
-                <p class="title">Переваги компанії</p>
-                <p class="subtitle">До головних конкурентних переваг нашої компанії
-                    можна віднести</p>
-
                 <div class="benefits">
                     <div class="benefits__box">
                         <div class="benefits__ico">
@@ -666,196 +665,58 @@
             </div>
         </section>
 
-        <section class="section section-target">
+        <section class="section section-partners">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-5">
-                        <p class="title">Наша мета</p>
-                    </div>
-                    <div class="col-lg-6">
-                        <p class="font-weight-medium">Основна мета компанії «Візінформ» - задоволення запитів клієнтів на рекламну продукцію. Ми завжди прагнемо виконати замовлення якісно, в
-                            оптимально короткий термін, щоб ви залишилися задоволені, і не тільки самі зверталися до нас надалі, але і рекомендували нашу фірму своїм
-                            партнерам по бізнесу, а також залишаючи виключно позитивні відгуки про нашу продукцію на сайті компанії і в соціальних мережах.
-                            Повторні замовлення клієнтів - найкраще визнання нашого професіоналізму.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <p class="title">Серед наших клієнтів</p>
 
-        <section class="section section-video">
-            <div class="section__substrate">
-                <div class="container">
-                    <div class="container-heading">
-                        <p class="title">Наші відео</p>
+                <div class="partners">
+                    <picture class="partners__pic">
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-01.svg') %>" alt="image" title="image">
+                    </picture>
 
-                        <a href="#" class="btn btn-secondary">Усі статті
-                            <svg>
-                                <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
-                            </svg>
-                        </a>
-                    </div>
+                    <picture class="partners__pic">
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-02.svg') %>" alt="image" title="image">
+                    </picture>
 
-                    <div class="video">
-                        <div class="video-slider-wrapper">
-                            <div class="swiper-pagination"></div>
-                            <div class="video-slider swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide" data-title='Презентація УФ принтера'>
-                                        <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </div>
+                    <picture class="partners__pic">
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-03.svg') %>" alt="image" title="image">
+                    </picture>
 
-                                    <div class="swiper-slide" data-title='Порівняння 2-х фанерних коробок'>
-                                        <iframe src="https://www.youtube.com/embed/rNdkbXe_1CA" title="YouTube video player" frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </div>
+                    <picture class="partners__pic">
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-04.svg') %>" alt="image" title="image">
+                    </picture>
 
-                                    <div class="swiper-slide" data-title='Світлова вивіска для агенції "AP news"'>
-                                        <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </div>
+                    <picture class="partners__pic">
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-05.svg') %>" alt="image" title="image">
+                    </picture>
 
-                                    <div class="swiper-slide" data-title="Візитки з металу з кольоровим друком">
-                                        <iframe src="https://www.youtube.com/embed/rNdkbXe_1CA" title="YouTube video player" frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </div>
+                    <picture class="partners__pic">
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-06.svg') %>" alt="image" title="image">
+                    </picture>
 
-                                    <div class="swiper-slide" data-title="Акриловый логотип - credence">
-                                        <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </div>
+                    <picture class="partners__pic">
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-07.svg') %>" alt="image" title="image">
+                    </picture>
 
-                                    <div class="swiper-slide" data-title="Наклейки із самоклеючої плівки">
-                                        <iframe src="https://www.youtube.com/embed/rNdkbXe_1CA" title="YouTube video player" frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                    <picture class="partners__pic">
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-08.svg') %>" alt="image" title="image">
+                    </picture>
 
-        <section class="section section-benefits-line">
-            <div class="container">
-                <p class="title">Яке обладнання ми <br>використовуємо для роботи</p>
+                    <picture class="partners__pic">
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-09.svg') %>" alt="image" title="image">
+                    </picture>
 
-                <p class="subtitle">Для виготовлення рекламної та сувенірної продукції майстерня компанії «Візінформ» оснащена новітнім високотехнологічним обладнанням. У парк, використовуваних нами, пристроїв входять:</p>
+                    <picture class="partners__pic">
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-10.svg') %>" alt="image" title="image">
+                    </picture>
 
-                <div class="benefits-line">
-                    <div class="col-lg-4">
-                        <div class="benefits-line__box">
-                            <div class="benefits-line__ico">
-                                <svg><use xlink:href="./img/spritemap.svg#sprite-machine"></use></svg>
-                            </div>
-                            <p class="benefits-line__text">Верстати для плоттерного і лазерного різання, що працюють під управлінням комп'ютерних програм</p>
-                        </div>
-                    </div>
+                    <picture class="partners__pic">
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-11.svg') %>" alt="image" title="image">
+                    </picture>
 
-                    <div class="col-lg-4">
-                        <div class="benefits-line__box">
-                            <div class="benefits-line__ico">
-                                <svg><use xlink:href="./img/spritemap.svg#sprite-cnc"></use></svg>
-                            </div>
-                            <p class="benefits-line__text">Фрезерні верстати з числовим програмним керуванням</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <div class="benefits-line__box">
-                            <div class="benefits-line__ico">
-                                <svg><use xlink:href="./img/spritemap.svg#sprite-printer"></use></svg>
-                            </div>
-                            <p class="benefits-line__text">Кольоровий ультрафіолетовий принтер Mimaki</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <div class="benefits-line__box">
-                            <div class="benefits-line__ico">
-                                <svg><use xlink:href="./img/spritemap.svg#sprite-drying"></use></svg>
-                            </div>
-                            <p class="benefits-line__text">Комплекс обладнання для сублімації</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <div class="benefits-line__box">
-                            <div class="benefits-line__ico">
-                                <svg><use xlink:href="./img/spritemap.svg#sprite-laser"></use></svg>
-                            </div>
-                            <p class="benefits-line__text">Aпарати для лазерного та фрезерного гравіювання</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section-certificates">
-            <div class="container">
-                <p class="title">Наші дипломи та сертифікати</p>
-
-                <div class="certificates">
-                    <div class="certificates-slider swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="certificates__box">
-                                    <picture>
-                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/certificate-01.png') %>" alt="image" title="image">
-                                    </picture>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="certificates__box">
-                                    <picture>
-                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/certificate-01.png') %>" alt="image" title="image">
-                                    </picture>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="certificates__box">
-                                    <picture>
-                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/certificate-01.png') %>" alt="image" title="image">
-                                    </picture>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="certificates__box">
-                                    <picture>
-                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/certificate-01.png') %>" alt="image" title="image">
-                                    </picture>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="certificates__box">
-                                    <picture>
-                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/certificate-01.png') %>" alt="image" title="image">
-                                    </picture>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="certificates__box">
-                                    <picture>
-                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/certificate-01.png') %>" alt="image" title="image">
-                                    </picture>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="certificates__box">
-                                    <picture>
-                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/certificate-01.png') %>" alt="image" title="image">
-                                    </picture>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <picture class="partners__pic">
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner-12.svg') %>" alt="image" title="image">
+                    </picture>
                 </div>
             </div>
         </section>
