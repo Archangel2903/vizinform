@@ -205,6 +205,17 @@ $(function () {
         $('#tabs').tabs();
     })();
 
+    //FAQ
+    (function () {
+        if ($('.faq__box').length > 0) {
+            $('.faq__box-header').on('click', function () {
+                $(this).toggleClass('active').next().slideToggle();
+            });
+        }
+    })();
+
+
+
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');
     let imgObserve = new IntersectionObserver(function (entries) {

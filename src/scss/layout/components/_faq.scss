@@ -8,7 +8,8 @@
   .subtitle {
     max-width: 538px;
     margin-bottom: 60px;
-    &__content{
+
+    &__content {
       margin: 20px;
     }
   }
@@ -16,7 +17,9 @@
 
 .faq {
   &__box {
-    weight: 690px;
+    width: 100%;
+    max-width: 690px;
+    padding: 20px;
     border: 1px solid #E0ECFF;
     border-radius: 20px;
     margin-bottom: 30px;
@@ -27,18 +30,27 @@
       justify-content: space-between;
       align-content: center;
       align-items: center;
-      margin: 20px 20px 0 20px;
 
+      &.active {
+        .faq__box-header-trigger {
+          &:before {
+            transform: rotate(90deg);
+          }
+        }
+      }
 
       &-trigger {
+        flex: 0 0 auto;
         position: relative;
         width: 24px;
         height: 24px;
+        margin-left: 20px;
 
         &:before, &:after {
           content: '';
           position: absolute;
           background-color: black;
+          border-radius: 99px;
           transition: transform 0.25s ease-out;
         }
 
@@ -61,21 +73,24 @@
         &:hover {
           cursor: pointer;
         }
-
-        &:active {
-          &:before {
-            transform: rotate(90deg);
-          }
-        }
-
       }
     }
 
-      &-title {
-        font-weight: 600;
-        font-size: 22px;
-        margin-bottom: 0;
-      }
+    &-title {
+      font-weight: 600;
+      font-size: 22px;
+      margin-bottom: 0;
+    }
+
+    &-body {
+      display: none;
+    }
+
+    &-text {
+      padding-top: 20px;
+      margin: 0;
+      font-weight: 500;
+    }
   }
 }
 
