@@ -1,0 +1,24 @@
+.section-callback {
+  margin-bottom: 120px;
+
+  .container {
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
+}
+
+.callback-form {
+  &__field {
+    &-name {
+      display: block;
+      margin-bottom: 10px;
+      color: #373737;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  &__submit {
+    margin-top: 60px;
+  }
+}

@@ -1,0 +1,19 @@
+.section-delivery-method {
+  margin: 120px 0 60px;
+
+  .title {
+    margin-bottom: 30px;
+  }
+
+  .subtitle {
+    margin: 0;
+  }
+
+  .benefits {
+    max-width: 620px;
+
+    &__box {
+      margin-bottom: 60px;
+    }
+  }
+}

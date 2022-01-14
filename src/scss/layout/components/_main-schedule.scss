@@ -1,0 +1,26 @@
+.section-schedule {
+  margin-bottom: 120px;
+
+  .container {
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
+
+  .benefits-line {
+    &__ico {
+      background: white;
+    }
+    &__text {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 27px;
+    }
+  }
+}
+
+.main-schedule {
+  &__text {
+    margin: 0;
+    font-weight: 500;
+  }
+}
