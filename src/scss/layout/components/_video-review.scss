@@ -1,0 +1,28 @@
+.section-video-review {
+  margin-bottom: 60px;
+}
+
+.video-review {
+  margin-bottom: 60px;
+
+  &__media {
+    display: flex;
+    margin-bottom: 30px;
+
+    iframe {
+      width: 100%;
+      max-width: 690px;
+      height: 380px;
+      border-radius: 40px;
+    }
+  }
+
+  &__title {
+    padding: 20px;
+    border: 1px solid $main-second-color;
+    border-radius: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 27px;
+  }
+}

@@ -1,7 +1,7 @@
 .section-video {
   margin: 120px 0;
 
-  .container {
+  .section__substrate {
     padding-top: 110px;
     padding-bottom: 110px;
   }
@@ -150,6 +150,36 @@
           }
         }
       }
+    }
+  }
+}
+
+.section-main-video {
+  margin-bottom: 120px;
+}
+
+.main-video {
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 27px;
+  }
+
+  &__slider {
+    overflow: visible;
+  }
+
+  &__box {
+    iframe, video {
+      width: 100%;
+      max-width: 450px;
+      height: 250px;
+      border-radius: 20px;
     }
   }
 }

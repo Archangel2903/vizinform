@@ -7,6 +7,7 @@ import 'jquery-ui/ui/widgets/tabs';
 import 'bootstrap';
 import 'popper.js';
 import Swiper from 'swiper/dist/js/swiper.min';
+import IMask from "imask";
 
 $(window).on('load', function () {
     let b = $('body');
@@ -136,9 +137,6 @@ $(function () {
                     pauseOnMouseEnter: true,
                     autoHeight: true,
                     effect: 'fade',
-                    // width: 1058,
-                    // height: 585,
-                    // loop: false,
                     pagination: {
                         el: video_slider.prev('.swiper-pagination'),
                         renderBullet: function (index, className) {
@@ -160,13 +158,25 @@ $(function () {
             let slide = document.querySelectorAll('.certificates-slider .swiper-slide').length;
 
             if (slide > 1) {
-                let slider = new Swiper('.certificates-slider', {
+                let sliderDocs = new Swiper('.certificates-slider', {
                     observer: true,
                     observeParents: true,
-                    // loop: true,
                     autoplay: true,
                     spaceBetween: 30,
                     slidesPerView: 6,
+                });
+            }
+        }
+
+        if ($('.main-video__slider').length) {
+            let slide = document.querySelectorAll('.main-video__slider .swiper-slide').length;
+
+            if (slide > 1) {
+                let mainVideoSlider = new Swiper('.main-video__slider', {
+                    observer: true,
+                    observeParents: true,
+                    spaceBetween: 30,
+                    slidesPerView: 3,
                 });
             }
         }
@@ -209,6 +219,43 @@ $(function () {
         if ($('.faq__box').length > 0) {
             $('.faq__box-header').on('click', function () {
                 $(this).toggleClass('active').next().slideToggle();
+            });
+        }
+    })();
+
+    // inputs mask
+    (function() {
+        const phoneInputs = document.querySelectorAll('.mask-phone');
+        const cardNumber = document.querySelectorAll('.mask-card');
+        const cardDate = document.querySelectorAll('.mask-card-date');
+
+        if (phoneInputs.length) {
+            phoneInputs.forEach(function (e, i) {
+                const phone = IMask(e, {
+                    mask: '+{38}(\\000)-000-00-00',
+                    lazy: true,
+                    placeholderChar: '_',
+                });
+            });
+        }
+
+        if (cardNumber) {
+            cardNumber.forEach(function (e, i) {
+                const card = IMask(e, {
+                    mask: '0000 0000 0000 0000',
+                    lazy: true,
+                    placeholderChar: 'X',
+                });
+            });
+        }
+
+        if (cardDate) {
+            cardDate.forEach(function (e, i) {
+                const card = IMask(e, {
+                    mask: '00\\/00',
+                    lazy: true,
+                    placeholderChar: '0',
+                });
             });
         }
     })();
