@@ -260,6 +260,13 @@ $(function () {
         }
     })();
 
+    // filter
+    (function() {
+        $('.filter__item').on('click', function () {
+            $(this).toggleClass('active');
+        });
+    })();
+
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');
     let imgObserve = new IntersectionObserver(function (entries) {
