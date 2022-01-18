@@ -1,0 +1,28 @@
+.section-product-card {}
+
+
+
+.product {
+  &-pic {
+    img {}
+  }
+
+  &-content {
+    &__title {
+      margin: 0 0 20px;
+      font-weight: 700;
+      font-size: 29px;
+      line-height: 35px;
+    }
+  }
+
+  &-info {
+    &__box {
+      &-title {
+        margin: 0 0 20px;
+        font-weight: 600;
+        line-height: 20px;
+      }
+    }
+  }
+}
