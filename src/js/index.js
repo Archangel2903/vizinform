@@ -263,8 +263,18 @@ $(function () {
 
     // filter
     (function () {
-        $('.filter__item').on('click', function () {
+        let filterItems = $('.filter__item');
+
+        filterItems.on('click', function () {
             $(this).toggleClass('active');
+        });
+
+        $('.filter__reset').on('click', function () {
+            filterItems.forEach(function (e, i) {
+                if ($(e).hasClass('active')) {
+                    $(e).removeClass('active');
+                }
+            });
         });
     })();
 
