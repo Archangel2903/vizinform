@@ -8,6 +8,7 @@ import 'bootstrap';
 import 'popper.js';
 import Swiper from 'swiper/dist/js/swiper.min';
 import IMask from "imask";
+import 'bootstrap-star-rating';
 
 $(window).on('load', function () {
     let b = $('body');
@@ -224,7 +225,7 @@ $(function () {
     })();
 
     // inputs mask
-    (function() {
+    (function () {
         const phoneInputs = document.querySelectorAll('.mask-phone');
         const cardNumber = document.querySelectorAll('.mask-card');
         const cardDate = document.querySelectorAll('.mask-card-date');
@@ -261,10 +262,41 @@ $(function () {
     })();
 
     // filter
-    (function() {
+    (function () {
         $('.filter__item').on('click', function () {
             $(this).toggleClass('active');
         });
+    })();
+
+    // Star rating
+    (function () {
+        let ratingOutput = $('.star-rating-output'),
+            ratingInput = $('.star-rating');
+
+        if (ratingOutput.length) {
+            ratingOutput.rating({
+                size: 'xs',
+                readonly: true,
+                displayOnly: true,
+                showClear: false,
+                showCaption: false,
+                stars: 5,
+                emptyStar: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024"><title></title><g id="icomoon-ignore"></g><path fill="#d8d8d8" d="M461.187 58.538c16.746-48.176 84.878-48.176 101.625 0l88.669 255.093c7.391 21.252 27.22 35.662 49.717 36.12l270.008 5.503c50.996 1.039 72.046 65.837 31.405 96.65l-215.208 163.158c-17.929 13.594-25.503 36.908-18.989 58.447l78.205 258.491c14.766 48.818-40.35 88.867-82.219 59.733l-221.674-154.254c-18.467-12.851-42.983-12.851-61.452 0l-221.677 154.254c-41.865 29.134-96.984-10.915-82.215-59.733l78.204-258.491c6.516-21.539-1.060-44.853-18.989-58.447l-215.208-163.158c-40.643-30.813-19.589-95.61 31.403-96.65l270.009-5.503c22.495-0.458 42.329-14.868 49.716-36.12l88.67-255.093z"></path></svg>`,
+                filledStar: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024"><title></title><g id="icomoon-ignore"></g><path fill="#0047ba"
+          d="M461.187 58.538c16.746-48.176 84.878-48.176 101.625 0l88.669 255.093c7.391 21.252 27.22 35.662 49.717 36.12l270.008 5.503c50.996 1.039 72.046 65.837 31.405 96.65l-215.208 163.158c-17.929 13.594-25.503 36.908-18.989 58.447l78.205 258.491c14.766 48.818-40.35 88.867-82.219 59.733l-221.674-154.254c-18.467-12.851-42.983-12.851-61.452 0l-221.677 154.254c-41.865 29.134-96.984-10.915-82.215-59.733l78.204-258.491c6.516-21.539-1.060-44.853-18.989-58.447l-215.208-163.158c-40.643-30.813-19.589-95.61 31.403-96.65l270.009-5.503c22.495-0.458 42.329-14.868 49.716-36.12l88.67-255.093z"></path></svg>`,
+            });
+        }
+        if (ratingInput.length) {
+            ratingInput.rating({
+                size: 'xs',
+                showClear: false,
+                showCaption: false,
+                stars: 5,
+                step: 1,
+                emptyStar: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024"><path d="M512 0l158.215 337.080 353.785 54.054-256 262.38 60.436 370.487-316.436-174.92-316.433 174.92 60.433-370.487-256-262.38 353.783-54.054 158.217-337.080z"></path></svg>`,
+                filledStar: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024"><path d="M512 0l158.215 337.080 353.785 54.054-256 262.38 60.436 370.487-316.436-174.92-316.433 174.92 60.433-370.487-256-262.38 353.783-54.054 158.217-337.080z"></path></svg>`,
+            });
+        }
     })();
 
     // Lazy load observer

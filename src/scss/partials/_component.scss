@@ -331,6 +331,56 @@
   }
 }
 
+.rating-input {
+  display: none;
+}
+
+.rating-container {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin: 0 0 20px;
+
+  .rating-stars {
+    display: block;
+    width: 100%;
+    max-width: 140px;
+    margin: 0 auto;
+    outline: none !important;
+  }
+
+  .star {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .empty-stars {
+    .star {
+      svg {
+        fill: #D8D8D8;
+      }
+    }
+  }
+
+  .filled-stars {
+    .star {
+      svg {
+        fill: $main-first-color;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 320px) {}
 @include media-breakpoint-up(sm) {}
 @include media-breakpoint-up(md) {}
