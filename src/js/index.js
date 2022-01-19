@@ -309,6 +309,27 @@ $(function () {
         }
     })();
 
+    // input counter
+    (function () {
+        let counterBtn = document.querySelectorAll('.product-content__counter-button');
+
+        counterBtn.forEach(function (e, i) {
+            e.addEventListener('click', function () {
+                let input = this.parentElement.querySelector('.product-content__counter');
+                let inputValue = +input.value;
+
+                if (this.classList.contains('product-content__counter-button_minus')) {
+                    if (inputValue > 0) {
+                        input.value = inputValue - 1;
+                    }
+                }
+                else if (this.classList.contains('product-content__counter-button_plus')) {
+                    input.value = inputValue + 1;
+                }
+            });
+        });
+    })();
+
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');
     let imgObserve = new IntersectionObserver(function (entries) {
