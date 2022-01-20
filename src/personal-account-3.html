@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
-    <title>Видео</title>
+    <title>Личный кабинет</title>
 </head>
 <body class="loaded">
 <!-- BODY -->
@@ -579,166 +579,229 @@
 
     <!-- CONTENT -->
     <main class="content">
-        <section class="section section-breadcrumbs">
+        <section class="section section-personal-account">
             <div class="container">
-                <ul class="breadcrumbs">
-                    <li class="breadcrumbs__item">
-                        <a href="#" class="breadcrumbs__link">Головна</a>
-                        <svg>
-                            <use xlink:href="./img/spritemap.svg#sprite-bread-logo"></use>
-                        </svg>
-                    </li>
+                <div class="personal-account">
+                    <div class="personal-account__sidebar">
+                        <p class="personal-account__sidebar-title">Вітаємо, Олексій</p>
 
-                    <li class="breadcrumbs__item">
-                        <span class="breadcrumbs__link">Відео</span>
-                    </li>
-                </ul>
-            </div>
-        </section>
+                        <ul class="personal-account__sidebar-list">
+                            <li>
+                                <a href="personal-account.html" class="active"><svg><use xlink:href="./img/spritemap.svg#sprite-user-info"></use></svg>Контактна інформація</a>
+                            </li>
 
-        <section class="section section-main-video">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-auto">
-                        <p class="main-title">Наші відео</p>
+                            <li>
+                                <a href="personal-account-1.html"><svg><use xlink:href="./img/spritemap.svg#sprite-clipboard"></use></svg>Заявки</a>
+                            </li>
+
+                            <li>
+                                <a href="personal-account-2.html"><svg><use xlink:href="./img/spritemap.svg#sprite-cart"></use></svg>Мої замовлення</a>
+                            </li>
+
+                            <li>
+                                <a href="personal-account-3.html"><svg><use xlink:href="./img/spritemap.svg#sprite-heart"></use></svg>Обранні товари</a>
+                            </li>
+
+                            <li>
+                                <a href="index.html"><svg><use xlink:href="./img/spritemap.svg#sprite-exit"></use></svg>Вихід</a>
+                            </li>
+                        </ul>
                     </div>
 
-                    <div class="col-auto">
-                        <div class="social-links">
-                            <a href="#" class="btn btn-secondary">Youtube<svg><use xlink:href="./img/spritemap.svg#sprite-youtube"></use></svg></a>
+                    <div class="personal-account__content">
+                        <div class="personal-wishlist">
+                        <div class="product-card">
+                            <div class="product-card__info">
+                                <picture class="product-card__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/prod-badge01.png') %>" alt="image"
+                                         title="image">
+                                </picture>
+
+                                <p class="product-card__name">Бейдж "D&P perfumum"</p>
+                            </div>
+
+                            <div class="product-card__actions">
+                                <button class="product-card__btn-wish btn btn-sm btn-light">
+                                    <svg>
+                                        <use xlink:href="./img/spritemap.svg#sprite-heart"></use>
+                                    </svg>
+                                </button>
+                                <a href="#" class="product-card__btn-link btn btn-sm btn-secondary">
+                                    <svg>
+                                        <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card__info">
+                                <picture class="product-card__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/prod-badge01.png') %>" alt="image"
+                                         title="image">
+                                </picture>
+
+                                <p class="product-card__name">Бейдж "D&P perfumum"</p>
+                            </div>
+
+                            <div class="product-card__actions">
+                                <button class="product-card__btn-wish btn btn-sm btn-light">
+                                    <svg>
+                                        <use xlink:href="./img/spritemap.svg#sprite-heart"></use>
+                                    </svg>
+                                </button>
+                                <a href="#" class="product-card__btn-link btn btn-sm btn-secondary">
+                                    <svg>
+                                        <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card__info">
+                                <picture class="product-card__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/prod-badge01.png') %>" alt="image"
+                                         title="image">
+                                </picture>
+
+                                <p class="product-card__name">Бейдж "D&P perfumum"</p>
+                            </div>
+
+                            <div class="product-card__actions">
+                                <button class="product-card__btn-wish btn btn-sm btn-light">
+                                    <svg>
+                                        <use xlink:href="./img/spritemap.svg#sprite-heart"></use>
+                                    </svg>
+                                </button>
+                                <a href="#" class="product-card__btn-link btn btn-sm btn-secondary">
+                                    <svg>
+                                        <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card__info">
+                                <picture class="product-card__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/prod-badge01.png') %>" alt="image"
+                                         title="image">
+                                </picture>
+
+                                <p class="product-card__name">Бейдж "D&P perfumum"</p>
+                            </div>
+
+                            <div class="product-card__actions">
+                                <button class="product-card__btn-wish btn btn-sm btn-light">
+                                    <svg>
+                                        <use xlink:href="./img/spritemap.svg#sprite-heart"></use>
+                                    </svg>
+                                </button>
+                                <a href="#" class="product-card__btn-link btn btn-sm btn-secondary">
+                                    <svg>
+                                        <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card__info">
+                                <picture class="product-card__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/prod-badge01.png') %>" alt="image"
+                                         title="image">
+                                </picture>
+
+                                <p class="product-card__name">Бейдж "D&P perfumum"</p>
+                            </div>
+
+                            <div class="product-card__actions">
+                                <button class="product-card__btn-wish btn btn-sm btn-light">
+                                    <svg>
+                                        <use xlink:href="./img/spritemap.svg#sprite-heart"></use>
+                                    </svg>
+                                </button>
+                                <a href="#" class="product-card__btn-link btn btn-sm btn-secondary">
+                                    <svg>
+                                        <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card__info">
+                                <picture class="product-card__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/prod-badge01.png') %>" alt="image"
+                                         title="image">
+                                </picture>
+
+                                <p class="product-card__name">Бейдж "D&P perfumum"</p>
+                            </div>
+
+                            <div class="product-card__actions">
+                                <button class="product-card__btn-wish btn btn-sm btn-light">
+                                    <svg>
+                                        <use xlink:href="./img/spritemap.svg#sprite-heart"></use>
+                                    </svg>
+                                </button>
+                                <a href="#" class="product-card__btn-link btn btn-sm btn-secondary">
+                                    <svg>
+                                        <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card__info">
+                                <picture class="product-card__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/prod-badge01.png') %>" alt="image"
+                                         title="image">
+                                </picture>
+
+                                <p class="product-card__name">Бейдж "D&P perfumum"</p>
+                            </div>
+
+                            <div class="product-card__actions">
+                                <button class="product-card__btn-wish btn btn-sm btn-light">
+                                    <svg>
+                                        <use xlink:href="./img/spritemap.svg#sprite-heart"></use>
+                                    </svg>
+                                </button>
+                                <a href="#" class="product-card__btn-link btn btn-sm btn-secondary">
+                                    <svg>
+                                        <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-card__info">
+                                <picture class="product-card__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/prod-badge01.png') %>" alt="image"
+                                         title="image">
+                                </picture>
+
+                                <p class="product-card__name">Бейдж "D&P perfumum"</p>
+                            </div>
+
+                            <div class="product-card__actions">
+                                <button class="product-card__btn-wish btn btn-sm btn-light">
+                                    <svg>
+                                        <use xlink:href="./img/spritemap.svg#sprite-heart"></use>
+                                    </svg>
+                                </button>
+                                <a href="#" class="product-card__btn-link btn btn-sm btn-secondary">
+                                    <svg>
+                                        <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="main-video">
-                    <p class="main-video__title">Виробництво вивісок</p>
-
-                    <div class="main-video__slider swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide main-video__box">
-                                <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-
-                            <div class="swiper-slide main-video__box">
-                                <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-
-                            <div class="swiper-slide main-video__box">
-                                <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-
-                            <div class="swiper-slide main-video__box">
-                                <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-
-                            <div class="swiper-slide main-video__box">
-                                <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="main-video">
-                    <p class="main-video__title">Виробництво вивісок</p>
-
-                    <div class="main-video__slider swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide main-video__box">
-                                <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-
-                            <div class="swiper-slide main-video__box">
-                                <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-
-                            <div class="swiper-slide main-video__box">
-                                <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-
-                            <div class="swiper-slide main-video__box">
-                                <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-
-                            <div class="swiper-slide main-video__box">
-                                <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="main-video">
-                    <p class="main-video__title">Виробництво вивісок</p>
-
-                    <div class="main-video__slider swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide main-video__box">
-                                <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-
-                            <div class="swiper-slide main-video__box">
-                                <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-
-                            <div class="swiper-slide main-video__box">
-                                <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-
-                            <div class="swiper-slide main-video__box">
-                                <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-
-                            <div class="swiper-slide main-video__box">
-                                <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="main-video">
-                    <p class="main-video__title">Виробництво вивісок</p>
-
-                    <div class="main-video__slider swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide main-video__box">
-                                <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-
-                            <div class="swiper-slide main-video__box">
-                                <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-
-                            <div class="swiper-slide main-video__box">
-                                <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-
-                            <div class="swiper-slide main-video__box">
-                                <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-
-                            <div class="swiper-slide main-video__box">
-                                <iframe src="https://www.youtube.com/embed/PRLAinAx5sI" title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

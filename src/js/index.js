@@ -7,6 +7,7 @@ import 'jquery-ui/ui/widgets/tabs';
 import 'bootstrap';
 import 'popper.js';
 import Swiper from 'swiper/dist/js/swiper.min';
+import 'select2';
 import IMask from "imask";
 import 'bootstrap-star-rating';
 
@@ -322,11 +323,19 @@ $(function () {
                     if (inputValue > 0) {
                         input.value = inputValue - 1;
                     }
-                }
-                else if (this.classList.contains('product-content__counter-button_plus')) {
+                } else if (this.classList.contains('product-content__counter-button_plus')) {
                     input.value = inputValue + 1;
                 }
             });
+        });
+    })();
+
+    // Select2
+    (function () {
+        let select = $('.select-js');
+
+        select.select2({
+            minimumResultsForSearch: Infinity,
         });
     })();
 

@@ -2,64 +2,325 @@
   margin: 90px 0 120px;
 }
 
-.personal-account {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-content: stretch;
-  align-items: stretch;
+.personal {
+  &-account {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
 
-  &__sidebar {
-    width: 100%;
-    max-width: 330px;
-    padding: 30px;
-    background: #f5f9ff;
-    border-radius: 38px;
+    &__sidebar {
+      width: 100%;
+      max-width: 330px;
+      padding: 30px;
+      background: #f5f9ff;
+      border-radius: 38px;
 
-    &-title {
-      font-size: 22px;
-      font-weight: 700;
-      line-height: 27px;
+      &-title {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 27px;
+      }
+
+      &-list {
+        padding: 0;
+        margin: 0;
+
+        li {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-start;
+          align-content: flex-start;
+          align-items: flex-start;
+
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+
+          a {
+            display: inline-flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: 600;
+            line-height: 20px;
+
+            svg {
+              width: 32px;
+              height: 32px;
+              margin-right: 20px;
+            }
+
+            &.active {
+              background: white;
+
+              svg {
+
+              }
+            }
+          }
+        }
+      }
     }
 
-    &-list {
-      padding: 0;
-      margin: 0;
+    &__content {
+      position: relative;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-content: stretch;
+      align-items: stretch;
+      width: 100%;
+      max-width: calc(100% - 360px);
+      min-height: 445px;
 
-      li {
+      &-wrap {
+        position: relative;
         display: flex;
         flex-flow: row wrap;
         justify-content: flex-start;
+        align-content: stretch;
+        align-items: stretch;
+        width: 100%;
+        max-width: calc(100% - 360px);
+        min-height: 445px;
+        padding: 30px;
+        border: 2px solid $main-second-color;
+        border-radius: 40px;
+      }
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: stretch;
+    width: 100%;
+
+    &__form {
+      .row {
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
+
+      label {
+        width: 100%;
+        margin: 0;
+
+        &> span {
+          display: block;
+          margin: 0 0 10px;
+          font-size: 14px;
+          line-height: 17px;
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-content: flex-start;
+      align-items: flex-start;
+
+      .btn {
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+
+  &-request {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+    width: 100%;
+
+    &__header {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-content: stretch;
+      align-items: stretch;
+      padding: 0 20px;
+      margin-bottom: 30px;
+
+      &-col {
+        flex: 0 0 auto;
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      align-content: stretch;
+      align-items: stretch;
+    }
+
+    &__box {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-content: center;
+      align-items: center;
+      padding: 20px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+
+      &-col {
+        flex: 1 1 auto;
+        font-size: 1rem;
+        line-height: 1.25;
+
+        &:first-child {
+          max-width: 120px;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+        }
+
+        &:nth-child(2) {
+          max-width: 160px;
+        }
+
+        &:last-child {
+          flex: 0 0 auto;
+          max-width: 65px;
+        }
+
+        span {
+          display: block;
+
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    &-card {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      align-content: stretch;
+      align-items: stretch;
+      width: 100%;
+
+      &:not(:last-child) {
+        padding-bottom: 30px;
+        border-bottom: 1px solid $main-first-color;
+        margin-bottom: 30px;
+      }
+
+      &__header {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        margin: 0 0 30px;
+      }
+
+      &__backward {
+        display: inline-flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.25;
+
+        svg {
+          width: 24px;
+          height: 24px;
+          margin-right: 10px;
+          transform: rotate(180deg);
+        }
+      }
+
+      &__status {
+        display: inline-flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.25;
+
+        svg {
+          width: 24px;
+          height: 24px;
+          margin-right: 10px;
+        }
+      }
+
+      &__box {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
         align-content: flex-start;
         align-items: flex-start;
 
         &:not(:last-child) {
-          margin-bottom: 20px;
+          padding-bottom: 30px;
+          border-bottom: 1px solid #F4F4F4;
+          margin-bottom: 30px;
         }
+      }
 
-        a {
+      &__list {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        align-content: stretch;
+        align-items: stretch;
+        width: 100%;
+        max-width: 490px;
+        padding: 0;
+        margin: 0;
+
+        li {
           display: inline-flex;
           flex-flow: row nowrap;
-          justify-content: flex-start;
-          align-content: center;
-          align-items: center;
-          width: 100%;
-          padding: 10px;
-          border-radius: 10px;
-          font-weight: 600;
-          line-height: 20px;
+          justify-content: space-between;
+          align-content: flex-start;
+          align-items: flex-start;
 
-          svg {
-            width: 32px;
-            height: 32px;
-            margin-right: 20px;
+          &:not(:last-child) {
+            margin-bottom: 20px;
           }
 
-          &.active {
-            background: white;
+          span {
+            font-size: 1rem;
+            line-height: 1.25;
 
-            svg {
-
+            &:first-child {
+              max-width: 90px;
+            }
+            &:last-child {
+              width: 100%;
+              max-width: 300px;
             }
           }
         }
@@ -67,50 +328,16 @@
     }
   }
 
-  &__content {
-    width: 100%;
-    max-width: calc(100% - 360px);
-    padding: 30px;
-    border: 2px solid $main-second-color;
-    border-radius: 40px;
-  }
-}
-
-.personal-info {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
-  align-content: stretch;
-  align-items: stretch;
-  height: 100%;
-
-  &__form {
-    .row {
-      &:not(:last-child) {
-        margin-bottom: 30px;
-      }
-    }
-
-    label {
-      margin: 0;
-
-      &> span {
-        display: block;
-        margin: 0 0 10px;
-        font-size: 14px;
-        line-height: 17px;
-      }
-    }
-  }
-
-  &__footer {
+  &-wishlist {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-content: flex-start;
     align-items: flex-start;
 
-    .btn {
+    .product-card {
+      margin-bottom: 30px;
+
       &:not(:last-child) {
         margin-right: 30px;
       }
