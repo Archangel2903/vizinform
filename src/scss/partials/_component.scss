@@ -159,20 +159,24 @@
     &-wish {
       margin-right: 10px;
 
-      svg {
-        width: 24px;
-        height: 24px;
-        margin: 0;
+      &.btn {
+        svg {
+          width: 24px;
+          height: 24px;
+          margin: 0;
+        }
       }
     }
 
     &-link {
       flex: 1 1 auto;
 
-      svg {
-        width: 20px;
-        height: 20px;
-        margin: 0;
+      &.btn {
+        svg {
+          width: 20px;
+          height: 20px;
+          margin: 0;
+        }
       }
     }
   }
@@ -191,6 +195,40 @@
 
   &:focus {
     border-color: $main-first-color;
+  }
+
+  &-name {
+    display: block;
+    margin: 0 0 10px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.pseudo {
+  &-radio {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+
+    &__input {
+      flex: 0 0 auto;
+      width: 24px;
+      height: 24px;
+      margin-right: 20px;
+      border: 2px solid #D8D8D8;
+      border-radius: 100%;
+    }
+
+    &__text {
+      flex: 0 0 auto;
+      margin: 3px 0 0;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 20px;
+    }
   }
 }
 

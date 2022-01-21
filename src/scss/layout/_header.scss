@@ -294,11 +294,19 @@ header.header {
     font-weight: 600;
     font-size: 1rem;
     line-height: 20px;
+    text-decoration: none !important;
 
     svg {
       width: 24px;
       height: 24px;
       margin-right: 10px;
+      transition: $transition-base;
+    }
+
+    &:hover {
+      svg {
+        fill: $main-first-color;
+      }
     }
   }
 }
@@ -720,6 +728,18 @@ header.header {
 
   .mobile-menu {
     display: none;
+  }
+}
+
+.header-contact-tel {
+  &__text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &__link {
+    font-weight: 600;
   }
 }
 

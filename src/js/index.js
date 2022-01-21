@@ -26,69 +26,77 @@ $(window).on('load', function () {
 $(function () {
     // catalog
     (function () {
-        const toggler = document.querySelector('.catalog__toggle');
-        const listWrap = document.querySelector('.catalog__list-wrapper');
-        const list = document.querySelector('.catalog__list');
-        const listItem = listWrap.querySelectorAll('.catalog__list > li');
+        const catalog = document.querySelector('.catalog');
 
-        listItem.forEach(function (el, i) {
-            el.addEventListener('mouseenter', function (e) {
-                if (this.querySelector('.catalog__sublist-wrap')) {
-                    let sublistHeight = this.querySelector('.catalog__sublist-wrap').offsetHeight;
+        if (catalog) {
+            const toggler = document.querySelector('.catalog__toggle');
+            const listWrap = document.querySelector('.catalog__list-wrapper');
+            const list = document.querySelector('.catalog__list');
+            const listItem = listWrap.querySelectorAll('.catalog__list > li');
 
-                    if (sublistHeight > list.offsetHeight) {
-                        listWrap.style.height = `${sublistHeight + 20}px`;
-                    } else if (sublistHeight < list.offsetHeight) {
-                        listWrap.style.height = `auto`;
-                    } else {
-                        listWrap.style.height = `auto`;
+            listItem.forEach(function (el, i) {
+                el.addEventListener('mouseenter', function (e) {
+                    if (this.querySelector('.catalog__sublist-wrap')) {
+                        let sublistHeight = this.querySelector('.catalog__sublist-wrap').offsetHeight;
+
+                        if (sublistHeight > list.offsetHeight) {
+                            listWrap.style.height = `${sublistHeight + 20}px`;
+                        } else if (sublistHeight < list.offsetHeight) {
+                            listWrap.style.height = `auto`;
+                        } else {
+                            listWrap.style.height = `auto`;
+                        }
                     }
-                }
+                });
+
+                el.addEventListener('mouseleave', function () {
+                    listWrap.style.height = `auto`;
+                });
             });
 
-            el.addEventListener('mouseleave', function () {
-                listWrap.style.height = `auto`;
+            toggler.addEventListener('click', function (e) {
+                let catalogMenu = this.nextElementSibling;
+
+                catalogMenu.classList.toggle('opened');
             });
-        });
-
-        toggler.addEventListener('click', function (e) {
-            let catalogMenu = this.nextElementSibling;
-
-            catalogMenu.classList.toggle('opened');
-        });
+        }
     })();
 
     // Cart
     (function () {
-        let cartButton = document.querySelector('.cart__ico');
-        cartButton.addEventListener('click', function () {
-            this.nextElementSibling.classList.toggle('opened');
-        });
+        const cart = document.querySelector('.cart');
 
-        let counterBtn = document.querySelectorAll('.cart__counter-btn');
-        counterBtn.forEach(function (el, i) {
-            // el.addEventListener('click', counter);
-            el.addEventListener('mousedown', counter);
-        });
+        if (cart) {
+            let cartButton = document.querySelector('.cart__ico');
+            cartButton.addEventListener('click', function () {
+                this.nextElementSibling.classList.toggle('opened');
+            });
 
-        let removeItemBtn = document.querySelectorAll('.cart__item-remove');
-        removeItemBtn.forEach(function (el, i) {
-            el.addEventListener('click', function () {
-                this.parentElement.remove();
-            })
-        });
+            let counterBtn = document.querySelectorAll('.cart__counter-btn');
+            counterBtn.forEach(function (el, i) {
+                // el.addEventListener('click', counter);
+                el.addEventListener('mousedown', counter);
+            });
 
-        function counter() {
-            let field = this.parentElement.querySelector('.cart__counter-field');
-            let currentVal = this.parentElement.querySelector('.cart__counter-field').value;
+            let removeItemBtn = document.querySelectorAll('.cart__item-remove');
+            removeItemBtn.forEach(function (el, i) {
+                el.addEventListener('click', function () {
+                    this.parentElement.remove();
+                })
+            });
 
-            if (this.classList.contains('cart__counter-btn_minus')) {
-                if (currentVal > 1) {
-                    this.nextElementSibling.value = +currentVal - 1;
-                }
-            } else if (this.classList.contains('cart__counter-btn_plus')) {
-                if (currentVal < Number(field.getAttribute('max'))) {
-                    this.previousElementSibling.value = +currentVal + 1;
+            function counter() {
+                let field = this.parentElement.querySelector('.cart__counter-field');
+                let currentVal = this.parentElement.querySelector('.cart__counter-field').value;
+
+                if (this.classList.contains('cart__counter-btn_minus')) {
+                    if (currentVal > 1) {
+                        this.nextElementSibling.value = +currentVal - 1;
+                    }
+                } else if (this.classList.contains('cart__counter-btn_plus')) {
+                    if (currentVal < Number(field.getAttribute('max'))) {
+                        this.previousElementSibling.value = +currentVal + 1;
+                    }
                 }
             }
         }

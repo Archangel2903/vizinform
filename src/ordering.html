@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
+    <title>Оформление заказа</title>
+</head>
+<body class="loaded">
+<!-- BODY -->
+<div class="main-wrapper">
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-top">
+            <a href="index.html" class="logo">
+                <svg>
+                    <use xlink:href="./img/spritemap.svg#sprite-logo"></use>
+                </svg>
+            </a>
+
+            <div class="header-contact-tel">
+                <p class="header-contact-tel__text">Консультація по телефону:
+                    <a href="tel:+380977851818" class="header-contact-tel__link">097-785-18-18,</a>
+                    <a href="tel:+380445923664" class="header-contact-tel__link">044-592-36-64</a>
+                </p>
+            </div>
+        </div>
+    </header>
+    <!-- HEADER END -->
+
+    <!-- CONTENT -->
+    <main class="content">
+        <section class="section section-ordering">
+            <div class="container">
+                <div class="ordering">
+                    <div class="ordering-info">
+                        <form action="" class="ordering-info__form">
+                            <p class="ordering-info__title-block">Контактна інформація</p>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <label>
+                                        <span class="form-control-name">Ім’я</span>
+                                        <input type="text" class="form-control">
+                                    </label>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <label>
+                                        <span class="form-control-name">Прізвище</span>
+                                        <input type="text" class="form-control">
+                                    </label>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <label>
+                                        <span class="form-control-name">Номер телефона</span>
+                                        <input type="text" class="form-control mask-phone">
+                                    </label>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <label>
+                                        <span class="form-control-name">Email</span>
+                                        <input type="email" class="form-control">
+                                    </label>
+                                </div>
+                            </div>
+
+                            <p class="ordering-info__title-block">Оплата і доставка</p>
+
+                            <div class="ordering-info__payment-method">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label>
+                                            <input type="radio" name="payment-method">
+
+                                            <span class="pseudo-radio">
+                                                <span class="pseudo-radio__input"></span>
+                                                <span class="pseudo-radio__text">Банківська картка</span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <label>
+                                            <input type="radio" name="payment-method">
+
+                                            <span class="pseudo-radio">
+                                                <span class="pseudo-radio__input"></span>
+                                                <span class="pseudo-radio__text">Безготівковий</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ordering-info__payment">
+                                <div class="ordering-info__payment-block payment-credit-card"></div>
+                                <div class="ordering-info__payment-block payment-cash"></div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="ordering-cart"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- CONTENT END -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p class="copyright text-center">Vizinform© 2000 - 2021 Майстерня з виготовлення рекламної продукції. Всі права захищені</p>
+    </footer>
+    <!-- FOOTER END -->
+</div>
+
+<div class="icon-load">
+    <picture><img src="<%= require('./img/logo-ico.svg') %>" alt="pre-loader"></picture>
+</div>
+<!-- BODY END   -->
+</body>
+</html>
