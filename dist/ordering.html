@@ -5,7 +5,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
     <title>Оформление заказа</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="style.e151c054d0cda4cc0f60.min.css" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="style.c6ff2d32d2a43cf649cb.min.css" rel="stylesheet"></head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
@@ -35,7 +35,7 @@
                 <div class="ordering">
                     <div class="ordering-info">
                         <form action="" class="ordering-info__form">
-                            <p class="ordering-info__title-block">Контактна інформація</p>
+                            <p class="ordering-info__title">Контактна інформація</p>
 
                             <div class="row">
                                 <div class="col-lg-6">
@@ -67,42 +67,227 @@
                                 </div>
                             </div>
 
-                            <p class="ordering-info__title-block">Оплата і доставка</p>
+                            <p class="ordering-info__title">Оплата і доставка</p>
 
-                            <div class="ordering-info__payment-method">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <label>
-                                            <input type="radio" name="payment-method">
+                            <div class="ordering-info__method">
+                                <div class="ordering-info__method-head">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <label>
+                                                <input type="radio" name="payment-method">
 
-                                            <span class="pseudo-radio">
-                                                <span class="pseudo-radio__input"></span>
-                                                <span class="pseudo-radio__text">Банківська картка</span>
-                                            </span>
-                                        </label>
+                                                <span class="pseudo-radio">
+                                                    <span class="pseudo-radio__input"></span>
+                                                    <span class="pseudo-radio__text">Банківська картка</span>
+                                                </span>
+                                            </label>
+                                        </div>
+
+                                        <div class="col-lg-4">
+                                            <label>
+                                                <input type="radio" name="payment-method">
+
+                                                <span class="pseudo-radio">
+                                                    <span class="pseudo-radio__input"></span>
+                                                    <span class="pseudo-radio__text">Безготівковий</span>
+                                                </span>
+                                            </label>
+                                        </div>
                                     </div>
+                                </div>
 
-                                    <div class="col-lg-6">
-                                        <label>
-                                            <input type="radio" name="payment-method">
+                                <div class="ordering-info__method-body">
+                                    <fieldset id="payment-card">
+                                        <div class="ordering-info__note">
+                                            <div class="ordering-info__card-list">
+                                                <label>
+                                                    <input type="radio" name="card-method">
 
-                                            <span class="pseudo-radio">
-                                                <span class="pseudo-radio__input"></span>
-                                                <span class="pseudo-radio__text">Безготівковий</span>
-                                            </span>
-                                        </label>
-                                    </div>
+                                                    <span class="pseudo-radio">
+                                                        <span class="pseudo-radio__input"></span>
+                                                        <span class="pseudo-radio__text">Додати нову</span>
+                                                    </span>
+                                                </label>
+                                            </div>
+
+                                            <div class="ordering-info__card">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <label>
+                                                            <span class="form-control-name">Номер картки</span>
+                                                            <input type="text" id="add_card_number" class="form-control mask-card ordering-info__card-number">
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="col-auto">
+                                                        <label>
+                                                            <span class="form-control-name">Термін дії</span>
+                                                            <input type="text" id="add_card_date"
+                                                                   class="form-control form-control_sm ordering-info__card-info mask-card-date">
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="col-auto">
+                                                        <label>
+                                                            <span class="form-control-name">CVV ⓘ</span>
+                                                            <input type="text" id="add_card_cvv" class="form-control form-control_sm ordering-info__card-info">
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <button id="add_card_btn" class="btn btn-sm btn-primary">Додати</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <p class="ordering-info__note-text">Натискаючи кнопку «Додати», Ви підтверджуєте, що надаєте свою згоду на надання Вам
+                                                фінансових послуг з переказу коштів з метою оплати замовлення\послуг на Vizinform одним із наступних фінансових
+                                                партнерів:</p>
+                                            <p class="ordering-info__note-text">АТ "ТАСКОМБАНК", АТ "АЛЬФА-БАНК", АТ "ПУМБ", АТ КБ "ПРИВАТБАНК", АТ "ОЩАДБАНК"</p>
+
+                                            <div id="card_list" class="ordering-info__card-list">
+                                                <label>
+                                                    <input type="radio" name="card-method">
+
+                                                    <span class="pseudo-radio">
+                                                        <span class="pseudo-radio__input"></span>
+                                                        <span class="pseudo-radio__text">***********3345</span>
+                                                    </span>
+                                                </label>
+                                            </div>
+
+                                            <div class="ordering-info__card-list alternate-payment" data-note="або">
+                                                <label>
+                                                    <input type="radio" name="card-method">
+
+                                                    <span class="pseudo-radio">
+                                                        <span class="pseudo-radio__input"></span>
+                                                        <span class="pseudo-radio__text">Google Pay / Apple Pay</span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                    <fieldset id="payment-online">
+                                        <div class="ordering-info__note">
+                                            <p class="ordering-info__note-text">Увага! Для оплати обраним способом потрібно ввести код ЄДРПОУ особи, з розрахункового
+                                                рахунку якої буде здійснена оплата</p>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>
+                                                    <span class="form-control-name">Повна назва особи</span>
+                                                    <input type="text" class="form-control">
+                                                </label>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label>
+                                                    <span class="form-control-name">Код ЄДРПОУ</span>
+                                                    <input type="text" class="form-control">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
                                 </div>
                             </div>
 
-                            <div class="ordering-info__payment">
-                                <div class="ordering-info__payment-block payment-credit-card"></div>
-                                <div class="ordering-info__payment-block payment-cash"></div>
+                            <div class="ordering-info__method">
+                                <div class="ordering-info__method-head">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <label>
+                                                <input type="radio" name="delivery-method">
+
+                                                <span class="pseudo-radio">
+                                                    <span class="pseudo-radio__input"></span>
+                                                    <span class="pseudo-radio__text">Нова Пошта</span>
+                                                </span>
+                                            </label>
+                                        </div>
+
+                                        <div class="col-lg-4">
+                                            <label>
+                                                <input type="radio" name="delivery-method">
+
+                                                <span class="pseudo-radio">
+                                                    <span class="pseudo-radio__input"></span>
+                                                    <span class="pseudo-radio__text">Кур'єр (Київ)</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="ordering-info__method-body">
+                                    <fieldset id="delivery-card">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <label>
+                                                    <span class="form-control-name">Місто</span>
+
+                                                    <select name="" class="select-js">
+                                                        <option value="0">Не вказано</option>
+                                                        <option value="1">м. Київ, Київська обл.</option>
+                                                        <option value="2">м. Херсон, Херсонська обл.</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <label>
+                                                    <span class="form-control-name">Відділення Нової Пошти</span>
+
+                                                    <select name="" class="select-js">
+                                                        <option value="0">Не вказано</option>
+                                                        <option value="1">Відділення №1</option>
+                                                        <option value="2">Відділення №2</option>
+                                                        <option value="3">Відділення №3</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                    <fieldset id="delivery-online">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <label>
+                                                    <span class="form-control-name">Адреса доставки</span>
+
+                                                    <select name="" class="select-js">
+                                                        <option value="0">Не вказано</option>
+                                                        <option value="1">вул. Такая-то, 40-Б</option>
+                                                        <option value="2">вул. Такая-то, 20-Б</option>
+                                                        <option value="3">вул. Такая-то, 1-А</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
                             </div>
                         </form>
                     </div>
 
-                    <div class="ordering-cart"></div>
+                    <div class="ordering-cart">
+                        <div class="ordering-cart__product-list"></div>
+
+                        <div class="ordering-cart__delivery-price"></div>
+
+                        <div class="ordering-cart__summary">
+                            <p class="ordering-cart__summary-text">
+                                <span>Всього</span>
+                                <span>1999₴</span>
+                            </p>
+
+                            <button type="button" class="btn btn-lg btn-primary w-100">Замовлення підтверджую <svg><use xlink:href="./img/spritemap.svg#sprite-arrow-link"></use></svg></button>
+                        </div>
+
+                        <p class="ordering-cart__note">Підтверджуючи замовлення, я приймаю умови <a href="#">угоди користувача</a></p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -120,5 +305,5 @@
     <picture><img src="img/logo-ico.svg" alt="pre-loader"></picture>
 </div>
 <!-- BODY END   -->
-<script type="text/javascript" src="bundle.e151c054d0cda4cc0f60.min.js"></script></body>
+<script type="text/javascript" src="bundle.c6ff2d32d2a43cf649cb.min.js"></script></body>
 </html>
