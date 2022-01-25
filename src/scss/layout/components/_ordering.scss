@@ -186,11 +186,15 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 
     &__product-list {
-
+      padding: 0 0 20px;
+      margin: 0 0 20px;
+      border-bottom: 1px solid #F4F4F4;
     }
 
     &__delivery-price {
-
+      padding: 0 0 20px;
+      margin: 0 0 20px;
+      border-bottom: 1px solid #F4F4F4;
     }
 
     &__summary {
