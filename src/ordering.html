@@ -273,9 +273,52 @@
                     </div>
 
                     <div class="ordering-cart">
-                        <div class="ordering-cart__product-list"></div>
+                        <ul class="ordering-cart-list">
+                            <li>
+                                <button class="ordering-cart-list__remove">
+                                    <svg>
+                                        <use xlink:href="./img/spritemap.svg#sprite-close-around"></use>
+                                    </svg>
+                                </button>
 
-                        <div class="ordering-cart__delivery-price"></div>
+                                <a href="product-page.html" class="ordering-cart-list__name">Бейдж Вбб1</a>
+
+                                <form action="" class="cart__counter">
+                                    <label>
+                                        <button type="button" class="cart__counter-btn cart__counter-btn_minus">-</button>
+                                        <input type="number" class="cart__counter-field" value="15" min="1" max="9999">
+                                        <button type="button" class="cart__counter-btn cart__counter-btn_plus">+</button>
+                                    </label>
+                                </form>
+
+                                <span class="ordering-cart-list__price">999₴</span>
+                            </li>
+
+                            <li>
+                                <button class="ordering-cart-list__remove">
+                                    <svg>
+                                        <use xlink:href="./img/spritemap.svg#sprite-close-around"></use>
+                                    </svg>
+                                </button>
+
+                                <a href="product-page.html" class="ordering-cart-list__name">Магніт, Код В1</a>
+
+                                <form action="" class="cart__counter">
+                                    <label>
+                                        <button type="button" class="cart__counter-btn cart__counter-btn_minus">-</button>
+                                        <input type="number" class="cart__counter-field" value="15" min="1" max="9999">
+                                        <button type="button" class="cart__counter-btn cart__counter-btn_plus">+</button>
+                                    </label>
+                                </form>
+
+                                <span class="ordering-cart-list__price">1000₴</span>
+                            </li>
+                        </ul>
+
+                        <p class="ordering-cart__delivery-price">
+                            <span>Вартість доставки</span>
+                            <span>200₴</span>
+                        </p>
 
                         <div class="ordering-cart__summary">
                             <p class="ordering-cart__summary-text">
@@ -283,7 +326,11 @@
                                 <span>1999₴</span>
                             </p>
 
-                            <button type="button" class="btn btn-lg btn-primary w-100">Замовлення підтверджую <svg><use xlink:href="./img/spritemap.svg#sprite-arrow-link"></use></svg></button>
+                            <button type="button" class="btn btn-lg btn-primary w-100">Замовлення підтверджую
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-arrow-link"></use>
+                                </svg>
+                            </button>
                         </div>
 
                         <p class="ordering-cart__note">Підтверджуючи замовлення, я приймаю умови <a href="#">угоди користувача</a></p>

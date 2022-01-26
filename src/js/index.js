@@ -65,6 +65,7 @@ $(function () {
     // Cart
     (function () {
         const cart = document.querySelector('.cart');
+        const orderCart = document.querySelector('.ordering-cart-list');
 
         if (cart) {
             let cartButton = document.querySelector('.cart__ico');
@@ -99,6 +100,15 @@ $(function () {
                     }
                 }
             }
+        }
+
+        if (orderCart) {
+            orderCart.addEventListener('click', function (e) {
+                if (e.target.classList.contains('ordering-cart-list__remove')) {
+                    let removeBtn = e.target;
+                    removeBtn.parentNode.remove();
+                }
+            });
         }
     })();
 

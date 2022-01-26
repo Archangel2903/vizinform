@@ -56,9 +56,9 @@
 
 .title {
   margin: 0 0 60px;
-  font-size: 49px;
+  font-size: 25px;
   font-weight: 700;
-  line-height: 60px;
+  line-height: 30px;
 }
 
 .subtitle {
@@ -670,13 +670,23 @@ input {
   }
 }
 
-@media screen and (min-width: 320px) {
-}
 @include media-breakpoint-up(sm) {
+  .title {
+    font-size: 35px;
+    line-height: 1.5;
+  }
 }
+
 @include media-breakpoint-up(md) {
+  .title {
+    font-size: 49px;
+    line-height: 60px;
+  }
 }
+
 @include media-breakpoint-up(lg) {
+
 }
+
 @include media-breakpoint-up(xl) {
 }
