@@ -85,7 +85,7 @@ header.header {
         z-index: 2;
 
         &:not(:last-child) {
-          margin-right: 98px;
+          margin-right: 40px;
         }
 
         svg {
@@ -527,12 +527,6 @@ header.header {
 .catalog {
   flex: 0 0 auto;
 
-  &:hover {
-    .catalog__list-wrapper {
-      transform: translate(-50%, 0) scaleY(1);
-    }
-  }
-
   &__toggle {
     display: inline-flex;
     flex-flow: row wrap;
@@ -616,13 +610,6 @@ header.header {
         height: 14px;
         transform: rotate(-90deg);
       }
-
-      &:hover {
-        .catalog__sublist-wrap {
-          opacity: 1;
-          visibility: visible;
-        }
-      }
     }
   }
 
@@ -651,8 +638,7 @@ header.header {
       justify-content: flex-start;
       align-content: flex-start;
       align-items: flex-start;
-      width: calc(100% - 330px);
-      //min-height: 100%;
+      width: 100%;
       padding: 30px 20px;
       background: white;
       opacity: 0;
@@ -700,8 +686,8 @@ header.header {
   }
 
   .mobile-menu {
+    max-width: 335px;
     padding: 0 20px;
-    //display: none;
 
     .header-nav {
       &__list {
@@ -758,6 +744,10 @@ header.header {
 @include media-breakpoint-up(xl) {
   .header {
     &-top {
+      .header-nav {
+        display: block;
+      }
+
       .languages {
         display: inline-flex;
       }
@@ -785,10 +775,50 @@ header.header {
       }
     }
   }
+
+  .catalog {
+    &:hover {
+      .catalog__list-wrapper {
+        transform: translate(-50%, 0) scaleY(1);
+      }
+    }
+
+    &__list {
+      & > li {
+        &:hover {
+          .catalog__sublist-wrap {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+
+    &__sublist {
+      &-wrap {
+        width: calc(100% - 330px);
+        min-height: 100%;
+      }
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+  }
 }
 
 @include media-breakpoint-up(xxl) {
   .header {
+    &-nav {
+      &__list {
+        & > li {
+          &:not(:last-child) {
+            margin-right: 98px;
+          }
+        }
+      }
+    }
+
     &-contacts {
       position: relative;
       display: inline-flex;

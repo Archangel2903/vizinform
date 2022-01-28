@@ -11,6 +11,14 @@ import 'select2';
 import IMask from "imask";
 import 'bootstrap-star-rating';
 
+const mqlMin = {
+    xxl: matchMedia('(min-width: 1470px)'),
+    xl: matchMedia('(min-width: 1200px)'),
+    lg: matchMedia('(min-width: 992px)'),
+    md: matchMedia('(min-width: 768px)'),
+    sm: matchMedia('(min-width: 576px)'),
+}
+
 $(window).on('load', function () {
     let b = $('body');
 
@@ -34,25 +42,41 @@ $(function () {
             const list = document.querySelector('.catalog__list');
             const listItem = listWrap.querySelectorAll('.catalog__list > li');
 
-            listItem.forEach(function (el, i) {
-                el.addEventListener('mouseenter', function (e) {
-                    if (this.querySelector('.catalog__sublist-wrap')) {
-                        let sublistHeight = this.querySelector('.catalog__sublist-wrap').offsetHeight;
+            function handlerResize() {
+                if (mqlMin.xl.matches) {
+                    listItem.forEach(function (el, i) {
+                        el.addEventListener('mouseenter', handlerEnter);
 
-                        if (sublistHeight > list.offsetHeight) {
-                            listWrap.style.height = `${sublistHeight + 20}px`;
-                        } else if (sublistHeight < list.offsetHeight) {
-                            listWrap.style.height = `auto`;
-                        } else {
-                            listWrap.style.height = `auto`;
-                        }
+                        el.addEventListener('mouseleave', handlerLeave);
+                    });
+                }
+                else {
+                    listItem.forEach(function (el, i) {
+                        el.removeEventListener('mouseenter', handlerEnter);
+
+                        el.removeEventListener('mouseleave', handlerLeave);
+                    });
+                }
+            }
+            let handlerEnter = function () {
+                if (this.querySelector('.catalog__sublist-wrap')) {
+                    let sublistHeight = this.querySelector('.catalog__sublist-wrap').offsetHeight;
+
+                    if (sublistHeight > list.offsetHeight) {
+                        listWrap.style.height = `${sublistHeight + 20}px`;
+                    } else if (sublistHeight < list.offsetHeight) {
+                        listWrap.style.height = `auto`;
+                    } else {
+                        listWrap.style.height = `auto`;
                     }
-                });
+                }
+            }
+            let handlerLeave = function () {
+                listWrap.style.height = `auto`;
+            }
 
-                el.addEventListener('mouseleave', function () {
-                    listWrap.style.height = `auto`;
-                });
-            });
+            window.addEventListener('resize', handlerResize);
+            handlerResize();
 
             toggler.addEventListener('click', function (e) {
                 let catalogMenu = this.nextElementSibling;
