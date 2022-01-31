@@ -42,9 +42,11 @@ $(function () {
             const listMobile = listWrap.querySelector('.mobile-menu');
             const list =   document.querySelector('.catalog__list');
             const listItem = listWrap.querySelectorAll('.catalog__list > li');
+            const sublistWrap = list.querySelectorAll('.catalog__sublist-wrap');
             const sublistToggle = list.querySelectorAll('.catalog__sublist-toggle');
             const sublistReturn = list.querySelectorAll('.catalog__sublist-return');
             const dropdownToggle = list.querySelectorAll('.catalog__dropdown-toggle');
+            const dropdownWrap = list.querySelectorAll('.catalog__dropdown-wrap');
 
             let handlerEnter = function () {
                 if (this.querySelector('.catalog__sublist-wrap')) {
@@ -71,9 +73,20 @@ $(function () {
                 if (mqlMin.xl.matches) {
                     listItem.forEach(function (el, i) {
                         el.addEventListener('mouseenter', handlerEnter);
-
                         el.addEventListener('mouseleave', handlerLeave);
                     });
+                    sublistToggle.forEach(function (e, i) {
+                        e.removeEventListener('click', handlerSublistToggle);
+                    });
+                    sublistWrap.forEach(function (e, i) {
+                        e.classList.remove('active');
+                    });
+                    /*dropdownToggle.forEach(function (e, i) {
+                        e.classList.remove('active');
+                    });
+                    dropdownWrap.forEach(function (e, i) {
+                        $(e).slideDown();
+                    });*/
                 }
                 else {
                     listItem.forEach(function (el, i) {
