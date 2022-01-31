@@ -39,25 +39,13 @@ $(function () {
         if (catalog) {
             const toggler = document.querySelector('.catalog__toggle');
             const listWrap = document.querySelector('.catalog__list-wrapper');
-            const list = document.querySelector('.catalog__list');
+            const listMobile = listWrap.querySelector('.mobile-menu');
+            const list =   document.querySelector('.catalog__list');
             const listItem = listWrap.querySelectorAll('.catalog__list > li');
+            const sublistToggle = list.querySelectorAll('.catalog__sublist-toggle');
+            const sublistReturn = list.querySelectorAll('.catalog__sublist-return');
+            const dropdownToggle = list.querySelectorAll('.catalog__dropdown-toggle');
 
-            function handlerResize() {
-                if (mqlMin.xl.matches) {
-                    listItem.forEach(function (el, i) {
-                        el.addEventListener('mouseenter', handlerEnter);
-
-                        el.addEventListener('mouseleave', handlerLeave);
-                    });
-                }
-                else {
-                    listItem.forEach(function (el, i) {
-                        el.removeEventListener('mouseenter', handlerEnter);
-
-                        el.removeEventListener('mouseleave', handlerLeave);
-                    });
-                }
-            }
             let handlerEnter = function () {
                 if (this.querySelector('.catalog__sublist-wrap')) {
                     let sublistHeight = this.querySelector('.catalog__sublist-wrap').offsetHeight;
@@ -74,6 +62,31 @@ $(function () {
             let handlerLeave = function () {
                 listWrap.style.height = `auto`;
             }
+            let handlerSublistToggle = function () {
+                this.nextElementSibling.classList.toggle('active');
+                $(listMobile).stop().slideUp();
+            }
+
+            function handlerResize() {
+                if (mqlMin.xl.matches) {
+                    listItem.forEach(function (el, i) {
+                        el.addEventListener('mouseenter', handlerEnter);
+
+                        el.addEventListener('mouseleave', handlerLeave);
+                    });
+                }
+                else {
+                    listItem.forEach(function (el, i) {
+                        el.removeEventListener('mouseenter', handlerEnter);
+
+                        el.removeEventListener('mouseleave', handlerLeave);
+                    });
+
+                    sublistToggle.forEach(function (e, i) {
+                        e.addEventListener('click', handlerSublistToggle);
+                    });
+                }
+            }
 
             window.addEventListener('resize', handlerResize);
             handlerResize();
@@ -82,6 +95,18 @@ $(function () {
                 let catalogMenu = this.nextElementSibling;
 
                 catalogMenu.classList.toggle('opened');
+            });
+            sublistReturn.forEach(function (e, i) {
+                e.addEventListener('click', function () {
+                    this.closest('.catalog__sublist-wrap').classList.remove('active');
+                    $(listMobile).stop().slideDown();
+                });
+            });
+            dropdownToggle.forEach(function (e, i) {
+                e.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    $(this).next().stop().slideToggle();
+                });
             });
         }
     })();
@@ -255,7 +280,9 @@ $(function () {
 
     // Tabs
     (function () {
-        $('#tabs').tabs();
+        if ($('#tabs')) {
+            $('#tabs').tabs();
+        }
     })();
 
     //FAQ
@@ -308,17 +335,19 @@ $(function () {
     (function () {
         let filterItems = $('.filter__item');
 
-        filterItems.on('click', function () {
-            $(this).toggleClass('active');
-        });
-
-        $('.filter__reset').on('click', function () {
-            filterItems.forEach(function (e, i) {
-                if ($(e).hasClass('active')) {
-                    $(e).removeClass('active');
-                }
+        if (filterItems) {
+            filterItems.on('click', function () {
+                $(this).toggleClass('active');
             });
-        });
+
+            $('.filter__reset').on('click', function () {
+                filterItems.forEach(function (e, i) {
+                    if ($(e).hasClass('active')) {
+                        $(e).removeClass('active');
+                    }
+                });
+            });
+        }
     })();
 
     // Star rating
