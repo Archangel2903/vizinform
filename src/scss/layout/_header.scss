@@ -336,8 +336,6 @@ header.header {
 }
 
 .cart {
-  position: relative;
-
   &__ico {
     svg {
       width: 24px;
@@ -349,8 +347,9 @@ header.header {
   &__dropdown {
     position: absolute;
     top: 100%;
-    right: 100%;
+    right: 0;
     width: 600px;
+    max-width: 100%;
     padding: 0 20px 20px;
     background: white;
     border-radius: 0 0 40px 40px;
@@ -364,7 +363,7 @@ header.header {
     &.opened {
       opacity: 1;
       visibility: visible;
-      transform: translate(40%, 0) scaleY(1);
+      transform: translate(0, 0) scaleY(1);
     }
 
     &-list {
@@ -385,7 +384,7 @@ header.header {
 
     &-footer {
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: column-reverse wrap;
       justify-content: space-between;
       align-content: center;
       align-items: center;
@@ -403,8 +402,9 @@ header.header {
   }
 
   &__item {
+    position: relative;
     display: inline-flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-content: center;
     align-items: center;
@@ -413,8 +413,11 @@ header.header {
 
     &-remove {
       flex: 0 0 24px;
+      position: absolute;
+      top: 20px;
+      right: 0;
       padding: 0;
-      margin-right: 20px;
+      margin: 0;
       background: none;
       border: none;
       outline: none !important;
@@ -423,6 +426,7 @@ header.header {
         width: 18px;
         height: 18px;
         fill: #D8D8D8;
+        vertical-align: baseline;
         transition: $transition-base;
       }
 
@@ -434,13 +438,13 @@ header.header {
     }
 
     &-info {
-      flex: 0 0 260px;
+      flex: 0 0 100%;
       display: inline-flex;
       flex-flow: row nowrap;
       justify-content: flex-start;
       align-content: center;
       align-items: center;
-      margin-right: 20px;
+      margin: 0 0 20px;
     }
 
     &-pic {
@@ -507,7 +511,7 @@ header.header {
   }
 
   &__summary {
-    margin: 0;
+    margin: 0 0 20px;
     font-size: 22px;
     font-weight: 600;
     line-height: 27px;
@@ -760,7 +764,8 @@ header.header {
       }
     }
 
-    &__box {}
+    &__box {
+    }
 
     .phone-list {
       flex-flow: row wrap;
@@ -779,6 +784,22 @@ header.header {
       &__link {
         svg {
           display: none;
+        }
+      }
+    }
+
+    .schedule {
+      li {
+        margin-bottom: 30px;
+      }
+    }
+
+    .social {
+      &__link {
+        margin: 0;
+
+        &:not(:last-child) {
+          margin: 0 20px 0 0;
         }
       }
     }
@@ -820,9 +841,36 @@ header.header {
       //max-width: 185px;
     }
   }
+
+  .cart {
+    &__dropdown {
+      &-footer {
+        flex-flow: row wrap;
+      }
+    }
+
+    &__item {
+      position: static;
+
+      &-remove {
+        position: static;
+        margin-right: 20px;
+      }
+
+      &-info {
+        flex: 0 0 260px;
+        margin: 0 20px 0 0;
+      }
+    }
+
+    &__summary {
+      margin: 0 0 0 20px;
+    }
+  }
 }
 
-@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(md) {
+}
 
 @include media-breakpoint-up(lg) {
   .header {
@@ -858,6 +906,60 @@ header.header {
 
     &-search {
       max-width: 510px;
+    }
+
+    &-contacts {
+      position: relative;
+      display: inline-flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-content: center;
+      align-items: center;
+      z-index: 1;
+
+      & > svg {
+        width: 12px;
+        height: 12px;
+        margin-left: 10px;
+        transition: $transition-base;
+      }
+
+      &__dropdown {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: calc(100% + 40px);
+        padding: 64px 20px 20px;
+        background: #FFFFFF;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        border-radius: 20px;
+        transform: translate(-50%, -50%) scaleY(0);
+        transition: $transition-base;
+        z-index: -1;
+
+        .phone-list {
+          padding: 0 0 20px;
+          margin: 0 0 20px;
+          border-bottom: 1px solid #F4F4F4;
+        }
+
+        .social {
+          justify-content: space-between;
+          margin-bottom: 20px;
+          border-bottom: 1px solid #F4F4F4;
+        }
+      }
+
+      &:hover {
+        & > svg {
+          transform: rotate3d(1, 0, 0, 180deg);
+        }
+
+        .header-contacts__dropdown {
+          top: -20px;
+          transform: translate(-50%, 0) scaleY(1);
+        }
+      }
     }
 
     &-actions {
@@ -936,6 +1038,19 @@ header.header {
       display: none;
     }
   }
+
+  .cart {
+    position: relative;
+
+    &__dropdown {
+      right: 100%;
+      max-width: none;
+
+      &.opened {
+        transform: translate(40%, 0) scaleY(1);
+      }
+    }
+  }
 }
 
 @include media-breakpoint-up(xxl) {
@@ -946,60 +1061,6 @@ header.header {
           &:not(:last-child) {
             margin-right: 98px;
           }
-        }
-      }
-    }
-
-    &-contacts {
-      position: relative;
-      display: inline-flex;
-      flex-flow: row nowrap;
-      justify-content: flex-start;
-      align-content: center;
-      align-items: center;
-      z-index: 1;
-
-      & > svg {
-        width: 12px;
-        height: 12px;
-        margin-left: 10px;
-        transition: $transition-base;
-      }
-
-      &__dropdown {
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        width: calc(100% + 40px);
-        padding: 64px 20px 20px;
-        background: #FFFFFF;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-        border-radius: 20px;
-        transform: translate(-50%, -50%) scaleY(0);
-        transition: $transition-base;
-        z-index: -1;
-
-        .phone-list {
-          padding: 0 0 20px;
-          margin: 0 0 20px;
-          border-bottom: 1px solid #F4F4F4;
-        }
-
-        .social {
-          justify-content: space-between;
-          margin-bottom: 20px;
-          border-bottom: 1px solid #F4F4F4;
-        }
-      }
-
-      &:hover {
-        & > svg {
-          transform: rotate3d(1, 0, 0, 180deg);
-        }
-
-        .header-contacts__dropdown {
-          top: -20px;
-          transform: translate(-50%, 0) scaleY(1);
         }
       }
     }
@@ -1016,6 +1077,7 @@ header.header {
       }
     }
 
-    &__sublist {}
+    &__sublist {
+    }
   }
 }

@@ -1,5 +1,5 @@
 .section-main-home {
-  margin-top: 90px;
+  margin-top: 30px;
 }
 
 .main-home {
@@ -50,3 +50,13 @@
     }
   }
 }
+
+
+@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {
+  .section-main-home {
+    margin-top: 90px;
+  }
+}
+@include media-breakpoint-up(xl) {}
