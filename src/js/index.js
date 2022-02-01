@@ -206,6 +206,28 @@ $(function () {
             }
         }
 
+        if ($('.blog-slider')) {
+            let blogSlide = document.querySelectorAll('.blog-slider .swiper-slide').length
+
+            if (blogSlide > 4) {
+                const blogSlider = new Swiper('.blog-slider', {
+                    observer: true,
+                    observeParents: true,
+                    slidesPerView: 4,
+                    spaceBetween: 0,
+                    init: true,
+                    breakpoints: {
+                        1200: {
+                            destroy: true,
+                        },
+                        460: {
+                            spaceBetween: 20,
+                        }
+                    }
+                })
+            }
+        }
+
         let video_slider = $('.video-slider');
         if (video_slider.length) {
             let videoSlide = document.querySelectorAll('.video-slider .swiper-slide').length;

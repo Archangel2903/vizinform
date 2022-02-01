@@ -6,7 +6,7 @@
     max-width: 1638px;
     margin: 0 auto;
     background: #F5F9FF;
-    border-radius: 90px;
+    border-radius: 40px;
     overflow: hidden;
   }
 }
@@ -42,7 +42,15 @@
     justify-content: space-between;
     align-content: center;
     align-items: center;
-    margin: 0 0 60px;
+    margin: 0 0 30px;
+
+    .btn {
+      font-size: 0;
+
+      svg {
+        margin: 0;
+      }
+    }
   }
 }
 
@@ -55,7 +63,7 @@
 }
 
 .title {
-  margin: 0 0 60px;
+  margin: 0 0 30px;
   font-size: 25px;
   font-weight: 700;
   line-height: 30px;
@@ -334,11 +342,12 @@ input {
 
 .btn {
   padding: 10px;
-  line-height: 20px;
   border: none;
   border-radius: 10px;
   box-shadow: none !important;
+  font-size: 1rem;
   font-weight: 600;
+  line-height: 20px;
 
   &-primary {
     svg {
@@ -347,9 +356,10 @@ input {
   }
 
   &-lg {
-    padding: 20px;
-    border-radius: 16px;
-    line-height: 27px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 19px;
+    line-height: 23px;
   }
 
   &-sm {
@@ -670,23 +680,54 @@ input {
   }
 }
 
+@media screen and (min-width: 375px) {
+}
 @include media-breakpoint-up(sm) {
   .title {
     font-size: 35px;
     line-height: 1.5;
   }
 }
-
 @include media-breakpoint-up(md) {
+  .container-heading {
+    margin: 0 0 60px;
+
+    .btn {
+      font-size: inherit;
+
+      svg {
+        margin-left: 10px;
+      }
+    }
+  }
+
   .title {
+    margin: 0 0 60px;
     font-size: 49px;
     line-height: 60px;
   }
-}
 
+  .btn {
+    &-lg {
+      padding: 20px;
+      border-radius: 16px;
+      font-size: 22px;
+      line-height: 27px;
+    }
+  }
+}
 @include media-breakpoint-up(lg) {
-
+  .section {
+    &__substrate {
+      border-radius: 60px;
+    }
+  }
 }
-
 @include media-breakpoint-up(xl) {
+  .section {
+    &__substrate {
+      border-radius: 90px;
+    }
+  }
 }
+@include media-breakpoint-up(xxl) {}
