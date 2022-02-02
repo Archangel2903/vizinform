@@ -1,5 +1,5 @@
 .section-video {
-  margin: 120px 0;
+  margin: 60px 0;
 
   .section__substrate {
     padding-top: 30px;
@@ -158,6 +158,8 @@
 
 @include media-breakpoint-up(sm) {
   .section-video {
+    margin: 90px 0;
+
     .section__substrate {
       padding-top: 60px;
       padding-bottom: 60px;
@@ -167,6 +169,8 @@
 @include media-breakpoint-up(md) {}
 @include media-breakpoint-up(lg) {
   .section-video {
+    margin: 120px 0;
+
     .section__substrate {
       padding-top: 60px;
       padding-bottom: 60px;

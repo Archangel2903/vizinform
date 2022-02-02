@@ -55,14 +55,14 @@ $(function () {
                     if (sublistHeight > list.offsetHeight) {
                         listWrap.style.height = `${sublistHeight + 20}px`;
                     } else if (sublistHeight < list.offsetHeight) {
-                        listWrap.style.height = `auto`;
+                        listWrap.style.height = `${list.offsetHeight}px`;
                     } else {
-                        listWrap.style.height = `auto`;
+                        listWrap.style.height = `${list.offsetHeight}px`;
                     }
                 }
             }
             let handlerLeave = function () {
-                listWrap.style.height = `auto`;
+                listWrap.style.height = `${list.offsetHeight}px`;
             }
             let handlerSublistToggle = function () {
                 this.nextElementSibling.classList.toggle('active');
