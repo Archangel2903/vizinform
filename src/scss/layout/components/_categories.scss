@@ -1,5 +1,5 @@
 .section-popular-category {
-  margin: 120px 0;
+  margin: 60px 0;
 }
 
 .main-categories {
@@ -9,7 +9,22 @@
     overflow: visible;
 
     .swiper-slide {
+      width: inherit;
       max-width: 210px;
     }
   }
 }
+
+@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {
+  .section-popular-category {
+    margin: 90px 0;
+  }
+}
+@include media-breakpoint-up(xl) {
+  .section-popular-category {
+    margin: 120px 0;
+  }
+}
+@include media-breakpoint-up(xxl) {}

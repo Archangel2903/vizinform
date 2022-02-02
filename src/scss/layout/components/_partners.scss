@@ -10,17 +10,38 @@
   align-items: center;
 
   &__pic {
-    flex: 0 0 25%;
     display: inline-flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-content: center;
     align-items: center;
-    height: 100px;
-    margin-bottom: 60px;
+    width: 50%;
+    margin-bottom: 20px;
 
     img {
-
+      width: 100%;
     }
   }
 }
+
+
+@include media-breakpoint-up(sm) {
+  .partners {
+    &__pic {
+      width: 33%;;
+    }
+  }
+}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {
+  .partners {
+    &__pic {
+      flex: 0 0 25%;
+      width: 25%;
+      height: 100px;
+      margin-bottom: 60px;
+    }
+  }
+}
+@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xxl) {}

@@ -1,9 +1,9 @@
 .section-reviews {
-  margin: 0 0 120px;
+  margin: 0 0 60px;
 
   .section__substrate {
-    padding-top: 110px;
-    padding-bottom: 110px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   .title {
@@ -13,6 +13,17 @@
 }
 
 .review {
+  .container-heading {
+    flex-flow: column wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+
+    .btn {
+      margin-top: 20px;
+      font-size: inherit;
+    }
+  }
+
   &-slider {
     overflow: visible;
   }
@@ -25,7 +36,7 @@
     align-items: stretch;
     max-width: 330px;
     height: 420px;
-    padding: 30px;
+    padding: 20px;
     background: #FFFFFF;
     border-radius: 40px;
 
@@ -51,3 +62,48 @@
     }
   }
 }
+
+@media screen and (min-width: 375px) {
+  .review {
+    .container-heading {
+      flex-flow: row wrap;
+      align-content: center;
+      align-items: center;
+
+      .btn {
+        margin-top: 0;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(sm) {
+  .section-reviews {
+    .section__substrate {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .review {
+    &-card {
+      padding: 30px;
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .section-reviews {
+    margin: 0 0 90px;
+
+    .section__substrate {
+      padding-top: 110px;
+      padding-bottom: 110px;
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .section-reviews {
+    margin: 0 0 120px;
+  }
+}
+@include media-breakpoint-up(xxl) {}

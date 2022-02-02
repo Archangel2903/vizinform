@@ -680,6 +680,12 @@ input {
   }
 }
 
+.swiper-container {
+  .swiper-slide {
+    width: auto;
+  }
+}
+
 @media screen and (min-width: 375px) {
 }
 @include media-breakpoint-up(sm) {

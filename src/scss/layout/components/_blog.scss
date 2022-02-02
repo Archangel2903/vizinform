@@ -1,5 +1,5 @@
 .section-blog {
-  margin: 120px 0;
+  margin: 60px 0;
 
   .title {
     margin: 0;
@@ -7,8 +7,15 @@
 }
 
 .blog {
+  &-slider {
+    .swiper-slide {
+      width: auto;
+    }
+  }
+
   &-card {
     &.card {
+      max-width: 310px;
       padding: 10px;
       background: white;
       border: none;
@@ -85,5 +92,35 @@
 @media screen and (min-width: 320px) {}
 @include media-breakpoint-up(sm) {}
 @include media-breakpoint-up(md) {}
-@include media-breakpoint-up(lg) {}
-@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(lg) {
+  .section-blog {
+    margin: 90px 0;
+  }
+}
+@include media-breakpoint-up(xl) {
+  .section-blog {
+    margin: 120px 0;
+  }
+}
+@include media-breakpoint-up(xxl) {
+  .blog {
+    &-slider {
+      .swiper {
+        &-wrapper {
+          flex-wrap: wrap;
+        }
+
+        &-slide {
+          flex: 0 0 25%;
+          padding: 0 15px;
+        }
+      }
+    }
+
+    &-card {
+      &.card {
+        max-width: 330px;
+      }
+    }
+  }
+}
