@@ -540,10 +540,13 @@ input {
       justify-content: flex-start;
       align-content: center;
       align-items: center;
+      width: 100%;
       padding: 10px;
       margin: 0 0 30px;
       border: 2px solid $main-second-color;
       border-radius: 999px;
+      overflow: hidden;
+      overflow-x: scroll;
 
       &::before, &::after {
         display: none;
