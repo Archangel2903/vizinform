@@ -1,9 +1,9 @@
 .section-schedule {
-  margin-bottom: 120px;
+  margin-bottom: 60px;
 
   .section__substrate {
-    padding-top: 110px;
-    padding-bottom: 110px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .benefits-line {
@@ -24,3 +24,27 @@
     font-weight: 500;
   }
 }
+
+@include media-breakpoint-up(sm) {
+  .section-schedule {
+    margin-bottom: 90px;
+
+    .section__substrate {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  }
+}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {
+  .section-schedule {
+    margin-bottom: 120px;
+
+    .section__substrate {
+      padding-top: 110px;
+      padding-bottom: 110px;
+    }
+  }
+}
+@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xxl) {}

@@ -298,6 +298,20 @@ $(function () {
                     autoplay: true,
                     spaceBetween: 30,
                     slidesPerView: 6,
+                    breakpoints: {
+                        1469: {
+                            slidesPerView: 5,
+                        },
+                        1199: {
+                            slidesPerView: 4,
+                        },
+                        991: {
+                            slidesPerView: 3,
+                        },
+                        767: {
+                            slidesPerView: 'auto',
+                        }
+                    }
                 });
             }
         }

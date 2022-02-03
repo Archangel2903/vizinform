@@ -1,5 +1,5 @@
 .section-delivery-method {
-  margin: 120px 0 60px;
+  margin: 60px 0;
 
   .title {
     margin-bottom: 30px;
@@ -10,10 +10,48 @@
   }
 
   .benefits {
-    max-width: 620px;
-
     &__box {
-      margin-bottom: 60px;
+      width: 100%;
+      margin-bottom: 30px;
     }
   }
 }
+
+@include media-breakpoint-up(sm) {
+  .section-delivery-method {
+    margin: 90px 0;
+  }
+}
+@include media-breakpoint-up(md) {
+  .section-delivery-method {
+    .benefits {
+      &__box {
+        width: 48%;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .section-delivery-method {
+    margin: 120px 0 60px;
+
+    .benefits {
+      &__box {
+        width: 31%;
+        margin-bottom: 60px;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .section-delivery-method {
+    .benefits {
+      max-width: 620px;
+
+      &__box {
+        width: 48%;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xxl) {}

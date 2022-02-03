@@ -1,9 +1,9 @@
 .section-home {
-  margin: 0 0 120px;
+  margin: 0 0 60px;
 
   .section__substrate {
-    padding-top: 126px;
-    padding-bottom: 126px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .main-title {
@@ -19,6 +19,7 @@
   align-items: center;
 
   &__content {
+    width: 100%;
     max-width: 870px;
   }
 
@@ -28,19 +29,59 @@
     line-height: 27px;
   }
 
-  &__decoration {
-    position: relative;
-  }
-
   &__pic {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    display: none;
+  }
+}
 
-    img {
-      width: 503px;
-      height: 423px;
-      filter: drop-shadow(0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198)) drop-shadow(0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275)) drop-shadow(0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035)) drop-shadow(0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725)) drop-shadow(0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802));
+@include media-breakpoint-up(sm) {
+  .section-home {
+    margin: 0 0 90px;
+
+    .section__substrate {
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+  }
+}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {
+  .section-home {
+    margin: 0 0 120px;
+
+    .section__substrate {
+      padding-top: 126px;
+      padding-bottom: 126px;
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .home {
+    &__decoration {
+      position: relative;
+      width: calc(100% - 870px);
+    }
+
+    &__pic {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      transform: translate(-50%, -50%);
+
+      img {
+        width: 503px;
+        height: 423px;
+        filter: drop-shadow(0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198)) drop-shadow(0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275)) drop-shadow(0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035)) drop-shadow(0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725)) drop-shadow(0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802));
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xxl) {
+  .home {
+    &__pic {
+      left: auto;
+      transform: translate(0, -50%);
     }
   }
 }
