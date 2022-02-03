@@ -7,7 +7,7 @@
   }
 
   .title {
-    margin: 0;
+    margin: 0 0 20px;
     white-space: pre-line;
   }
 }
@@ -19,7 +19,6 @@
     align-items: flex-start;
 
     .btn {
-      margin-top: 20px;
       font-size: inherit;
     }
   }
@@ -64,15 +63,17 @@
 }
 
 @media screen and (min-width: 375px) {
+  .section-reviews {
+    .title {
+      margin: 0;
+    }
+  }
+
   .review {
     .container-heading {
-      flex-flow: row wrap;
+      flex-flow: row nowrap;
       align-content: center;
       align-items: center;
-
-      .btn {
-        margin-top: 0;
-      }
     }
   }
 }

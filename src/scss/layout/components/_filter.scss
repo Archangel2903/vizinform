@@ -10,19 +10,18 @@
   }
 
   &__item {
-    padding: 10px 15px;
-    margin-bottom: 30px;
+    padding: 10px;
+    margin: 0 0 10px;
     background: #f4f4f4;
     border: none;
     border-radius: 99px;
+    font-size: 13px;
     font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
     cursor: pointer;
     transition: $transition-base;
 
     &:not(:last-child) {
-      margin-right: 30px;
+      margin-right: 10px;
     }
 
     svg {
@@ -72,3 +71,28 @@
     line-height: 17px;
   }
 }
+
+
+@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(md) {
+  .filter {
+    &__item {
+      padding: 10px 15px;
+      font-size: 1rem;
+      line-height: 20px;
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .filter {
+    &__item {
+      margin: 0 0 30px;
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xxl) {}

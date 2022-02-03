@@ -1,5 +1,5 @@
 .section-social-links {
-  margin-bottom: 120px;
+  margin-bottom: 60px;
 }
 
 .social-links {
@@ -10,18 +10,57 @@
   align-items: flex-start;
 
   a {
-    padding: 20px;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 27px;
+    padding: 15px;
+    font-size: 0;
 
     &:not(:last-child) {
-      margin-right: 30px;
+      margin-right: 10px;
     }
 
     svg {
       width: 32px;
       height: 32px;
+      margin: 0;
     }
   }
 }
+
+
+@include media-breakpoint-up(sm) {
+  .section-social-links {
+    margin-bottom: 90px;
+  }
+}
+@include media-breakpoint-up(md) {
+  .social-links {
+    a {
+      padding: 20px;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 27px;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      svg {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .section-social-links {
+    margin-bottom: 120px;
+  }
+
+  .social-links {
+    a {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xxl) {}

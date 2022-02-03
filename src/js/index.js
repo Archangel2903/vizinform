@@ -325,6 +325,15 @@ $(function () {
                     observeParents: true,
                     spaceBetween: 30,
                     slidesPerView: 3,
+                    breakpoints: {
+                        1199: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        767: {
+                            slidesPerView: 1,
+                        }
+                    }
                 });
             }
         }

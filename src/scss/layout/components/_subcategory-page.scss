@@ -9,17 +9,30 @@
 .product-cards {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   align-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  margin-bottom: 30px;
-
+  margin: 0 0 30px;
 
   .product-card {
-    margin-bottom: 30px;
+    margin: 0 auto 20px;
+  }
+}
 
-    &:not(:last-child) {
-      margin-right: 24px;
+
+@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xxl) {
+  .product-cards {
+    .product-card {
+      margin: 0 auto 30px;
+
+      &:not(:last-child) {
+        //margin-right: 24px;
+      }
     }
   }
 }

@@ -1,26 +1,27 @@
 .section-contacts-info {
-
+  margin-bottom: 60px;
 }
 
 .contacts-info {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: space-between;
   align-content: flex-start;
   align-items: flex-start;
   max-width: 1160px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 
   &__box {
     display: inline-flex;
-    flex-flow: row nowrap;
+    flex-flow: column wrap;
     justify-content: flex-start;
     align-content: flex-start;
     align-items: flex-start;
+    margin-bottom: 30px;
   }
 
   &__title {
-    margin: 0 70px 0 0;
+    margin: 0 0 20px;
     font-weight: 600;
     font-size: 22px;
     line-height: 27px;
@@ -31,6 +32,10 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 27px;
+
+    p {
+      margin: 0;
+    }
 
     .schedule {
       width: 200px;
@@ -53,15 +58,6 @@
   }
 }
 
-.section-map {
-  margin-bottom: 120px;
-}
-
-#map {
-  width: 100%;
-  height: 488px;
-}
-
 .section-contacts-data {
   margin-bottom: 120px;
 
@@ -73,30 +69,24 @@
 .contacts-data {
   &__phones {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: flex-start;
     align-content: center;
     align-items: center;
-    min-width: 570px;
     width: 100%;
     padding: 21px 20px;
     margin: 0 0 30px;
     border: 1px solid $main-second-color;
     border-radius: 20px;
 
-    &::after {
-      content: '';
-      display: block;
-      min-width: 190px;
-      height: 1px;
-      background: $main-second-color;
-    }
-
     a {
       flex: 0 0 auto;
-      margin-right: 20px;
       font-weight: 600;
       text-decoration: none !important;
+
+      &:not(:last-child) {
+        margin: 0 0 20px;
+      }
 
       svg {
         width: 24px;
@@ -108,18 +98,18 @@
 
   &__box {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column wrap;
     justify-content: flex-start;
-    align-content: flex-start;
-    align-items: flex-start;
-    padding: 30px;
+    align-content: center;
+    align-items: center;
+    padding: 10px;
     margin: 0 0 30px;
     border: 1px solid $main-second-color;
     border-radius: 40px;
   }
 
   &__pic {
-    margin-right: 30px;
+    margin: 0 0 20px;
 
     img {
       width: 150px;
@@ -132,8 +122,8 @@
     display: inline-flex;
     flex-flow: column wrap;
     justify-content: flex-start;
-    align-content: stretch;
-    align-items: stretch;
+    align-content: center;
+    align-items: center;
   }
 
   &__name {
@@ -171,3 +161,112 @@
     }
   }
 }
+
+#map {
+  width: 100%;
+  height: 488px;
+  border-radius: 30px;
+
+  iframe {
+    @extend #map;
+  }
+}
+
+
+@include media-breakpoint-up(sm) {
+  .section-contacts-info {
+    margin-bottom: 90px;
+  }
+
+  .contacts {
+    &-info {
+      margin-bottom: 60px;
+
+      &__title {}
+    }
+
+    &-data {
+      &__box {
+        padding: 20px;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .contacts {
+    &-info {
+      flex-flow: row wrap;
+    }
+
+    &-data {
+      &__phones {
+        flex-flow: row nowrap;
+        min-width: 570px;
+
+        &::after {
+          content: '';
+          display: block;
+          min-width: 190px;
+          height: 1px;
+          background: $main-second-color;
+        }
+
+        a {
+          margin: 0 20px 0 0 !important;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .section-contacts-info {
+    margin-bottom: 120px;
+  }
+
+  .contacts-info {
+    &__box {
+      flex-flow: row nowrap;
+      margin: 0;
+    }
+
+    &__title {
+      min-width: 210px;
+    }
+  }
+
+  #map {
+    border-radius: 60px;
+  }
+}
+@include media-breakpoint-up(xl) {
+  .contacts {
+    &-info {
+      &__title {
+        margin: 0;
+      }
+    }
+
+    &-data {
+      &__box {
+        flex-flow: row nowrap;
+        align-content: flex-start;
+        align-items: flex-start;
+        padding: 30px;
+      }
+
+      &__pic {
+        margin: 0 30px 0 0;
+      }
+
+      &__content {
+        align-content: stretch;
+        align-items: stretch;
+      }
+    }
+  }
+
+  #map {
+    border-radius: 90px;
+  }
+}
+@include media-breakpoint-up(xxl) {}

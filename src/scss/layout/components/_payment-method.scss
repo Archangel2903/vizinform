@@ -1,7 +1,21 @@
 .section-payment-method {
-  margin-bottom: 120px;
+  margin-bottom: 60px;
 
   .title {
     margin-bottom: 30px;
   }
 }
+
+@include media-breakpoint-up(sm) {
+  .section-payment-method {
+    margin-bottom: 90px;
+  }
+}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {
+  .section-payment-method {
+    margin-bottom: 120px;
+  }
+}
+@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xxl) {}

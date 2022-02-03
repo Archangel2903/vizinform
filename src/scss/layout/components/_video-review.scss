@@ -3,7 +3,7 @@
 }
 
 .video-review {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 
   &__media {
     display: flex;
@@ -13,16 +13,44 @@
       width: 100%;
       max-width: 690px;
       height: 380px;
-      border-radius: 40px;
+      border-radius: 20px;
     }
   }
 
   &__title {
-    padding: 20px;
+    padding: 10px;
+    margin: 0;
     border: 1px solid $main-second-color;
-    border-radius: 20px;
+    border-radius: 14px;
     font-size: 22px;
     font-weight: 600;
     line-height: 27px;
   }
 }
+
+@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {
+  .video-review {
+    &__media {
+      iframe {
+        border-radius: 40px;
+      }
+    }
+
+    &__title {
+      padding: 15px;
+      border-radius: 20px;
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .video-review {
+    margin-bottom: 60px;
+
+    &__title {
+      padding: 20px;
+    }
+  }
+}
+@include media-breakpoint-up(xxl) {}

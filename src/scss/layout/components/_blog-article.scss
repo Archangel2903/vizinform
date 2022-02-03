@@ -1,5 +1,5 @@
 .section-article {
-  margin-bottom: 120px;
+  margin-bottom: 60px;
 
   .main-title {
     max-width: 971px;
@@ -49,3 +49,18 @@
     }
   }
 }
+
+
+@include media-breakpoint-up(sm) {
+  .section-article {
+    margin-bottom: 90px;
+  }
+}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {
+  .section-article {
+    margin-bottom: 120px;
+  }
+}
+@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xxl) {}

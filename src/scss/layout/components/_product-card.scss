@@ -4,26 +4,30 @@
 
 .product {
   &-pic {
+    display: block;
+    width: 100%;
+    margin: 0 0 30px;
+
     img {
       width: 100%;
-      max-width: 330px;
-      height: 330px;
+      max-height: 330px;
       border-radius: 30px;
     }
   }
 
   &-content {
-    padding: 30px;
+    padding: 15px;
+    margin: 0 0 30px;
     background: white;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
     border-radius: 30px;
 
     &__title {
       display: flex;
-      flex-flow: row nowrap;
+      flex-flow: column-reverse wrap;
       justify-content: space-between;
-      align-content: center;
-      align-items: center;
+      align-content: stretch;
+      align-items: stretch;
       margin: 0 0 20px;
       font-weight: 700;
       font-size: 29px;
@@ -31,6 +35,7 @@
     }
 
     &__price {
+      margin: 0 0 20px;
       flex: 0 0 auto;
       font-size: 22px;
       font-weight: 700;
@@ -131,15 +136,15 @@
 
     &__contacts {
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: column wrap;
       justify-content: flex-start;
-      align-content: center;
-      align-items: center;
+      align-content: flex-start;
+      align-items: flex-start;
       margin-bottom: 30px;
 
       .social {
         display: inline-flex;
-        margin: 0 20px 0 0;
+        margin: 0 20px 20px 0;
 
         &__link {
           margin: 0;
@@ -239,7 +244,7 @@
   }
 
   &-info {
-    padding: 30px;
+    padding: 15px;
     border: 2px solid $main-second-color;
     border-radius: 40px;
 
@@ -305,7 +310,7 @@
 
     &__box {
       display: flex;
-      flex-flow: row nowrap;
+      flex-flow: column wrap;
       justify-content: space-between;
       align-content: center;
       align-items: center;
@@ -320,8 +325,7 @@
 
     &__name {
       flex: 1 1 auto;
-      padding-right: 20px;
-      margin: 0;
+      margin: 0 0 20px;
       font-size: 22px;
       font-weight: 700;
       line-height: 27px;
@@ -352,3 +356,97 @@
     }
   }
 }
+
+
+@include media-breakpoint-up(sm) {
+  .product {
+    &-content {
+      &__contacts {
+        flex-flow: row wrap;
+        align-content: center;
+        align-items: center;
+
+        .social {
+          margin: 0 20px 0 0;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .product {
+    &-content {
+      &__title {
+        flex-flow: row nowrap;
+        align-content: center;
+        align-items: center;
+      }
+
+      &__price {
+        margin: 0;
+      }
+    }
+
+    &-options {
+      &__box {
+        flex-flow: row nowrap;
+      }
+
+      &__name {
+        padding-right: 20px;
+        margin: 0;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .product {
+    &-content {
+      padding: 30px;
+    }
+
+    &-info {
+      padding: 30px;
+    }
+
+    &-options {
+      &__box {
+        flex-flow: column wrap;
+      }
+
+      &__name {
+        padding: 0;
+        margin: 0 0 20px;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .product {
+    &-pic {
+      display: inline;
+
+      img {
+        max-width: 330px;
+        height: 330px;
+        border-radius: 30px;
+      }
+    }
+
+    &-content {
+      margin: 0;
+    }
+
+    &-options {
+      &__box {
+        flex-flow: row nowrap;
+      }
+
+      &__name {
+        padding-right: 20px;
+        margin: 0;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xxl) {}
