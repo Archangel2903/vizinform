@@ -585,7 +585,7 @@ input {
       border: 2px solid $main-second-color;
       border-radius: 999px;
       overflow: hidden;
-      overflow-x: scroll;
+      overflow-x: auto;
 
       &::before, &::after {
         display: none;

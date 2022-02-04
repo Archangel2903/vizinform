@@ -1,5 +1,5 @@
 .section-personal-account {
-  margin: 90px 0 120px;
+  margin: 60px 0;
 }
 
 .personal {
@@ -12,8 +12,8 @@
 
     &__sidebar {
       width: 100%;
-      max-width: 330px;
-      padding: 30px;
+      padding: 20px;
+      margin: 0 0 30px;
       background: #f5f9ff;
       border-radius: 38px;
 
@@ -76,8 +76,6 @@
       align-content: stretch;
       align-items: stretch;
       width: 100%;
-      max-width: calc(100% - 360px);
-      min-height: 445px;
 
       &-wrap {
         position: relative;
@@ -87,9 +85,7 @@
         align-content: stretch;
         align-items: stretch;
         width: 100%;
-        max-width: calc(100% - 360px);
-        min-height: 445px;
-        padding: 30px;
+        padding: 20px;
         border: 2px solid $main-second-color;
         border-radius: 40px;
       }
@@ -127,13 +123,14 @@
     &__footer {
       display: flex;
       flex-flow: row wrap;
+      flex-flow: column wrap;
       justify-content: flex-start;
       align-content: flex-start;
       align-items: flex-start;
 
       .btn {
         &:not(:last-child) {
-          margin-right: 30px;
+          margin: 0 0 20px;
         }
       }
     }
@@ -148,19 +145,7 @@
     width: 100%;
 
     &__header {
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-between;
-      align-content: stretch;
-      align-items: stretch;
-      padding: 0 20px;
-      margin-bottom: 30px;
-
-      &-col {
-        flex: 0 0 auto;
-        font-size: 14px;
-        line-height: 17px;
-      }
+      display: none;
     }
 
     &__body {
@@ -173,7 +158,7 @@
 
     &__box {
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: column wrap;
       justify-content: space-between;
       align-content: center;
       align-items: center;
@@ -183,13 +168,17 @@
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 
       &:not(:last-child) {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
       }
 
       &-col {
         flex: 1 1 auto;
         font-size: 1rem;
         line-height: 1.25;
+
+        &:not(:last-child) {
+          margin: 0 0 10px;
+        }
 
         &:first-child {
           max-width: 120px;
@@ -302,7 +291,7 @@
 
         li {
           display: inline-flex;
-          flex-flow: row nowrap;
+          flex-flow: column nowrap;
           justify-content: space-between;
           align-content: flex-start;
           align-items: flex-start;
@@ -317,10 +306,13 @@
 
             &:first-child {
               max-width: 90px;
+              margin: 0 0 5px;
+              font-weight: 500;
             }
             &:last-child {
               width: 100%;
               max-width: 300px;
+              font-size: 14px;
             }
           }
         }
@@ -331,16 +323,146 @@
   &-wishlist {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-content: flex-start;
     align-items: flex-start;
 
     .product-card {
-      margin-bottom: 30px;
+      margin: 0 auto;
 
       &:not(:last-child) {
-        margin-right: 30px;
+        margin-bottom: 20px;
       }
     }
   }
 }
+
+
+@include media-breakpoint-up(sm) {
+  .personal {
+    &-account {
+      &__sidebar {
+        padding: 30px;
+      }
+
+      &__content {
+        &-wrap {
+          padding: 30px;
+        }
+      }
+    }
+
+    &-info {
+      &__footer {
+        flex-flow: row wrap;
+
+        .btn {
+          &:not(:last-child) {
+            margin: 0 30px 0 0;
+          }
+        }
+      }
+    }
+
+    &-request {
+      &__header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-content: stretch;
+        align-items: stretch;
+        padding: 0 20px;
+        margin-bottom: 30px;
+
+        &-col {
+          flex: 0 0 auto;
+          font-size: 14px;
+          line-height: 17px;
+        }
+      }
+
+      &__box {
+        flex-flow: row nowrap;
+      }
+
+      &-card {
+        &__list {
+          li {
+            flex-flow: row nowrap;
+
+            span {
+              &:first-child {
+                margin: 0;
+                font-weight: 400;
+              }
+              &:last-child {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-wishlist {
+      .product-card {
+        margin: 0 0 20px;
+
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .section-personal-account {
+    margin: 90px 0;
+  }
+
+  .personal {
+    &-request {
+      &__box {
+        &:not(:last-child) {
+          margin: 0 0 30px;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .section-personal-account {
+    margin: 90px 0 120px;
+  }
+
+  .personal {
+    &-account {
+      &__sidebar {
+        max-width: 330px;
+      }
+
+      &__content {
+        max-width: calc(100% - 360px);
+        min-height: 445px;
+
+        &-wrap {
+          max-width: calc(100% - 360px);
+        }
+      }
+    }
+
+    &-wishlist {
+      justify-content: flex-start;
+
+      .product-card {
+        margin: 0 0 30px;
+
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xxl) {}

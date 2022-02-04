@@ -807,6 +807,8 @@ header.header {
 }
 
 .header-contact-tel {
+  margin: 20px 0 0;
+
   &__text {
     margin: 0;
     font-size: 14px;
@@ -870,6 +872,9 @@ header.header {
 }
 
 @include media-breakpoint-up(md) {
+  .header-contact-tel {
+    margin: 0;
+  }
 }
 
 @include media-breakpoint-up(lg) {
