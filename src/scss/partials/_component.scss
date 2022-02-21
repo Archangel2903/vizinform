@@ -203,6 +203,27 @@
   }
 }
 
+form {
+  .pass-view {
+    position: absolute;
+    right: 20px;
+    bottom: 24px;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    outline: none !important;
+
+    svg {
+      display: block;
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
 .form-control {
   height: 60px;
   padding: 20px;
@@ -365,6 +386,14 @@ input {
   &-primary {
     svg {
       fill: white;
+    }
+  }
+
+  &-link {
+    color: $text-color;
+
+    &:hover {
+      color: $main-first-color;
     }
   }
 
@@ -725,6 +754,101 @@ input {
 .swiper-container {
   .swiper-slide {
     width: auto;
+  }
+}
+
+.modal {
+  &-sm {
+    max-width: 360px;
+  }
+
+  &-content {
+    padding: 30px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  &-header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0 0 30px;
+    border: none;
+  }
+
+  &-title {
+    flex: 0 0 auto;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27px;
+  }
+
+  .close {
+    flex: 0 1 14px;
+    padding: 0;
+    margin: 0;
+    outline: none !important;
+
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &-body {
+    padding: 0;
+  }
+
+  &-form {
+    label {
+      position: relative;
+      width: 100%;
+      margin: 0 0 20px;
+    }
+
+    &__submit {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+
+  &-footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 0;
+    margin-top: 10px;
+    border: none;
+  }
+}
+
+.social-login {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  margin: 0 0 20px;
+
+  &__link {
+    padding: 4px;
+    border: 1px solid $main-second-color;
+    border-radius: 100%;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    svg {
+      width: 32px;
+      height: 32px;
+    }
   }
 }
 

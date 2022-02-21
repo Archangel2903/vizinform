@@ -499,6 +499,46 @@ $(function () {
         });
     })();
 
+    // Modal
+    (function () {
+        $('#login').on('click', modalSwitch);
+        $('#registration').on('click', modalSwitch);
+
+        $('.pass-view').on('click', function () {
+            let input = $(this).prev();
+            let type = input.attr('type');
+
+            switch (type) {
+                case 'text':
+                    input.attr('type', 'password');
+                    break;
+                case 'password':
+                    input.attr('type', 'text');
+                    break;
+            }
+        });
+
+        function modalSwitch() {
+            let id = this.id;
+
+            switch (id) {
+                case 'login':
+                    $(`#modal_registration`).modal('hide');
+                    break;
+
+                case 'registration':
+                    $(`#modal_login`).modal('hide');
+                    break;
+
+                default:
+                    console.log('another variable');
+                    break;
+            }
+
+            $(`#modal_${id}`).modal('show');
+        }
+    })();
+
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');
     const iframes = document.querySelectorAll('.video-preview[data-src]');

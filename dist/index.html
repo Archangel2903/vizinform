@@ -5,7 +5,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
     <title>Главная</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="style.adf89365352d769b710a.min.css" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="style.c5c00388e7ad0aab76ad.min.css" rel="stylesheet"></head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
@@ -49,7 +49,7 @@
                 <a href="#ru" class="languages__link">RU</a>
             </nav>
 
-            <button class="btn btn-primary header-top__modal-open">
+            <button type="button" class="btn btn-primary header-top__modal-open" data-toggle="modal" data-target="#modal_callback">
                 <svg>
                     <use xlink:href="./img/spritemap.svg#sprite-message"></use>
                 </svg>
@@ -422,12 +422,16 @@
 
                         <div class="mobile-menu__box">
                             <ul class="phone-list">
-                                <li><a href="tel:+380977851818" class="phone-list__link"><svg>
+                                <li><a href="tel:+380977851818" class="phone-list__link">
+                                    <svg>
                                         <use xlink:href="./img/spritemap.svg#sprite-phone-call"></use>
-                                    </svg>097-785-18-18</a></li>
-                                <li><a href="tel:+380445923664" class="phone-list__link"><svg>
+                                    </svg>
+                                    097-785-18-18</a></li>
+                                <li><a href="tel:+380445923664" class="phone-list__link">
+                                    <svg>
                                         <use xlink:href="./img/spritemap.svg#sprite-phone-call"></use>
-                                    </svg>044-592-36-64</a></li>
+                                    </svg>
+                                    044-592-36-64</a></li>
                             </ul>
                         </div>
 
@@ -606,13 +610,13 @@
                     </div>
                 </div>
 
-                <a href="#" class="header-actions__account btn btn-secondary">
+                <a href="#" class="header-actions__account btn btn-secondary" data-toggle="modal" data-target="#modal_login">
                     <svg>
                         <use xlink:href="./img/spritemap.svg#sprite-user"></use>
                     </svg>
                 </a>
 
-                <button class="header-actions__btn btn btn-primary">Замовити</button>
+                <button type="button" class="header-actions__btn btn btn-primary" data-toggle="modal" data-target="#modal_callback">Замовити</button>
             </div>
         </div>
     </header>
@@ -630,7 +634,7 @@
                             <p class="main-home__text">з виготовлення рекламної продукції</p>
 
                             <div class="main-home-actions">
-                                <button class="btn btn-lg btn-primary">Замовити
+                                <button class="btn btn-lg btn-primary" data-toggle="modal" data-target="#modal_callback">Замовити
                                     <svg>
                                         <use xlink:href="./img/spritemap.svg#sprite-arrow-link"></use>
                                     </svg>
@@ -1867,7 +1871,7 @@
                             <p class="title">Відгуки від
                                 наших клієнтів</p>
 
-                            <button class="btn btn-lg btn-primary">Свій відгук</button>
+                            <button class="btn btn-lg btn-primary" data-toggle="modal" data-target="#modal_review">Свій відгук</button>
                         </div>
 
                         <div class="review-content">
@@ -2666,9 +2670,207 @@
     <!-- FOOTER END -->
 </div>
 
+<!-- Modals -->
+<div class="modal fade" id="modal_callback" tabindex="-1" role="dialog" aria-labelledby="modalCallbackTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalCallbackTitle">Зв’язатися</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <svg aria-hidden="true">
+                        <use xlink:href="./img/spritemap.svg#sprite-close"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form action="" class="modal-form">
+                    <div class="row">
+                        <div class="col-12">
+                            <label>
+                                <span class="form-control-name">Ім’я</span>
+                                <input type="text" class="form-control">
+                            </label>
+                        </div>
+
+                        <div class="col-12">
+                            <label>
+                                <span class="form-control-name">Телефон</span>
+                                <input type="tel" class="form-control mask-phone">
+                            </label>
+                        </div>
+
+                        <div class="col-12">
+                            <label>
+                                <span class="form-control-name">Email</span>
+                                <input type="email" class="form-control">
+                            </label>
+                        </div>
+
+                        <div class="col-12">
+                            <label>
+                                <span class="form-control-name">Що вас цікавить</span>
+                                <input type="text" class="form-control">
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="modal-form__submit btn btn-lg btn-primary">Замовити дзвінок
+                        <svg>
+                            <use xlink:href="./img/spritemap.svg#sprite-arrow-link"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal_registration" tabindex="-1" role="dialog" aria-labelledby="modalRegistrationTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalRegistrationTitle">Зареєструватись</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <svg aria-hidden="true">
+                        <use xlink:href="./img/spritemap.svg#sprite-close"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form action="" class="modal-form">
+                    <div class="row">
+                        <div class="col-12">
+                            <label>
+                                <span class="form-control-name">Ім’я</span>
+                                <input type="text" class="form-control">
+                            </label>
+                        </div>
+
+                        <div class="col-12">
+                            <label>
+                                <span class="form-control-name">Пароль</span>
+                                <input type="password" class="form-control">
+                                <button type="button" class="pass-view"><svg><use xlink:href="./img/spritemap.svg#sprite-eye"></use></svg></button>
+                            </label>
+                        </div>
+
+                        <div class="col-12">
+                            <label>
+                                <span class="form-control-name">Телефон</span>
+                                <input type="tel" class="form-control mask-phone">
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="modal-form__submit btn btn-lg btn-primary">Зареєструватись</button>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <!-- 1 -->
+                <button type="button" id="login" class="btn btn-link">Увійти</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal_login" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLoginTitle">Увійти</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <svg aria-hidden="true">
+                        <use xlink:href="./img/spritemap.svg#sprite-close"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form action="" class="modal-form">
+                    <div class="row">
+                        <div class="col-12">
+                            <label>
+                                <span class="form-control-name">Ім’я</span>
+                                <input type="text" class="form-control">
+                            </label>
+                        </div>
+
+                        <div class="col-12">
+                            <label>
+                                <span class="form-control-name">Пароль</span>
+                                <input type="password" class="form-control">
+                                <button type="button" class="pass-view"><svg><use xlink:href="./img/spritemap.svg#sprite-eye"></use></svg></button>
+                            </label>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="social-login">
+                                <a href="#" class="social-login__link"><svg><use xlink:href="./img/spritemap.svg#sprite-facebook"></use></svg></a>
+
+                                <a href="#" class="social-login__link"><svg><use xlink:href="./img/spritemap.svg#sprite-google-logo"></use></svg></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="modal-form__submit btn btn-lg btn-primary">Увійти</button>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <!-- 2 -->
+                <button type="button" id="registration" class="btn btn-link">Зареєструватись</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal_review" tabindex="-1" role="dialog" aria-labelledby="modalReviewTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalReviewTitle">Залишити відгук</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <svg aria-hidden="true">
+                        <use xlink:href="./img/spritemap.svg#sprite-close"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form action="" class="modal-form">
+                    <div class="row">
+                        <div class="col-12">
+                            <label>
+                                <span class="form-control-name">Ім’я</span>
+                                <input type="text" class="form-control">
+                            </label>
+                        </div>
+
+                        <div class="col-12">
+                            <label>
+                                <span class="form-control-name">Ваш відгук</span>
+                                <textarea id="review_text" class="form-control" cols="30" rows="10"></textarea>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="modal-form__submit btn btn-lg btn-primary">Відправити</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="icon-load">
     <picture><img src="img/logo-ico.svg" alt="pre-loader"></picture>
 </div>
 <!-- BODY END   -->
-<script type="text/javascript" src="bundle.adf89365352d769b710a.min.js"></script></body>
+<script type="text/javascript" src="bundle.c5c00388e7ad0aab76ad.min.js"></script></body>
 </html>
